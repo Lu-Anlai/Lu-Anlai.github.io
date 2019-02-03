@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Lu-Anlai&#39;s Blog">
 <meta property="og:description" content="原题题面请查看Codeforces 271B Prime Matrix。 也可在洛谷上查看：传送门。 题解埃氏筛">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-03T13:58:24.129Z">
+<meta property="og:updated_time" content="2019-02-03T14:00:31.427Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【题解】【Codeforces 271B】 Prime Matrix">
 <meta name="twitter:description" content="原题题面请查看Codeforces 271B Prime Matrix。 也可在洛谷上查看：传送门。 题解埃氏筛">
@@ -433,7 +433,7 @@
                 
               
 
-              <time title="创建时间：2019-02-03 21:47:01 / 修改时间：21:58:24" itemprop="dateCreated datePublished" datetime="2019-02-03T21:47:01+08:00">2019-02-03</time>
+              <time title="创建时间：2019-02-03 21:47:01 / 修改时间：22:00:31" itemprop="dateCreated datePublished" datetime="2019-02-03T21:47:01+08:00">2019-02-03</time>
             
 
             
@@ -514,9 +514,9 @@
 <h4 id="细节"><a href="#细节" class="headerlink" title="细节"></a>细节</h4><p>$10^5$经过操作后的素数是$100003$，所以埃氏筛要筛到$100003$。</p>
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> INF 0X3F3F3F3F3F3F3F3F</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> min(a, b) ((a) &lt; (b) ? (a) : (b))</span></span><br><span class="line"><span class="comment">//头文件，正无穷，函数min()</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">bool</span> isNotPrime[<span class="number">100004</span>];<span class="comment">//埃氏筛的标记数组</span></span><br><span class="line"><span class="keyword">int</span> n, m, a[<span class="number">501</span>][<span class="number">501</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">register</span> <span class="keyword">int</span> i, j;</span><br><span class="line">    <span class="keyword">register</span> <span class="keyword">long</span> <span class="keyword">long</span> now, temp, ans = INF;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;m);<span class="comment">//读入n,m</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/*----埃氏筛----*/</span></span><br><span class="line">    isNotPrime[<span class="number">1</span>] = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">2</span>; i &lt;= <span class="number">100003</span>; ++i) &#123;</span><br><span class="line">        <span class="keyword">if</span> (!isNotPrime[i])</span><br><span class="line">            <span class="keyword">for</span> (j = (i &lt;&lt; <span class="number">1</span>); j &lt;= <span class="number">100003</span>; j += i)</span><br><span class="line">                isNotPrime[j] = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= n; ++i)</span><br><span class="line">        <span class="keyword">for</span> (j = <span class="number">1</span>; j &lt;= m; ++j) &#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i][j]);<span class="comment">//先读入</span></span><br><span class="line">            now = temp = a[i][j];</span><br><span class="line">            <span class="keyword">while</span> (isNotPrime[now])</span><br><span class="line">                ++now;</span><br><span class="line">            <span class="comment">//寻找最近的素数now</span></span><br><span class="line">            a[i][j] = now - temp;<span class="comment">//求操作次数</span></span><br><span class="line">            a[i][<span class="number">0</span>] += a[i][j];</span><br><span class="line">            a[<span class="number">0</span>][j] += a[i][j];</span><br><span class="line">            <span class="comment">//为方便统计，记a[i][0]为第i行的操作总数，a[0][j]为第j列的操作总数</span></span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= n; ++i)</span><br><span class="line">        ans = min(ans, a[i][<span class="number">0</span>]);</span><br><span class="line">    <span class="keyword">for</span> (j = <span class="number">1</span>; j &lt;= m; ++j)</span><br><span class="line">        ans = min(ans, a[<span class="number">0</span>][j]);<span class="comment">//统计</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>, ans);<span class="comment">//输出并换行</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="我的评测记录"><a href="#我的评测记录" class="headerlink" title="我的评测记录"></a>我的评测记录</h3><ul>
-<li><p><a href="http://codeforces.com/contest/271/submission/49398471" target="_blank" rel="noopener">Codeforces</a></p>
+<li><p><a href="http://codeforces.com/contest/271/submission/49398471" target="_blank" rel="noopener">Codeforces</a>；</p>
 </li>
-<li><p><a href="https://www.luogu.org/recordnew/show/16053322" target="_blank" rel="noopener">洛谷</a>；</p>
+<li><p><a href="https://www.luogu.org/recordnew/show/16053322" target="_blank" rel="noopener">洛谷</a>。</p>
 </li>
 </ul>
 
@@ -588,6 +588,10 @@
 
           </div>
           
+
+  
+    <div class="comments" id="gitalk-container">
+    </div>
 
   
 
@@ -925,6 +929,32 @@
 
   
 
+
+  
+    
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+
+
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: 'e6139d5b53728420b116',
+    clientSecret: 'bedff8bca1eb350c93404a102292e69cd94a3a6d',
+    repo: 'Lu-Anlai.github.io',
+    owner: 'Lu-Anlai',
+    admin: ['Lu-Anlai'],
+    id: md5(location.pathname),
+    distractionFreeMode: 'true'
+  });
+  gitalk.render('gitalk-container');
+</script>
 
   
 
