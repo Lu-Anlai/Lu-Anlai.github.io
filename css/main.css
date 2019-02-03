@@ -1812,6 +1812,22 @@ pre .javascript .function {
 .site-author-image {
   border-radius: 100%;
 }
+.site-author-image {
+  -webkit-transition: -webkit-transform 1s ease-out;
+  -moz-transition: -moz-transform 1s ease-out;
+  -ms-transition: -ms-transform 1s ease-out;
+  transition: transform 1s ease-out;
+}
+.site-author-image:hover {
+  -webkit-transform: rotateZ(360deg);
+  -moz-transform: rotateZ(360deg);
+  -ms-transform: rotate(360deg);
+  -webkit-transform: rotateZ(360deg);
+  -moz-transform: rotateZ(360deg);
+  -ms-transform: rotateZ(360deg);
+  -o-transform: rotateZ(360deg);
+  transform: rotateZ(360deg);
+}
 .site-author-name {
   margin: 0;
   text-align: center;
@@ -1894,7 +1910,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #5e12e0;
+  background: #d4dd74;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2263,6 +2279,14 @@ pre .javascript .function {
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   color: #ccc;
+}
+.gt-header a,
+.gt-comments a,
+.gt-popup a {
+  border-bottom: none;
+}
+.gt-container .gt-popup .gt-action.is--active:before {
+  top: 0.7em;
 }
 .page-archive .archive-page-counter {
   position: relative;
@@ -3177,7 +3201,7 @@ ul.breadcrumb li+li:last-child {
   opacity: 0.942477796076938;
 }
 body {
-  background-image: url("https://imgsa.baidu.com/forum/w%3D580/sign=c79e720b0a4f78f0800b9afb49300a83/9c419b25bc315c6008db87b084b1cb1348547766.jpg");
+  background-image: url("https://acg.toubiec.cn/random");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
