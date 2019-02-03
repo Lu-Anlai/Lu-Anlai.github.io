@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[【题解】【Codeforces 271B】 Prime Matrix]]></title>
+    <url>%2F2019%2F02%2F03%2F%E3%80%90%E9%A2%98%E8%A7%A3%E3%80%91%E3%80%90Codeforces-271B%E3%80%91-Prime-Matrix%2F</url>
+    <content type="text"><![CDATA[原题题面请查看Codeforces 271B Prime Matrix。 也可在洛谷上查看：传送门。 题解埃氏筛 思路 用埃氏筛求出$1$~$10^{5}+3$以内的所有素数； 求出矩阵内每个元素变为素数的操作次数； 为最后统计方便，记a[i][0]为第$i$行的操作总数，a[0][j]为第$j$列的操作总数； 统计答案。 细节$10^5$经过操作后的素数是$100003$，所以埃氏筛要筛到$100003$。 代码1234567891011121314151617181920212223242526272829303132333435363738394041#include &lt;cstdio&gt;#define INF 0X3F3F3F3F3F3F3F3F#define min(a, b) ((a) &lt; (b) ? (a) : (b))//头文件，正无穷，函数min()bool isNotPrime[100004];//埃氏筛的标记数组int n, m, a[501][501];int main(void)&#123; register int i, j; register long long now, temp, ans = INF; scanf("%d%d", &amp;n, &amp;m);//读入n,m /*----埃氏筛----*/ isNotPrime[1] = true; for (i = 2; i &lt;= 100003; ++i) &#123; if (!isNotPrime[i]) for (j = (i &lt;&lt; 1); j &lt;= 100003; j += i) isNotPrime[j] = true; &#125; for (i = 1; i &lt;= n; ++i) for (j = 1; j &lt;= m; ++j) &#123; scanf("%d", &amp;a[i][j]);//先读入 now = temp = a[i][j]; while (isNotPrime[now]) ++now; //寻找最近的素数now a[i][j] = now - temp;//求操作次数 a[i][0] += a[i][j]; a[0][j] += a[i][j]; //为方便统计，记a[i][0]为第i行的操作总数，a[0][j]为第j列的操作总数 &#125; for (i = 1; i &lt;= n; ++i) ans = min(ans, a[i][0]); for (j = 1; j &lt;= m; ++j) ans = min(ans, a[0][j]);//统计 printf("%lld\n", ans);//输出并换行 return 0;&#125; 我的评测记录 Codeforces 洛谷；]]></content>
+      <categories>
+        <category>题解</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>Codeforces</tag>
+        <tag>埃氏筛</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[【题解】【洛谷 P1196】 [NOI2002]银河英雄传说]]></title>
     <url>%2F2019%2F02%2F03%2F%E3%80%90%E9%A2%98%E8%A7%A3%E3%80%91%E3%80%90%E6%B4%9B%E8%B0%B7-P1196%E3%80%91-NOI2002-%E9%93%B6%E6%B2%B3%E8%8B%B1%E9%9B%84%E4%BC%A0%E8%AF%B4%2F</url>
     <content type="text"><![CDATA[原题题面请查看洛谷 P1196 [NOI2002]银河英雄传说。 题解并查集 思路 观察合并指令：$M_{i,j}$，说到合并，就能想到一个优秀的【数据结构】并查集。 这就好比说到六六大顺，就能想到六小龄童，说到六小龄童，就想到他在西游记中的角色孙悟空。今年年初，中美合拍的西游记即将正式开机，六小龄童继续扮演美猴王孙悟空，六小龄童会用美猴王艺术形象努力创造一个正能量的形象，文体两开花，弘扬中华文化，希望大家多多关注。 观察询问指令：$C_{i,j}$，运用前缀和的思想，我们设$\text{front[x]}$为$x$前面有多少架战舰，那么查询的答案就是$| front[i]-front[j] | - 1$。 记$\text{num[i]}$为第$i$列飞船的数量，那么我们只需要对并查集的$\text{int find(int);}$函数进行魔改即可维护$\text{front[]}$数组。 代码代码如下： 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051#include &lt;cstdio&gt;#include &lt;iostream&gt;using std::cin;#define abs(a) ((a) &gt; 0 ? (a) : (-(a)))int T, ID[30001], front[30001], num[30001];int find(int);int main(void)&#123; register int i; scanf("%d", &amp;T); for (i = 1; i &lt;= 30000; ++i) &#123; ID[i] = i; num[i] = 1; &#125; while (T--) &#123; static char ch; static int x, y, fx, fy; cin &gt;&gt; ch; scanf("%d%d", &amp;x, &amp;y); fx = find(x), fy = find(y); if (ch == 'M') &#123; front[fx] += num[fy]; ID[fx] = fy; num[fy] += num[fx]; num[fx] = 0; &#125; else if (fx != fy) puts("-1"); else printf("%d\n", abs(front[x] - front[y]) - 1); &#125; return 0;&#125;int find(int x)&#123; if (ID[x] == x) return ID[x]; else &#123; register int root = find(ID[x]); front[x] += front[ID[x]]; return ID[x] = root; &#125;&#125;]]></content>
