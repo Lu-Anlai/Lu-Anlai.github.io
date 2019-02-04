@@ -1910,7 +1910,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #996b9c;
+  background: #ffff2b;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3198,7 +3198,7 @@ ul.breadcrumb li+li:last-child {
   }
 }
 .main-inner {
-  opacity: 0.986960440108936;
+  opacity: 0.9125;
 }
 body {
   background-image: url("https://acg.toubiec.cn/random");
