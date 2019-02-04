@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[【题解】【AtCoder dwacon2017-prelims-A】 動画検索]]></title>
+    <url>%2F2019%2F02%2F04%2F%E3%80%90%E9%A2%98%E8%A7%A3%E3%80%91%E3%80%90AtCoder-dwacon2017-prelims-A%E3%80%91-%E5%8B%95%E7%94%BB%E6%A4%9C%E7%B4%A2%2F</url>
+    <content type="text"><![CDATA[原题题面请查看AtCoder dwacon2017-prelims-A 動画検索。 也可在洛谷上查看：传送门。 题解模拟 思路模拟即可，注意答案的合法性。 代码代码如下： 123456789101112#include &lt;cstdio&gt;int n, a, b;int main(void)&#123; scanf("%d%d%d", &amp;n, &amp;a, &amp;b); if(a+b&gt;n) printf("%d\n", a + b - n); else puts("0"); return 0;&#125; 我的评测记录 AtCoder； 洛谷 R16059768。]]></content>
+      <categories>
+        <category>题解</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>AtCoder</tag>
+        <tag>模拟</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[【题解】【AtCoder ABC004-C】 入れ替え]]></title>
     <url>%2F2019%2F02%2F04%2F%E3%80%90%E9%A2%98%E8%A7%A3%E3%80%91%E3%80%90AtCoder-ABC004-C%E3%80%91-%E5%85%A5%E3%82%8C%E6%9B%BF%E3%81%88%2F</url>
     <content type="text"><![CDATA[原题题面请查看AtCoder ABC004-C 入れ替え。 也可在洛谷上查看：传送门。 题解模拟 思路答案$30$一循环，模拟即可。 代码代码如下： 1234567891011121314151617181920212223242526#include &lt;cstdio&gt;char str[7] = "123456";int a;void swap(char&amp;, char&amp;);int main(void)&#123; register int i, now = 0; scanf("%d", &amp;a); a %= 30; for (i = 0; i &lt; a; ++i) &#123; swap(str[now], str[now + 1]); if (++now == 5) now = 0; &#125; puts(str); return 0;&#125;void swap(char&amp; a, char&amp; b)&#123; a ^= b, b = a ^ b, a ^= b; return;&#125; 我的评测记录 AtCoder； 洛谷 R16059682。]]></content>
