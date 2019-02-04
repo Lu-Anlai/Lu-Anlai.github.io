@@ -3201,7 +3201,7 @@ ul.breadcrumb li+li:last-child {
   opacity: 0.9125;
 }
 body {
-  background-image: url("https://acg.toubiec.cn/random");
+  background-image: url("https://api.ixiaowai.cn/api/api.php");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
