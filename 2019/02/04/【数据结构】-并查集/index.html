@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="写作目的训练自己的Markdown绘图能力。 介绍并查集是一种数据结构，体现的是森林（或者树）形态，主要操作有两种：  并，意为合并，操作函数为void connect(int,int);（注：connect vt. &amp;amp; vi. 连接）； 查，意为查询： 查询一个节点的父亲节点，查询函数为int find(int);（注：find v. 寻找）； 查询两个节点是否在用一个集合内，查询函数为">
+  <meta name="description" content="介绍并查集是一种数据结构，体现的是森林（或者树）形态，主要操作有两种：  并，意为合并，操作函数为void connect(int,int);（注：connect vt. &amp;amp; vi. 连接）； 查，意为查询： 查询一个节点的父亲节点，查询函数为int find(int);（注：find v. 寻找）； 查询两个节点是否在用一个集合内，查询函数为bool search(int,int);（注">
 <meta name="keywords" content="数据结构,并查集">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【数据结构】 并查集">
 <meta property="og:url" content="http://yoursite.com/2019/02/04/【数据结构】-并查集/index.html">
 <meta property="og:site_name" content="Lu-Anlai&#39;s Blog">
-<meta property="og:description" content="写作目的训练自己的Markdown绘图能力。 介绍并查集是一种数据结构，体现的是森林（或者树）形态，主要操作有两种：  并，意为合并，操作函数为void connect(int,int);（注：connect vt. &amp;amp; vi. 连接）； 查，意为查询： 查询一个节点的父亲节点，查询函数为int find(int);（注：find v. 寻找）； 查询两个节点是否在用一个集合内，查询函数为">
+<meta property="og:description" content="介绍并查集是一种数据结构，体现的是森林（或者树）形态，主要操作有两种：  并，意为合并，操作函数为void connect(int,int);（注：connect vt. &amp;amp; vi. 连接）； 查，意为查询： 查询一个节点的父亲节点，查询函数为int find(int);（注：find v. 寻找）； 查询两个节点是否在用一个集合内，查询函数为bool search(int,int);（注">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-04T02:29:52.323Z">
+<meta property="og:updated_time" content="2019-02-04T02:31:01.214Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【数据结构】 并查集">
-<meta name="twitter:description" content="写作目的训练自己的Markdown绘图能力。 介绍并查集是一种数据结构，体现的是森林（或者树）形态，主要操作有两种：  并，意为合并，操作函数为void connect(int,int);（注：connect vt. &amp;amp; vi. 连接）； 查，意为查询： 查询一个节点的父亲节点，查询函数为int find(int);（注：find v. 寻找）； 查询两个节点是否在用一个集合内，查询函数为">
+<meta name="twitter:description" content="介绍并查集是一种数据结构，体现的是森林（或者树）形态，主要操作有两种：  并，意为合并，操作函数为void connect(int,int);（注：connect vt. &amp;amp; vi. 连接）； 查，意为查询： 查询一个节点的父亲节点，查询函数为int find(int);（注：find v. 寻找）； 查询两个节点是否在用一个集合内，查询函数为bool search(int,int);（注">
 
 
 
@@ -433,7 +433,7 @@
                 
               
 
-              <time title="创建时间：2019-02-04 10:27:07 / 修改时间：10:29:52" itemprop="dateCreated datePublished" datetime="2019-02-04T10:27:07+08:00">2019-02-04</time>
+              <time title="创建时间：2019-02-04 10:27:07 / 修改时间：10:31:01" itemprop="dateCreated datePublished" datetime="2019-02-04T10:27:07+08:00">2019-02-04</time>
             
 
             
@@ -497,8 +497,7 @@
       
 
       
-        <h2 id="写作目的"><a href="#写作目的" class="headerlink" title="写作目的"></a>写作目的</h2><p>训练自己的<code>Markdown</code>绘图能力。</p>
-<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>并查集是一种数据结构，体现的是森林（或者树）形态，主要操作有两种：</p>
+        <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>并查集是一种数据结构，体现的是森林（或者树）形态，主要操作有两种：</p>
 <ul>
 <li>并，意为合并，操作函数为<code>void connect(int,int);</code>（注：<code>connect vt. &amp; vi. 连接</code>）；</li>
 <li>查，意为查询：<ul>
@@ -507,6 +506,7 @@
 </ul>
 </li>
 </ul>
+<a id="more"></a>
 <h2 id="具体思路与实现"><a href="#具体思路与实现" class="headerlink" title="具体思路与实现"></a>具体思路与实现</h2><p>首先，因为并查集是森林（或者树）的一种，所以我们可以用树的三种表示方法其中之一——父亲结点表示法（其它两种方法是<code>儿子结点表示法</code>和<code>儿子、兄弟表示法</code>）。</p>
 <p>定义数组<code>ID[n]</code>（一般编程时数组下标从$1$开始，应使用<code>ID[n+1]</code>），<code>ID[i]</code>表示第$i$个结点当前状态下的父亲。</p>
 <p>假设有$n$个结点，为了方便，我们将每一个结点初始的父亲设为它自己。</p>
@@ -802,7 +802,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写作目的"><span class="nav-number">1.</span> <span class="nav-text">写作目的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍"><span class="nav-number">2.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体思路与实现"><span class="nav-number">3.</span> <span class="nav-text">具体思路与实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#int-find-int"><span class="nav-number">3.1.</span> <span class="nav-text">int find(int);</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#不带路径压缩"><span class="nav-number">3.1.1.</span> <span class="nav-text">不带路径压缩</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#路径压缩"><span class="nav-number">3.1.2.</span> <span class="nav-text">路径压缩</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#void-connect-int-int"><span class="nav-number">3.2.</span> <span class="nav-text">void connect(int,int);</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模板题"><span class="nav-number">4.</span> <span class="nav-text">模板题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体思路与实现"><span class="nav-number">2.</span> <span class="nav-text">具体思路与实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#int-find-int"><span class="nav-number">2.1.</span> <span class="nav-text">int find(int);</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#不带路径压缩"><span class="nav-number">2.1.1.</span> <span class="nav-text">不带路径压缩</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#路径压缩"><span class="nav-number">2.1.2.</span> <span class="nav-text">路径压缩</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#void-connect-int-int"><span class="nav-number">2.2.</span> <span class="nav-text">void connect(int,int);</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模板题"><span class="nav-number">3.</span> <span class="nav-text">模板题</span></a></li></ol></div>
             
 
           </div>
