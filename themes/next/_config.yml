@@ -867,9 +867,9 @@ canvas_nest:
   onmobile: true # display on mobile or not
   # color: '14,144,210' # RGB values, use ',' to separate
   color: '0,0,0' # Black
-  opacity: 0.9 # the opacity of line: 0~1
+  opacity: 1 # the opacity of line: 0~1
   zIndex: -1 # z-index property of the background
-  count: 256 # the number of lines
+  count: 99 # the number of lines
 
 # JavaScript 3D library.
 # Dependencies: https://github.com/theme-next/theme-next-three
