@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[欢迎]]></title>
+    <url>%2F2038%2F01%2F19%2F%E6%AC%A2%E8%BF%8E%2F</url>
+    <content type="text"><![CDATA[欢迎来到$\text{Lu-Anlai’s Blog}$本博客由 Hexo 强力驱动 v3.8.0 | 主题 – NexT.Gemini v7.0.0 背景是随机二次元图片$\text{API}$，您可以点击右侧的图片查看更多。 博客主要内容是题解（水题题解），之前在洛谷博客和$\text{CSDN}$博客发布的文章不久就会转移到这个博客上来（咕咕咕）。]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[【题解】【AtCoder dwacon2017-prelims-A】 動画検索]]></title>
     <url>%2F2019%2F02%2F04%2F%E3%80%90%E9%A2%98%E8%A7%A3%E3%80%91%E3%80%90AtCoder-dwacon2017-prelims-A%E3%80%91-%E5%8B%95%E7%94%BB%E6%A4%9C%E7%B4%A2%2F</url>
     <content type="text"><![CDATA[原题题面请查看AtCoder dwacon2017-prelims-A 動画検索。 也可在洛谷上查看：传送门。 题解模拟 思路模拟即可，注意答案的合法性。 代码代码如下： 123456789101112#include &lt;cstdio&gt;int n, a, b;int main(void)&#123; scanf("%d%d%d", &amp;n, &amp;a, &amp;b); if(a+b&gt;n) printf("%d\n", a + b - n); else puts("0"); return 0;&#125; 我的评测记录 AtCoder； 洛谷 R16059768。]]></content>
