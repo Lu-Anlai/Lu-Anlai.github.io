@@ -6,6 +6,16 @@
     <content type="text"><![CDATA[欢迎来到$\text{Lu-Anlai’s Blog}$本博客由 Hexo 强力驱动 v3.8.0 | 主题 – NexT.Gemini v7.0.0 背景是随机二次元图片$\text{API}$，您可以点击右侧的图片查看更多。 博客主要内容是题解（水题题解），之前在洛谷博客和$\text{CSDN}$博客发布的文章不久就会转移到这个博客上来（咕咕咕）。]]></content>
   </entry>
   <entry>
+    <title><![CDATA[Hexo+NexT主题搭建博客教程（Windows）]]></title>
+    <url>%2F2019%2F02%2F05%2FHexo-NexT%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B%EF%BC%88Windows%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[前期准备 注册$\text{GitHub}$账号； 先注册一个$\text{GitHub}$账号，官网传送门：$\text{GitHub}$； 安装$\text{Git}$； 下载$\text{Git}$到本地并安装，你可以到官网：$\text{Git}$处下载安装包。 安装时全程按Next即可。 安装$\text{Node.js}$； 下载$\text{Node.js}$到本地并安装，你可以到官网：$\text{Node.js}$处下载安装包（推荐选择$\text{LTS}$版）。 安装时全程按Next即可。 配置本地$\text{Git}$； 未完待续。 在$\text{GitHub}$中新建一个Repository； 搭建博客安装并配置$\text{Hexo}$新建一个文件夹，作为根目录用来存放博客文件（文件夹名任意，推荐命名成&lt;username&gt;.github.io，其中&lt;username&gt;是你$\text{GitHub}$的$\text{ID}$）。 然后在根目录中右键，选择Git Bash Here，然后在弹出来的窗口里输入命令npm install -g hexo（后文所说的输入命令都在此窗口输入），然后耐心等待。 注：等待时间从$2 \text{s} $到$30 \text{min}$不等，请耐心等待，中途不要进行任何操作。 如果出现了一长串代码，又没有ERROR提示出现的话，就是安装$\text{Hexo}$成功了。 接着输入：hexo init和npm install，如果弄完之后文件夹变成了这样： 那就没问题了。 预览博客在Git Bash窗口中输入hexo s，预览博客。 如果窗口中出现效果如下图，表明进行预览成功： 再打开网址http://localhost:4000/，即可对博客进行预览。 预览结束后一定要按Ctrl+C关闭预览。 至此博客搭建完成，但仍无法在公网上查看。 部署博客至$\text{GitHub}$输入命令npm install hexo-deployer-git --save安装deployer。 打开根目录下的_config.yml，按Ctrl+F搜索关键词deploy，找到形如下面的内容： 1234deploy: type: git repository: branch: 改成： 1234deploy: type: git repository: https://github.com/&lt;username&gt;/&lt;username&gt;.github.io.git branch: master 依次然后输入命令： 123hexo cleanhexo ghexo d 如果没有出错的话，等几分钟，再用浏览器打开&lt;username&gt;.github.io.git，就可以看到你的博客了。（此时别人也可以通过这个网址看到你的博客） 常见问题问题：输入hexo d后显示deployer not found:git； 解决办法： 修改根目录名称为&lt;username&gt;.github.io，某些时候有玄学问题，不是你仓库对应的名称部署不上去； 检查_config.yml文件内容是否完整，注意每一个:后面都有且只有一个空格； 输入命令npm install hexo-deployer-git --save； 再次尝试部署至$\text{GitHub}$。 美化博客未完待续。]]></content>
+      <tags>
+        <tag>教程</tag>
+        <tag>Hexo</tag>
+        <tag>NexT主题</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[【题解】【AtCoder dwacon2017-prelims-A】 動画検索]]></title>
     <url>%2F2019%2F02%2F04%2F%E3%80%90%E9%A2%98%E8%A7%A3%E3%80%91%E3%80%90AtCoder-dwacon2017-prelims-A%E3%80%91-%E5%8B%95%E7%94%BB%E6%A4%9C%E7%B4%A2%2F</url>
     <content type="text"><![CDATA[原题题面请查看AtCoder dwacon2017-prelims-A 動画検索。 也可在洛谷上查看：传送门。 题解模拟 思路模拟即可，注意答案的合法性。 代码代码如下： 123456789101112#include &lt;cstdio&gt;int n, a, b;int main(void)&#123; scanf("%d%d%d", &amp;n, &amp;a, &amp;b); if(a+b&gt;n) printf("%d\n", a + b - n); else puts("0"); return 0;&#125; 我的评测记录 AtCoder； 洛谷 R16059768。]]></content>
