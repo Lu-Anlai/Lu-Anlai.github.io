@@ -592,7 +592,7 @@
                 
               
 
-              <time title="创建时间：2019-02-05 16:20:28 / 修改时间：18:10:26" itemprop="dateCreated datePublished" datetime="2019-02-05T16:20:28+08:00">2019-02-05</time>
+              <time title="创建时间：2019-02-05 16:20:28 / 修改时间：18:14:56" itemprop="dateCreated datePublished" datetime="2019-02-05T16:20:28+08:00">2019-02-05</time>
             
 
             
@@ -632,58 +632,16 @@
 
       
         
+          <p>网上的教程都不够详细，本人自己写一篇。</p>
+          <!--noindex-->
           
-            <h1 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h1><ol>
-<li><p>注册$\text{GitHub}$账号；</p>
-<p> 先注册一个$\text{GitHub}$账号，官网传送门：<a href="https://github.com/" target="_blank" rel="noopener">$\text{GitHub}$</a>；</p>
-</li>
-<li><p>安装$\text{Git}$；</p>
-<p> 下载$\text{Git}$到本地并安装，你可以到官网：<a href="https://git-scm.com/" target="_blank" rel="noopener">$\text{Git}$</a>处下载安装包。</p>
-<p> 安装时全程按<code>Next</code>即可。</p>
-</li>
-<li><p>安装$\text{Node.js}$；</p>
-<p> 下载$\text{Node.js}$到本地并安装，你可以到官网：<a href="https://nodejs.org/en/" target="_blank" rel="noopener">$\text{Node.js}$</a>处下载安装包（推荐选择$\text{LTS}$版）。</p>
-<p> 安装时全程按<code>Next</code>即可。</p>
-</li>
-<li><p>配置本地$\text{Git}$；</p>
-</li>
-</ol>
-<p>未完待续。</p>
-<ol start="5">
-<li>在$\text{GitHub}$中新建一个<code>Repository</code>；</li>
-</ol>
-<h1 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h1><h2 id="安装并配置-text-Hexo"><a href="#安装并配置-text-Hexo" class="headerlink" title="安装并配置$\text{Hexo}$"></a>安装并配置$\text{Hexo}$</h2><p>新建一个文件夹，<strong>作为根目录</strong>用来存放博客文件（文件夹名任意，推荐命名成<code>&lt;username&gt;.github.io</code>，其中<code>&lt;username&gt;</code>是你$\text{GitHub}$的$\text{ID}$）。</p>
-<p>然后在根目录中右键，选择<code>Git Bash Here</code>，然后在弹出来的窗口里输入命令<code>npm install -g hexo</code>（后文所说的输入命令都在此窗口输入），然后耐心等待。</p>
-<p>注：等待时间从$2 \text{s} $到$30 \text{min}$不等，请耐心等待，中途不要进行任何操作。</p>
-<p>如果出现了一长串代码，又没有<code>ERROR</code>提示出现的话，就是安装$\text{Hexo}$成功了。</p>
-<p>接着输入：<code>hexo init</code>和<code>npm install</code>，如果弄完之后文件夹变成了这样：</p>
-<p><img src="https://wzs666233.github.io/2019/02/01/how/p4.webp" alt="1"></p>
-<p>那就没问题了。</p>
-<h2 id="预览博客"><a href="#预览博客" class="headerlink" title="预览博客"></a>预览博客</h2><p>在<code>Git Bash</code>窗口中输入<code>hexo s</code>，预览博客。</p>
-<p>如果窗口中出现效果如下图，表明进行预览成功：</p>
-<p><img src="图片未完待续。" alt="图片未完待续。"></p>
-<p>再打开网址<a href="http://localhost:4000/" target="_blank" rel="noopener"><code>http://localhost:4000/</code></a>，即可对博客进行预览。</p>
-<p>预览结束后一定要按<code>Ctrl+C</code>关闭预览。</p>
-<p>至此博客搭建完成，但仍无法在公网上查看。</p>
-<h1 id="部署博客至-text-GitHub"><a href="#部署博客至-text-GitHub" class="headerlink" title="部署博客至$\text{GitHub}$"></a>部署博客至$\text{GitHub}$</h1><p>输入命令<code>npm install hexo-deployer-git --save</code>安装<code>deployer</code>。</p>
-<p>打开根目录下的<code>_config.yml</code>，按<code>Ctrl+F</code>搜索关键词<code>deploy</code>，找到形如下面的内容：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: </span><br><span class="line">  branch:</span><br></pre></td></tr></table></figure>
-<p>改成：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/&lt;username&gt;/&lt;username&gt;.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<p>依次然后输入命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>如果没有出错的话，等几分钟，再用浏览器打开<code>&lt;username&gt;.github.io.git</code>，就可以看到你的博客了。（此时别人也可以通过这个网址看到你的博客）</p>
-<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><p>问题：输入<code>hexo d</code>后显示<code>deployer not found:git</code>；</p>
-<p>解决办法：</p>
-<ol>
-<li>修改根目录名称为<code>&lt;username&gt;.github.io</code>，某些时候有玄学问题，不是你仓库对应的名称部署不上去；</li>
-<li>检查<code>_config.yml</code>文件内容是否完整，注意每一个<code>:</code>后面都有且只有一个空格；</li>
-<li>输入命令<code>npm install hexo-deployer-git --save</code>；</li>
-<li>再次尝试部署至$\text{GitHub}$。</li>
-</ol>
-<h1 id="美化博客"><a href="#美化博客" class="headerlink" title="美化博客"></a>美化博客</h1><p>未完待续。</p>
-
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/02/05/Hexo-NexT主题搭建博客教程（Windows）/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           
+          <!--/noindex-->
         
       
     </div>
