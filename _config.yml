@@ -4,12 +4,12 @@
 
 # Site
 title: Lu-Anlai's Blog
-subtitle: 怎么可能有副标题
-description: 没有介绍
+subtitle: 你相信玄学吗？
+description: 学生，江西赣州人
 keywords:
 author: 卢安来
 language: zh-CN
-timezone:
+timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
