@@ -96,25 +96,25 @@
 
 
 
-  <meta name="description" content="原题题面请查看洛谷 P1196 [NOI2002]银河英雄传说。 题解并查集">
-<meta name="keywords" content="题解,并查集,洛谷,NOIp提高组,图论">
+  <meta name="description" content="原题题面请查看洛谷 P1340 兽径管理。 题解$\text{Kruskal}$算法">
+<meta name="keywords" content="题解,并查集,洛谷,Kruskal">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【题解】【洛谷 P1196】 [NOI2002]银河英雄传说">
-<meta property="og:url" content="http://yoursite.com/2019/02/03/【题解】【洛谷-P1196】-NOI2002-银河英雄传说/index.html">
+<meta property="og:title" content="【题解】【洛谷 P1340】 兽径管理">
+<meta property="og:url" content="http://yoursite.com/2019/02/06/【题解】【洛谷-P1340】-兽径管理/index.html">
 <meta property="og:site_name" content="Lu-Anlai&#39;s Blog">
-<meta property="og:description" content="原题题面请查看洛谷 P1196 [NOI2002]银河英雄传说。 题解并查集">
+<meta property="og:description" content="原题题面请查看洛谷 P1340 兽径管理。 题解$\text{Kruskal}$算法">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-03T15:00:53.279Z">
+<meta property="og:updated_time" content="2019-02-06T08:35:10.224Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【题解】【洛谷 P1196】 [NOI2002]银河英雄传说">
-<meta name="twitter:description" content="原题题面请查看洛谷 P1196 [NOI2002]银河英雄传说。 题解并查集">
+<meta name="twitter:title" content="【题解】【洛谷 P1340】 兽径管理">
+<meta name="twitter:description" content="原题题面请查看洛谷 P1340 兽径管理。 题解$\text{Kruskal}$算法">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/02/03/【题解】【洛谷-P1196】-NOI2002-银河英雄传说/">
+  <link rel="canonical" href="http://yoursite.com/2019/02/06/【题解】【洛谷-P1340】-兽径管理/">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>【题解】【洛谷 P1196】 [NOI2002]银河英雄传说 | Lu-Anlai's Blog</title>
+  <title>【题解】【洛谷 P1340】 兽径管理 | Lu-Anlai's Blog</title>
   
 
 
@@ -391,7 +391,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/03/【题解】【洛谷-P1196】-NOI2002-银河英雄传说/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/06/【题解】【洛谷-P1340】-兽径管理/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="卢安来">
@@ -408,7 +408,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">【题解】【洛谷 P1196】 [NOI2002]银河英雄传说
+          <h1 class="post-title" itemprop="name headline">【题解】【洛谷 P1340】 兽径管理
 
               
             
@@ -434,7 +434,7 @@
                 
               
 
-              <time title="创建时间：2019-02-03 17:54:47 / 修改时间：23:00:53" itemprop="dateCreated datePublished" datetime="2019-02-03T17:54:47+08:00">2019-02-03</time>
+              <time title="创建时间：2019-02-06 16:24:05 / 修改时间：16:35:10" itemprop="dateCreated datePublished" datetime="2019-02-06T16:24:05+08:00">2019-02-06</time>
             
 
             
@@ -498,19 +498,25 @@
       
 
       
-        <h2 id="原题"><a href="#原题" class="headerlink" title="原题"></a>原题</h2><p>题面请查看<a href="https://www.luogu.org/problemnew/show/P1196" target="_blank" rel="noopener">洛谷 P1196 [NOI2002]银河英雄传说</a>。</p>
-<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>并查集</p>
+        <h2 id="原题"><a href="#原题" class="headerlink" title="原题"></a>原题</h2><p>题面请查看<a href="https://www.luogu.org/problemnew/show/P1340" target="_blank" rel="noopener">洛谷 P1340 兽径管理</a>。</p>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>$\text{Kruskal}$算法</p>
 <a id="more"></a>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><ul>
-<li>观察合并指令：$M_{i,j}$，说到合并，就能想到一个优秀的<strong>【数据结构】并查集</strong>。</li>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><ol>
+<li>先读入所有边，每条边以时间为编号<code>ID</code>；</li>
+<li>对边以<strong>边权</strong>为关键字进行排序；</li>
+<li>以$1$~$w$为参数进行$\text{Kruskal}$算法：<ul>
+<li>如果这条边的编号大于所给参数，这条边不参与算法；</li>
+<li>否则寻找最小生成树。</li>
 </ul>
-<p><del>这就好比说到六六大顺，就能想到六小龄童，说到六小龄童，就想到他在西游记中的角色孙悟空。今年年初，中美合拍的西游记即将正式开机，六小龄童继续扮演美猴王孙悟空，六小龄童会用美猴王艺术形象努力创造一个正能量的形象，文体两开花，弘扬中华文化，希望大家多多关注。</del></p>
-<ul>
-<li>观察询问指令：$C_{i,j}$，运用<strong>前缀和</strong>的思想，我们设$\text{front[x]}$为$x$前面有多少架战舰，那么查询的答案就是$| front[i]-front[j] | - 1$。</li>
-</ul>
-<p>记$\text{num[i]}$为第$i$列飞船的数量，那么我们只需要对并查集的$\text{int find(int);}$函数进行魔改即可维护$\text{front[]}$数组。</p>
+</li>
+<li>输出答案。</li>
+</ol>
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>代码如下：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">cin</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> abs(a) ((a) &gt; 0 ? (a) : (-(a)))</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> T, ID[<span class="number">30001</span>], front[<span class="number">30001</span>], num[<span class="number">30001</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">register</span> <span class="keyword">int</span> i;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;T);</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= <span class="number">30000</span>; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        ID[i] = i;</span><br><span class="line">        num[i] = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (T--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">static</span> <span class="keyword">char</span> ch;</span><br><span class="line">        <span class="keyword">static</span> <span class="keyword">int</span> x, y, fx, fy;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; ch;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;x, &amp;y);</span><br><span class="line">        fx = find(x), fy = find(y);</span><br><span class="line">        <span class="keyword">if</span> (ch == <span class="string">'M'</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            front[fx] += num[fy];</span><br><span class="line">            ID[fx] = fy;</span><br><span class="line">            num[fy] += num[fx];</span><br><span class="line">            num[fx] = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (fx != fy)</span><br><span class="line">            <span class="built_in">puts</span>(<span class="string">"-1"</span>);</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, <span class="built_in">abs</span>(front[x] - front[y]) - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (ID[x] == x)</span><br><span class="line">        <span class="keyword">return</span> ID[x];</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">register</span> <span class="keyword">int</span> root = find(ID[x]);</span><br><span class="line">        front[x] += front[ID[x]];</span><br><span class="line">        <span class="keyword">return</span> ID[x] = root;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="comment">//头文件</span></span><br><span class="line"><span class="keyword">using</span> <span class="built_in">std</span>::sort;<span class="comment">//快速排序</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Edge</span>//定义 边 的结构体</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> ID, f, t, val;</span><br><span class="line">    <span class="keyword">bool</span> <span class="keyword">operator</span>&lt;(<span class="keyword">const</span> Edge &amp;a) <span class="keyword">const</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> val &lt; a.val;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Union_Find</span>//定义 并查集 的结构体</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> ID[<span class="number">201</span>];</span><br><span class="line">    Union_Find(<span class="keyword">int</span>);<span class="comment">//析构函数，用于并查集的初始化，参数为n</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">connect</span><span class="params">(<span class="keyword">int</span>, <span class="keyword">int</span>)</span></span>;<span class="comment">//并</span></span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">search</span><span class="params">(<span class="keyword">int</span>, <span class="keyword">int</span>)</span></span>;<span class="comment">//查</span></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span>)</span></span>;<span class="comment">//查</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, w;</span><br><span class="line">Edge E[<span class="number">6001</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Kruskal</span><span class="params">(<span class="keyword">int</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">register</span> <span class="keyword">int</span> i;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;w);</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= w; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        E[i].ID = i;<span class="comment">//每条边以时间为编号</span></span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>, &amp;E[i].f, &amp;E[i].t, &amp;E[i].val);<span class="comment">//读入</span></span><br><span class="line">    &#125;</span><br><span class="line">    sort(E + <span class="number">1</span>, E + w + <span class="number">1</span>);<span class="comment">//快速排序</span></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= w; ++i)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, Kruskal(i));<span class="comment">//调用函数并输出结果</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;<span class="comment">//在主函数末尾加上return 0;是一个好习惯</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Union_Find::Union_Find(<span class="keyword">int</span> n)<span class="comment">//析构函数，用于并查集的初始化，参数为n</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">register</span> <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= n; ++i)</span><br><span class="line">        ID[i] = i;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> Union_Find::connect(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">register</span> <span class="keyword">int</span> ra = find(a), rb = find(b);</span><br><span class="line">    <span class="keyword">if</span> (ra != rb)</span><br><span class="line">        ID[rb] = ra;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">bool</span> Union_Find::search(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> find(a) == find(b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> Union_Find::find(<span class="keyword">int</span> x)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (x == ID[x])</span><br><span class="line">        <span class="keyword">return</span> x;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> ID[x] = find(ID[x]);<span class="comment">//路径压缩</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Kruskal</span><span class="params">(<span class="keyword">int</span> time)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">register</span> <span class="keyword">int</span> i, cnt = <span class="number">0</span>, sum = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">//cnt为连接边的数量</span></span><br><span class="line">    <span class="function">Union_Find <span class="title">UF</span><span class="params">(n)</span></span>;<span class="comment">//先定义一个并查集UF，析构函数的参数为n</span></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= w &amp;&amp; cnt &lt; n - <span class="number">1</span>; ++i)</span><br><span class="line">        <span class="keyword">if</span> (E[i].ID &gt; time)<span class="comment">//如果这条边的编号大于所给参数，这条边不参与算法</span></span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (!UF.search(E[i].f, E[i].t))<span class="comment">//如果这条边连接的两个点不在同一个集合内</span></span><br><span class="line">        &#123;</span><br><span class="line">            ++cnt;</span><br><span class="line">            sum += E[i].val;</span><br><span class="line">            UF.connect(E[i].f, E[i].t);</span><br><span class="line">        &#125;<span class="comment">//统计答案</span></span><br><span class="line">    <span class="keyword">if</span> (cnt != n - <span class="number">1</span>)<span class="comment">//如果无法构成树</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;<span class="comment">//题目要求输出-1</span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> sum;<span class="comment">//返回答案</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="我的评测记录"><a href="#我的评测记录" class="headerlink" title="我的评测记录"></a>我的评测记录</h3><ul>
+<li><a href="https://www.luogu.org/recordnew/show/16089070" target="_blank" rel="noopener">洛谷 R16089070</a>。</li>
+</ul>
+
       
     </div>
 
@@ -539,9 +545,7 @@
           
             <a href="/tags/洛谷/" rel="tag"># 洛谷</a>
           
-            <a href="/tags/NOIp提高组/" rel="tag"># NOIp提高组</a>
-          
-            <a href="/tags/图论/" rel="tag"># 图论</a>
+            <a href="/tags/Kruskal/" rel="tag"># Kruskal</a>
           
         </div>
       
@@ -554,8 +558,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/03/【题解】【洛谷-P1967】-货车运输/" rel="next" title="【题解】【洛谷 P1967】 货车运输">
-                <i class="fa fa-chevron-left"></i> 【题解】【洛谷 P1967】 货车运输
+              <a href="/2019/02/05/【题解】【洛谷-P2574】-XOR的艺术/" rel="next" title="【题解】【洛谷 P2574】 XOR的艺术">
+                <i class="fa fa-chevron-left"></i> 【题解】【洛谷 P2574】 XOR的艺术
               </a>
             
           </div>
@@ -564,8 +568,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/02/03/【题解】【Codeforces-271B】-Prime-Matrix/" rel="prev" title="【题解】【Codeforces 271B】 Prime Matrix">
-                【题解】【Codeforces 271B】 Prime Matrix <i class="fa fa-chevron-right"></i>
+              <a href="/2038/01/19/欢迎/" rel="prev" title="欢迎">
+                欢迎 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -766,7 +770,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#原题"><span class="nav-number">1.</span> <span class="nav-text">原题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题解"><span class="nav-number">2.</span> <span class="nav-text">题解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#思路"><span class="nav-number">2.1.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">2.2.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#原题"><span class="nav-number">1.</span> <span class="nav-text">原题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题解"><span class="nav-number">2.</span> <span class="nav-text">题解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#思路"><span class="nav-number">2.1.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">2.2.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#我的评测记录"><span class="nav-number">2.3.</span> <span class="nav-text">我的评测记录</span></a></li></ol></li></ol></div>
             
 
           </div>
