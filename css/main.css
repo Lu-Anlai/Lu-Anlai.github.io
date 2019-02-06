@@ -1910,7 +1910,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #4ea65b;
+  background: #d487ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3198,7 +3198,7 @@ ul.breadcrumb li+li:last-child {
   }
 }
 .main-inner {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 body {
   background-image: url("https://api.ixiaowai.cn/api/api.php");
