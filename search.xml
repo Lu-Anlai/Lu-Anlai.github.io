@@ -27,10 +27,10 @@
         <category>题解</category>
       </categories>
       <tags>
+        <tag>并查集</tag>
         <tag>题解</tag>
         <tag>洛谷</tag>
         <tag>Kruskal</tag>
-        <tag>并查集</tag>
       </tags>
   </entry>
   <entry>
@@ -41,10 +41,10 @@
         <category>题解</category>
       </categories>
       <tags>
+        <tag>数据结构</tag>
         <tag>题解</tag>
         <tag>洛谷</tag>
         <tag>线段树</tag>
-        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
@@ -91,8 +91,8 @@
         <category>数据结构</category>
       </categories>
       <tags>
-        <tag>并查集</tag>
         <tag>数据结构</tag>
+        <tag>并查集</tag>
       </tags>
   </entry>
   <entry>
@@ -116,9 +116,9 @@
         <category>题解</category>
       </categories>
       <tags>
+        <tag>并查集</tag>
         <tag>题解</tag>
         <tag>洛谷</tag>
-        <tag>并查集</tag>
         <tag>NOIp提高组</tag>
         <tag>图论</tag>
       </tags>
@@ -131,12 +131,12 @@
         <category>题解</category>
       </categories>
       <tags>
+        <tag>并查集</tag>
         <tag>题解</tag>
         <tag>洛谷</tag>
-        <tag>Kruskal</tag>
-        <tag>并查集</tag>
         <tag>NOIp提高组</tag>
         <tag>图论</tag>
+        <tag>Kruskal</tag>
         <tag>LCA</tag>
       </tags>
   </entry>
