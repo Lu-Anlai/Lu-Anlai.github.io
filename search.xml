@@ -6,6 +6,20 @@
     <content type="text"><![CDATA[欢迎来到$\text{Lu-Anlai’s Blog}$本博客由 Hexo 强力驱动 v3.8.0 | 主题 – NexT.Gemini v7.0.0 背景是随机二次元图片$\text{API}$，您可以点击右侧的图片查看更多。 博客主要内容是题解（水题题解），之前在洛谷博客和$\text{CSDN}$博客发布的文章不久就会转移到这个博客上来（咕咕咕）。]]></content>
   </entry>
   <entry>
+    <title><![CDATA[【题解】【洛谷 P1198】 [JSOI2008]最大数]]></title>
+    <url>%2F2019%2F02%2F07%2F%E3%80%90%E9%A2%98%E8%A7%A3%E3%80%91%E3%80%90%E6%B4%9B%E8%B0%B7-P1198%E3%80%91-JSOI2008-%E6%9C%80%E5%A4%A7%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[原题题面请查看洛谷 P1198 [JSOI2008]最大数。 题解线段树 思路为节省写代码的时间，我们采用阉割版线段树（只具有单点修改和区间查询两个功能）。 具体实现过程 定义空树Tree，记len为当前数列的长度； 模拟操作： 查询操作： 记T=Tree.Query(1,1,m,len-L+1,len)，输出T并换行即可； 插入操作： 单点修改：Tree.Update(1,1,m,++len,(num+T)%D)； 结束。 代码代码如下： 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869#include &lt;cstdio&gt;#define INF 0X3F3F3F3F3F3F3F3F//定义正无穷#define max(a, b) ((a) &gt; (b) ? (a) : (b))//定义max()函数typedef long long llstruct Segment_Tree //线段树模板&#123; ll unit[(200000 &lt;&lt; 2) + 1]; //线段树空间要开到4倍 void Update(int, int, int, int, ll); //更新函数 ll Query(int, int, int, int, int); //查询函数&#125;;char ch[2];//操作符int m, len;//len表示数列长度ll D, T, num;Segment_Tree Tree; //线段树int main(void)&#123; register int i; scanf("%d%lld", &amp;m, &amp;D);//读入 for (i = 1; i &lt;= m; ++i)//模拟 &#123; scanf("%s%lld", ch, &amp;num); if (ch[0] == 'Q') &#123; if (!num) T = 0; else T = Tree.Query(1, 1, m, len - num + 1, len) % D;//查询 printf("%lld\n", T);//输出并换行 &#125; if (ch[0] == 'A') &#123; ++len;//数列边长 Tree.Update(1, 1, m, len, (num + T) % D);//更新 &#125; &#125; return 0;&#125;void Segment_Tree::Update(int ID, int l, int r, int index, ll val)&#123; if (l == r) unit[ID] = val; else &#123; register int mid = (l + r) &gt;&gt; 1; if (index &lt;= mid) Update(ID &lt;&lt; 1, l, mid, index, val); //更新左子树 if (index &gt; mid) Update(ID &lt;&lt; 1 | 1, mid + 1, r, index, val); //更新右子树 unit[ID] = max(unit[ID &lt;&lt; 1], unit[ID &lt;&lt; 1 | 1]) % D; &#125; return;&#125;ll Segment_Tree::Query(int ID, int l, int r, int x, int y)&#123; if (x &lt;= l &amp;&amp; r &lt;= y) return unit[ID]; register int mid = (l + r) &gt;&gt; 1; register ll a = -INF, b = -INF; if (x &lt;= mid) a = Query(ID &lt;&lt; 1, l, mid, x, y); //查询左子树 if (y &gt; mid) b = Query(ID &lt;&lt; 1 | 1, mid + 1, r, x, y); //查询右子树 return max(a, b); //返回查询结果&#125; 我的评测记录 洛谷 R16096515。]]></content>
+      <categories>
+        <category>题解</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>洛谷</tag>
+        <tag>JSOI2008</tag>
+        <tag>线段树</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[【题解】【洛谷 P1340】 兽径管理]]></title>
     <url>%2F2019%2F02%2F06%2F%E3%80%90%E9%A2%98%E8%A7%A3%E3%80%91%E3%80%90%E6%B4%9B%E8%B0%B7-P1340%E3%80%91-%E5%85%BD%E5%BE%84%E7%AE%A1%E7%90%86%2F</url>
     <content type="text"><![CDATA[原题题面请查看洛谷 P1340 兽径管理。 题解$\text{Kruskal}$算法 思路 先读入所有边，每条边以时间为编号ID； 对边以边权为关键字进行排序； 以$1$~$w$为参数进行$\text{Kruskal}$算法： 如果这条边的编号大于所给参数，这条边不参与算法； 否则寻找最小生成树。 输出答案。 代码代码如下： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091#include &lt;algorithm&gt;#include &lt;cstdio&gt;//头文件using std::sort;//快速排序struct Edge//定义 边 的结构体&#123; int ID, f, t, val; bool operator&lt;(const Edge &amp;a) const &#123; return val &lt; a.val; &#125;&#125;;struct Union_Find//定义 并查集 的结构体&#123; int ID[201]; Union_Find(int);//析构函数，用于并查集的初始化，参数为n void connect(int, int);//并 bool search(int, int);//查 int find(int);//查&#125;;int n, w;Edge E[6001];int Kruskal(int);int main(void)&#123; register int i; scanf("%d%d", &amp;n, &amp;w); for (i = 1; i &lt;= w; ++i) &#123; E[i].ID = i;//每条边以时间为编号 scanf("%d%d%d", &amp;E[i].f, &amp;E[i].t, &amp;E[i].val);//读入 &#125; sort(E + 1, E + w + 1);//快速排序 for (i = 1; i &lt;= w; ++i) printf("%d\n", Kruskal(i));//调用函数并输出结果 return 0;//在主函数末尾加上return 0;是一个好习惯&#125;Union_Find::Union_Find(int n)//析构函数，用于并查集的初始化，参数为n&#123; register int i; for (i = 1; i &lt;= n; ++i) ID[i] = i; return;&#125;void Union_Find::connect(int a, int b)&#123; register int ra = find(a), rb = find(b); if (ra != rb) ID[rb] = ra; return;&#125;bool Union_Find::search(int a, int b)&#123; return find(a) == find(b);&#125;int Union_Find::find(int x)&#123; if (x == ID[x]) return x; else return ID[x] = find(ID[x]);//路径压缩&#125;int Kruskal(int time)&#123; register int i, cnt = 0, sum = 0; //cnt为连接边的数量 Union_Find UF(n);//先定义一个并查集UF，析构函数的参数为n for (i = 1; i &lt;= w &amp;&amp; cnt &lt; n - 1; ++i) if (E[i].ID &gt; time)//如果这条边的编号大于所给参数，这条边不参与算法 continue; else if (!UF.search(E[i].f, E[i].t))//如果这条边连接的两个点不在同一个集合内 &#123; ++cnt; sum += E[i].val; UF.connect(E[i].f, E[i].t); &#125;//统计答案 if (cnt != n - 1)//如果无法构成树 return -1;//题目要求输出-1 else return sum;//返回答案&#125; 我的评测记录 洛谷 R16089070。]]></content>
@@ -14,9 +28,9 @@
       </categories>
       <tags>
         <tag>题解</tag>
-        <tag>并查集</tag>
         <tag>洛谷</tag>
         <tag>Kruskal</tag>
+        <tag>并查集</tag>
       </tags>
   </entry>
   <entry>
@@ -28,9 +42,9 @@
       </categories>
       <tags>
         <tag>题解</tag>
-        <tag>数据结构</tag>
         <tag>洛谷</tag>
         <tag>线段树</tag>
+        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
@@ -77,8 +91,8 @@
         <category>数据结构</category>
       </categories>
       <tags>
-        <tag>数据结构</tag>
         <tag>并查集</tag>
+        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
@@ -103,8 +117,8 @@
       </categories>
       <tags>
         <tag>题解</tag>
-        <tag>并查集</tag>
         <tag>洛谷</tag>
+        <tag>并查集</tag>
         <tag>NOIp提高组</tag>
         <tag>图论</tag>
       </tags>
@@ -118,11 +132,11 @@
       </categories>
       <tags>
         <tag>题解</tag>
-        <tag>并查集</tag>
         <tag>洛谷</tag>
+        <tag>Kruskal</tag>
+        <tag>并查集</tag>
         <tag>NOIp提高组</tag>
         <tag>图论</tag>
-        <tag>Kruskal</tag>
         <tag>LCA</tag>
       </tags>
   </entry>
