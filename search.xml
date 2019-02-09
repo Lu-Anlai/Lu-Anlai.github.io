@@ -6,6 +6,19 @@
     <content type="text"><![CDATA[欢迎来到$\text{Lu-Anlai’s Blog}$本博客由 Hexo 强力驱动 v3.8.0 | 主题 – NexT.Gemini v7.0.0 背景是随机二次元图片$\text{API}$，您可以点击右侧的图片查看更多。 博客主要内容是题解（水题题解），之前在洛谷博客和$\text{CSDN}$博客发布的文章不久就会转移到这个博客上来（咕咕咕）。]]></content>
   </entry>
   <entry>
+    <title><![CDATA[【题解（水）】【AtCoder Code Festival Team Relay A】 Kaiden]]></title>
+    <url>%2F2019%2F02%2F09%2F%E3%80%90%E9%A2%98%E8%A7%A3%EF%BC%88%E6%B0%B4%EF%BC%89%E3%80%91%E3%80%90AtCoder-Code-Festival-Team-Relay-A%E3%80%91-Kaiden%2F</url>
+    <content type="text"><![CDATA[原题题面请查看AtCoder ABC004-C 入れ替え。 也可在洛谷上查看：传送门。 题解模拟 思路此题太水，略去不写。 代码代码如下： 123456789101112131415#include &lt;cstdio&gt;long long a, b, k;int main(void)&#123; scanf("%lld%lld%lld", &amp;k, &amp;a, &amp;b); if (k &lt;= a) puts("1"); else if (a &lt;= b) puts("-1"); else printf("%lld\n", ((k - a) / (a - b) + bool((k - a) % (a - b))) &lt;&lt; 1 | 1); return 0;&#125; 我的评测记录 AtCoder； 洛谷 R16137986。]]></content>
+      <categories>
+        <category>题解（水）</category>
+      </categories>
+      <tags>
+        <tag>AtCoder</tag>
+        <tag>模拟</tag>
+        <tag>题解（水）</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[【题解】【洛谷 P2683】 小岛]]></title>
     <url>%2F2019%2F02%2F07%2F%E3%80%90%E9%A2%98%E8%A7%A3%E3%80%91%E3%80%90%E6%B4%9B%E8%B0%B7-P2683%E3%80%91-%E5%B0%8F%E5%B2%9B%2F</url>
     <content type="text"><![CDATA[原题题面请查看洛谷 P2683 小岛。 题解$\text{Dijkstra}$ 思路每一次查询都进行一遍$\text{Dijkstra}$求单源最短路径。 算法的优化 fread();读入优化，大约可节省$100\text{ms}$的时间； 存图应使用链式前向星； 使用堆（或者std::priority_queue）优化； 经过优化后，算法的时间复杂度为$\text{O}(mnlog_{2}n+m^{2})$。 代码代码如下： 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102#include &lt;cstdio&gt;#include &lt;cstring&gt;#include &lt;queue&gt;#include &lt;vector&gt;using std::less;using std::priority_queue;using std::vector; //头文件和引用#define INF 0X3F3F3F3F //定义正无穷#define getchar() (p1 == p2 &amp;&amp; (p2 = (p1 = buf) + fread(buf, 1, 100000, stdin), p1 == p2) ? EOF : *p1++)static char buf[100000], *p1 = buf, *p2 = buf; //fread();读入优化inline int read(void)&#123; register char ch = getchar(); register int sum = 0; while (!(ch &gt;= '0' &amp;&amp; ch &lt;= '9')) ch = getchar(); while (ch &gt;= '0' &amp;&amp; ch &lt;= '9') sum = sum * 10 + ch - 48, ch = getchar(); return sum;&#125;struct Node&#123; int ID, dis; bool operator&lt;(const Node &amp;a) const &#123; return dis &gt; a.dis; &#125;&#125;;bool vis[101];int cnt, head[101], to[10001], w[10001], Next[10001];int dis[101];priority_queue&lt;Node, vector&lt;Node&gt;, less&lt;Node&gt;&gt; Q; //优先队列void Add_Edge(int, int, int);void Dijkstra(int);int main(void)&#123; register int m, op, s, t, u, v, e; //register变量更快些 read(); //n在本题中没有用，也无超过n的毒瘤数据，无需读入 m = read(); //读入m while (m--) &#123; op = read(); if (op == 0) &#123; s = read(), t = read(); Dijkstra(s); printf("%d\n", (dis[t] == INF) ? (-1) : (dis[t])); &#125; if (op == 1) &#123; u = read(), v = read(), e = read(); Add_Edge(u, v, e); Add_Edge(v, u, e); //双向边 &#125; &#125; return 0;&#125;void Add_Edge(int f, int t, int val) //链式前向星存图&#123; Next[++cnt] = head[f]; to[cnt] = t; w[cnt] = val; head[f] = cnt; return;&#125;void Dijkstra(int s)&#123; register int i, ID, To; Node temp; memset(vis, false, sizeof(vis)); memset(dis, 0X3F, sizeof(dis)); dis[s] = 0; //每次运行前要记得初始化 temp.ID = s, temp.dis = 0; Q.push(temp); while (!Q.empty()) &#123; temp = Q.top(); Q.pop(); ID = temp.ID; if (vis[ID]) continue; vis[ID] = true; for (i = head[ID]; i; i = Next[i]) &#123; To = to[i]; if (dis[To] &gt; dis[ID] + w[i]) &#123; dis[To] = dis[ID] + w[i]; //松弛操作 temp.ID = To, temp.dis = dis[To]; Q.push(temp); &#125; &#125; &#125; return; //返回&#125; 我的评测记录 洛谷 R16112574。]]></content>
@@ -42,8 +55,8 @@
         <category>题解</category>
       </categories>
       <tags>
-        <tag>并查集</tag>
         <tag>题解</tag>
+        <tag>并查集</tag>
         <tag>洛谷</tag>
         <tag>Kruskal</tag>
       </tags>
@@ -56,8 +69,8 @@
         <category>题解</category>
       </categories>
       <tags>
-        <tag>数据结构</tag>
         <tag>题解</tag>
+        <tag>数据结构</tag>
         <tag>洛谷</tag>
         <tag>线段树</tag>
       </tags>
@@ -131,8 +144,8 @@
         <category>题解</category>
       </categories>
       <tags>
-        <tag>并查集</tag>
         <tag>题解</tag>
+        <tag>并查集</tag>
         <tag>洛谷</tag>
         <tag>NOIp提高组</tag>
         <tag>图论</tag>
@@ -146,8 +159,8 @@
         <category>题解</category>
       </categories>
       <tags>
-        <tag>并查集</tag>
         <tag>题解</tag>
+        <tag>并查集</tag>
         <tag>洛谷</tag>
         <tag>NOIp提高组</tag>
         <tag>图论</tag>
