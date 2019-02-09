@@ -38,7 +38,7 @@
 {% endif %}
 
 {% if theme.google_site_verification %}
-  <meta name="google-site-verification" content="{{ theme.google_site_verification }}"/>
+  <meta name="google-site-verification" content="XH6ROIhFuvaMkl8rntkOhYdKVP0idZe-CIqEBLzAeqw" />
 {% endif %}
 
 {% if theme.bing_site_verification %}
