@@ -14,8 +14,8 @@
       </categories>
       <tags>
         <tag>题解</tag>
-        <tag>Codeforces</tag>
         <tag>模拟</tag>
+        <tag>Codeforces</tag>
         <tag>排序</tag>
       </tags>
   </entry>
@@ -27,8 +27,8 @@
         <category>题解（水）</category>
       </categories>
       <tags>
-        <tag>模拟</tag>
         <tag>AtCoder</tag>
+        <tag>模拟</tag>
         <tag>题解（水）</tag>
       </tags>
   </entry>
@@ -69,8 +69,8 @@
         <category>题解</category>
       </categories>
       <tags>
-        <tag>并查集</tag>
         <tag>题解</tag>
+        <tag>并查集</tag>
         <tag>洛谷</tag>
         <tag>Kruskal</tag>
       </tags>
@@ -83,8 +83,8 @@
         <category>题解</category>
       </categories>
       <tags>
-        <tag>数据结构</tag>
         <tag>题解</tag>
+        <tag>数据结构</tag>
         <tag>洛谷</tag>
         <tag>线段树</tag>
       </tags>
@@ -108,8 +108,8 @@
       </categories>
       <tags>
         <tag>题解</tag>
-        <tag>模拟</tag>
         <tag>AtCoder</tag>
+        <tag>模拟</tag>
       </tags>
   </entry>
   <entry>
@@ -121,8 +121,8 @@
       </categories>
       <tags>
         <tag>题解</tag>
-        <tag>模拟</tag>
         <tag>AtCoder</tag>
+        <tag>模拟</tag>
       </tags>
   </entry>
   <entry>
@@ -158,8 +158,8 @@
         <category>题解</category>
       </categories>
       <tags>
-        <tag>并查集</tag>
         <tag>题解</tag>
+        <tag>并查集</tag>
         <tag>洛谷</tag>
         <tag>NOIp提高组</tag>
         <tag>图论</tag>
@@ -173,12 +173,12 @@
         <category>题解</category>
       </categories>
       <tags>
-        <tag>并查集</tag>
         <tag>题解</tag>
+        <tag>并查集</tag>
         <tag>洛谷</tag>
-        <tag>Kruskal</tag>
         <tag>NOIp提高组</tag>
         <tag>图论</tag>
+        <tag>Kruskal</tag>
         <tag>LCA</tag>
       </tags>
   </entry>
