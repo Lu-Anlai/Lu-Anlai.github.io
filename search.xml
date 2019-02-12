@@ -6,6 +6,20 @@
     <content type="text"><![CDATA[欢迎来到$\text{Lu-Anlai’s Blog}$本博客由 Hexo 强力驱动 v3.8.0 | 主题 – NexT.Gemini v7.0.0 背景是随机二次元图片$\text{API}$，您可以点击右侧的图片查看更多。 博客主要内容是题解（水题题解），之前在洛谷博客和$\text{CSDN}$博客发布的文章不久就会转移到这个博客上来（咕咕咕）。]]></content>
   </entry>
   <entry>
+    <title><![CDATA[【题解（水）】【Codeforces 579A】 Raising Bacteria]]></title>
+    <url>%2F2019%2F02%2F12%2F%E3%80%90%E9%A2%98%E8%A7%A3%EF%BC%88%E6%B0%B4%EF%BC%89%E3%80%91%E3%80%90Codeforces-579A%E3%80%91-Raising-Bacteria%2F</url>
+    <content type="text"><![CDATA[原题题面请查看Codeforces 579A Raising Bacteria。 也可在洛谷上查看：传送门。 题解模拟+二进制 思路此题太水，略去不写。 代码代码如下： 1234567891011121314151617#include &lt;cstdio&gt;int x;int main(void)&#123; register int cnt = 0; scanf("%d", &amp;x); while (x) &#123; if (x &amp; 1) ++cnt; x &gt;&gt;= 1; &#125; printf("%d\n", cnt); return 0;&#125; 我的评测记录 Codeforces； 洛谷。]]></content>
+      <categories>
+        <category>题解（水）</category>
+      </categories>
+      <tags>
+        <tag>模拟</tag>
+        <tag>Codeforces</tag>
+        <tag>题解（水）</tag>
+        <tag>二进制</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[【题解】【Codeforces 574A】 Bear and Elections]]></title>
     <url>%2F2019%2F02%2F09%2F%E3%80%90%E9%A2%98%E8%A7%A3%E3%80%91%E3%80%90Codeforces-574A%E3%80%91-Bear-and-Elections%2F</url>
     <content type="text"><![CDATA[原题题面请查看Codeforces 574A Bear and Elections。 也可在洛谷上查看：传送门。 洛谷题面翻译来自@卢安来，其实就是我。 题解模拟+排序 思路根据正常人的想法和思维，选票最多的人是Limak最大的敌人，我们应该多贿赂他的支持者。 因为每次贿赂后，选票最多的人都会改变，所以我们每次操作（实行贿赂）后进行排序即可。 具体实现设vote为Limak当前选票，那么每次的操作就可以写成这样： 1234567while (a[n - 1] &gt;= vote) //如果Limak无法获胜&#123; //开始贿赂 --a[n - 1]; //贿赂选票最多的人的一名支持者 sort(a + 1, a + n); //重新排序 ++vote; //Limak的选票增加 ++ans; //计数器自增&#125; 代码代码如下： 1234567891011121314151617181920212223#include &lt;algorithm&gt;#include &lt;cstdio&gt;using std::sort; //排序int n, vote, a[101]; //变量如上文所述int main(void)&#123; register int i, ans = 0; scanf("%d%d", &amp;n, &amp;vote); //读入 for (i = 1; i &lt; n; ++i) //除去Limak还有n-1个人 scanf("%d", &amp;a[i]); sort(a + 1, a + n); //要先排序 while (a[n - 1] &gt;= vote) //如果Limak无法获胜 &#123; //开始贿赂 --a[n - 1]; //贿赂选票最多的人的一名支持者 sort(a + 1, a + n); //重新排序 ++vote; //Limak的选票增加 ++ans; //计数器自增 &#125; printf("%d\n", ans); //输出并换行 return 0;&#125; 我的评测记录 Codeforces； 洛谷。]]></content>
@@ -69,8 +83,8 @@
         <category>题解</category>
       </categories>
       <tags>
-        <tag>题解</tag>
         <tag>并查集</tag>
+        <tag>题解</tag>
         <tag>洛谷</tag>
         <tag>Kruskal</tag>
       </tags>
@@ -83,8 +97,8 @@
         <category>题解</category>
       </categories>
       <tags>
-        <tag>题解</tag>
         <tag>数据结构</tag>
+        <tag>题解</tag>
         <tag>洛谷</tag>
         <tag>线段树</tag>
       </tags>
@@ -158,8 +172,8 @@
         <category>题解</category>
       </categories>
       <tags>
-        <tag>题解</tag>
         <tag>并查集</tag>
+        <tag>题解</tag>
         <tag>洛谷</tag>
         <tag>NOIp提高组</tag>
         <tag>图论</tag>
@@ -173,8 +187,8 @@
         <category>题解</category>
       </categories>
       <tags>
-        <tag>题解</tag>
         <tag>并查集</tag>
+        <tag>题解</tag>
         <tag>洛谷</tag>
         <tag>NOIp提高组</tag>
         <tag>图论</tag>
