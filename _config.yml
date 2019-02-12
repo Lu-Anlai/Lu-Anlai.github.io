@@ -13,7 +13,7 @@ timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://lu-anlai.github.io
+url: https://www.Lu-Anlai.top
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -79,7 +79,9 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: https://github.com/Lu-Anlai/Lu-Anlai.github.io.git
+  repository:
+    github: https://github.com/Lu-Anlai/Lu-Anlai.github.io.git
+    coding: git@git.coding.net:Lu-Anlai/Lu-Anlai.git
   branch: master
 
 search:
