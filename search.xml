@@ -6,6 +6,18 @@
     <content type="text"><![CDATA[欢迎来到$\text{Lu-Anlai’s Blog}$本博客由 Hexo 强力驱动 v3.8.0 | 主题 – NexT.Gemini v7.0.0 背景是随机二次元图片$\text{API}$，您可以点击右侧的图片查看更多。 博客主要内容是题解（水题题解），之前在洛谷博客和$\text{CSDN}$博客发布的文章不久就会转移到这个博客上来（咕咕咕）。]]></content>
   </entry>
   <entry>
+    <title><![CDATA[Manim的安装指南（Windows）]]></title>
+    <url>%2F2019%2F02%2F13%2FManim%E7%9A%84%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97%EF%BC%88Windows%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[网上的教程都不够详细，并且早已过时。 前期准备 $\text{Manim}$基于$\text{Python}3.7$，请确保$\text{Windows}$下安装了$\text{Python}3.7$； $\text{Manim}$托管于$\text{GitHub}$，请确保$\text{Windows}$下安装了$\text{Git}$； 请确保$\text{pip}$的版本是最新的。 $\text{Manim}$及其环境的配置随便找一个目录，按住Shift键并右键选择在此处打开 PowerShell 窗口（$\text{Windows}10$以下的系统显示的是命令提示符）。 输入命令： 12git clone https://github.com/3b1b/manim.gitcd manim 完成后可以发现原目录下多了一个叫做manim的文件夹，这就是以后的工作目录。 继续在之前的窗口中输入命令（或者在manim文件夹中打开$\text{PowerShell}$窗口）： 1python -m pip install -r requirements.txt 问题常见问题： 在这一步中如果看到类似于Error或者Visual Build 14.0的字样，请自行上网搜索解决办法，搜索引擎推荐使用$\text{Google}$。 如果看到形如ModuleNotFoundError: No module named &lt;pack name&gt;的错误提示，请运行命令： 1pip install &lt;pack name&gt; 特别的，如果遇见ModuleNotFoundError: No module named &#39;readline&#39;，请输入： 1pip install pyreadline 测试输入命令： 1python -m manim example_scenes.py SquareToCircle -pl 如果弹出了一段下面这样的视频（分辨率为$854 \times 480$），说明$\text{Manim}$配置成功。 1234&lt;video width=&quot;854&quot; height=&quot;480&quot; controls=&quot;controls&quot; type=&quot;video/mp4&quot; preload=&quot;auto&quot;&gt; &lt;source src=&quot;SquareToCircle.mp4&quot; autostart=&quot;true&quot;&gt; Your browser does not support the video tag.&lt;/video&gt; 常见问题： 如果看到形如ModuleNotFoundError: No module named &lt;pack name&gt;的错误提示，请运行命令： 1pip install &lt;pack name&gt; 特别的，如果遇见ModuleNotFoundError: No module named &#39;readline&#39;，请输入： 1pip install pyreadline]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>Manim</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[【数据结构】 树]]></title>
     <url>%2F2019%2F02%2F12%2F%E3%80%90%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E3%80%91-%E6%A0%91%2F</url>
     <content type="text"><![CDATA[介绍树是一种数据结构，它是由$n(n \geq 1)$个有限结点组成一个具有层次关系的集合。 树的定义自然树显然，计算机的树与自然界中的树（后文简称为自然树）有所联系，否则它就不会以树为名称了。 下面我们先来看看自然树： 归纳一下自然树的特征： 有且只有一个树根； 树会分叉； 树枝的末端是叶子。 计算机中的树根据自然树的特征，我们给出树的定义：（共有$3$种） 集合定义： 树是包含$n(n \geq 0)$个结点的有穷集，其中： 每个元素称为结点； 有一个特定的结点被称为根结点或树根； 除根结点之外的其余数据元素被分为$m(m \geq 0)$个互不相交的集合$T_{1},T_{2},…,T_{m}$，其中每一个集合$T_{i}(1 \leq i \leq m)$本身也是一棵树，被称作原树的子树。 关系定义（层次定义）： 树是由根结点和若干颗子树构成的； 树是由一个集合以及在该集合上定义的一种关系构成的。集合中的元素称为树的结点，所定义的关系称为父子关系； 父子关系在树的结点之间建立了一个层次结构。在这种层次结构中有一个结点具有特殊的地位，这个结点称为该树的根结点，或称为树根。 递归定义： 单个结点是一棵树，树根就是该结点本身。 设$T_{1},T_{2},…,T_{k}$是树，它们的根结点分别为$n_{1},n_{2},…,n_{k}$。用一个新结点$n$作为$n_{1},n_{2},…,n_{k}$的父亲，则得到一棵新树，结点$n$就是新树的根。我们称$n_{1},n_{2},…,n_{k}$为一组兄弟结点，它们都是结点$n$的子结点。我们还称$T_{1},T_{2},…,T_{k}$为结点$n$的子树。 空集合也是树，称为空树。空树中没有结点。 树的表示方法图像法图像法是最常见的树的表示方法。 用图像表示树，一目了然。 遍历法此方法只适用于二叉树。 二叉树有多种遍历方法，最常见的是先序遍历，中序遍历，后序遍历以及层次遍历。 用先序遍历，中序遍历，后序遍历既可以表达二叉树又可以确定二叉树。 其先序遍历为：1 2 4 6 3 7 5 8 9； 其中序遍历为：4 2 6 1 7 3 8 5 9； 其后序遍历为：4 6 2 7 8 9 5 3 1。 除此之外还有符号法等方法可以表示树。 树的储存方法树的储存方法有多种，此处不展开说明。 推荐使用链式前向星存双向边。]]></content>
