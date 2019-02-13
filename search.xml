@@ -6,6 +6,20 @@
     <content type="text"><![CDATA[欢迎来到$\text{Lu-Anlai’s Blog}$本博客由 Hexo 强力驱动 v3.8.0 | 主题 – NexT.Gemini v7.0.0 背景是随机二次元图片$\text{API}$，您可以点击右侧的图片查看更多。 博客主要内容是题解（水题题解），之前在洛谷博客和$\text{CSDN}$博客发布的文章不久就会转移到这个博客上来（咕咕咕）。]]></content>
   </entry>
   <entry>
+    <title><![CDATA[【题解】【洛谷 P1073】 最优贸易]]></title>
+    <url>%2F2019%2F02%2F13%2F%E3%80%90%E9%A2%98%E8%A7%A3%E3%80%91%E3%80%90%E6%B4%9B%E8%B0%B7-P1073%E3%80%91-%E6%9C%80%E4%BC%98%E8%B4%B8%E6%98%93%2F</url>
+    <content type="text"><![CDATA[原题题面请查看洛谷 P1073 最优贸易。 题解$\text{SPFA}$ 思路进行两次$SPFA$即可。 算法的优化 fread();读入优化，大约可节省$100\text{ms}$的时间； 存图使用链式前向星； 手写循环队列； 经过优化后，算法的时间复杂度为$\text{O}(n+m+2Km+n)=\text{O}(2n+(2K+1)m)$，可以通过。 代码代码如下： 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127#include &lt;cstdio&gt;#include &lt;cstring&gt;#define min(a, b) ((a) &lt; (b) ? (a) : (b))#define max(a, b) ((a) &gt; (b) ? (a) : (b))//宏定义#define getchar() (p1 == p2 &amp;&amp; (p2 = (p1 = buf) + fread(buf, 1, 100000, stdin), p1 == p2) ? EOF : *p1++)static char buf[100000], *p1 = buf, *p2 = buf;inline int read(void)//读入优化&#123; register char ch = getchar(); register int sum = 0; while (!(ch &gt;= '0' &amp;&amp; ch &lt;= '9')) ch = getchar(); while (ch &gt;= '0' &amp;&amp; ch &lt;= '9') sum = (sum &lt;&lt; 1) + (sum &lt;&lt; 3) + ch - 48, ch = getchar(); return sum;&#125;struct Graph&#123; int cnt, head[100001], to[1000001], w[1000001], Next[1000001]; void Add_Edge(int, int, int);&#125;;//链式前向星存图bool vis[100001][2];int a[100001];int Min[100001], Max[100001];int Q[100001], head, tail;Graph L1, L2;void SPFA1(int);void SPFA2(int);int main(void)&#123; register int n, m, i, ans = 0, x, y, z; n = read(), m = read(); for (i = 1; i &lt;= n; ++i) a[i] = read(); for (i = 1; i &lt;= m; ++i) &#123; x = read(), y = read(), z = read(); L1.Add_Edge(x, y, a[y]), L2.Add_Edge(y, x, a[x]); if (z == 2)//双向边 L1.Add_Edge(y, x, a[x]), L2.Add_Edge(x, y, a[y]); &#125; SPFA1(1), SPFA2(n);//两次SPFA for (i = 1; i &lt;= n; ++i) ans = max(ans, Max[i] - Min[i]);//max()求答案 printf("%d\n", ans);//输出并换行 return 0;//结束程序&#125;void Graph::Add_Edge(int f, int t, int val)&#123; Next[++cnt] = head[f]; to[cnt] = t; w[cnt] = val; head[f] = cnt; return;&#125;void SPFA1(int s)&#123; register int i, ID, To; head = tail = 0; memset(Q, 0, sizeof(Q)); memset(Min, 0X3F, sizeof(Min)); vis[s][1] = true; Q[tail++] = s; while (head!=tail) &#123; ID = Q[head++]; if (head &gt;= 100001) head %= 100001; vis[ID][1] = false; for (i = L1.head[ID]; i; i = L1.Next[i]) &#123; To = L1.to[i]; if (Min[To] &gt; min(Min[ID], L1.w[i])) &#123; Min[To] = min(Min[ID], L1.w[i]); if (!vis[To][1]) &#123; vis[To][1] = true; Q[tail++] = To; if (tail &gt;= 100001) tail %= 100001; &#125; &#125; &#125; &#125; return;&#125;void SPFA2(int s)&#123; register int i, ID, To; head = tail = 0; memset(Q, 0, sizeof(Q)); vis[s][0] = true; Q[tail++] = s; while (head!=tail) &#123; ID = Q[head++]; if (head &gt;= 100001) head %= 100001; vis[ID][0] = false; for (i = L2.head[ID]; i; i = L2.Next[i]) &#123; To = L2.to[i]; if (Max[To] &lt; max(Max[ID], L2.w[i])) &#123; Max[To] = max(Max[ID], L2.w[i]); if (!vis[To][0]) &#123; vis[To][0] = true; Q[tail++] = To; if (tail &gt;= 100001) tail %= 100001; &#125; &#125; &#125; &#125; return;&#125; 我的评测记录 洛谷 R16277015。]]></content>
+      <categories>
+        <category>题解</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>洛谷</tag>
+        <tag>图论</tag>
+        <tag>SPFA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Manim的安装指南（Windows）]]></title>
     <url>%2F2019%2F02%2F13%2FManim%E7%9A%84%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97%EF%BC%88Windows%EF%BC%89%2F</url>
     <content type="text"><![CDATA[网上的教程都不够详细，并且早已过时。 $\text{Manim}$项目地址。 前期准备 $\text{Manim}$基于$\text{Python}3.7$，请确保$\text{Windows}$下安装了$\text{Python}3.7$； $\text{Manim}$托管于$\text{GitHub}$，请确保$\text{Windows}$下安装了$\text{GitHub}$； 请确保$\text{pip}$的版本是最新的。 $\text{Manim}$及其环境的配置随便找一个目录，按住Shift键并右键选择在此处打开 PowerShell 窗口（$\text{Windows}10$以下的系统显示的是命令提示符）。 输入命令： 12git clone https://github.com/3b1b/manim.gitcd manim 完成后可以发现原目录下多了一个叫做manim的文件夹，这就是以后的工作目录。 继续在之前的窗口中输入命令（或者在manim文件夹中打开$\text{PowerShell}$窗口）： 1python -m pip install -r requirements.txt 问题常见问题： 在这一步中如果看到类似于Error或者Visual Build 14.0的字样，请自行上网搜索解决办法，搜索引擎推荐使用$\text{Google}$。 如果看到形如ModuleNotFoundError: No module named &lt;pack name&gt;的错误提示，请运行命令： 1pip install &lt;pack name&gt; 特别的，如果遇见ModuleNotFoundError: No module named &#39;readline&#39;，请输入： 1pip install pyreadline 测试输入命令： 1python -m manim example_scenes.py SquareToCircle -pl 如果弹出了一段下面这样的视频（分辨率为$854 \times 480$，帧率为$15 \text{FPS}$），说明$\text{Manim}$配置成功。 常见问题： 如果看到形如ModuleNotFoundError: No module named &lt;pack name&gt;的错误提示，请运行命令： 1pip install &lt;pack name&gt; 特别的，如果遇见ModuleNotFoundError: No module named &#39;readline&#39;，请输入： 1pip install pyreadline 欣赏影片以下影片分辨率为$1280 \times 720$，帧率为$30 \text{FPS}$]]></content>
@@ -37,8 +51,8 @@
         <category>题解（水）</category>
       </categories>
       <tags>
-        <tag>模拟</tag>
         <tag>Codeforces</tag>
+        <tag>模拟</tag>
         <tag>题解（水）</tag>
         <tag>二进制</tag>
       </tags>
@@ -52,8 +66,8 @@
       </categories>
       <tags>
         <tag>题解</tag>
-        <tag>模拟</tag>
         <tag>Codeforces</tag>
+        <tag>模拟</tag>
         <tag>排序</tag>
       </tags>
   </entry>
@@ -199,8 +213,8 @@
         <tag>并查集</tag>
         <tag>题解</tag>
         <tag>洛谷</tag>
-        <tag>NOIp提高组</tag>
         <tag>图论</tag>
+        <tag>NOIp提高组</tag>
       </tags>
   </entry>
   <entry>
@@ -214,9 +228,9 @@
         <tag>并查集</tag>
         <tag>题解</tag>
         <tag>洛谷</tag>
-        <tag>NOIp提高组</tag>
         <tag>图论</tag>
         <tag>Kruskal</tag>
+        <tag>NOIp提高组</tag>
         <tag>LCA</tag>
       </tags>
   </entry>
