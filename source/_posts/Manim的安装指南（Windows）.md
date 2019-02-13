@@ -86,10 +86,10 @@ pip install pyreadline
 
 ## 欣赏影片
 
-以下影片分辨率为$2560 \times 1440$，帧率为$60 \text{FPS}$
+以下影片分辨率为$1280 \times 720$，帧率为$30 \text{FPS}$
 
-<embed src="1440p60/SquareToCircle.mp4" width="854" height="480"/>
+<embed src="720p30/SquareToCircle.mp4" width="854" height="480"/>
 
-<embed src="1440p60/WarpSquare.mp4" width="854" height="480"/>
+<embed src="720p30/WarpSquare.mp4" width="854" height="480"/>
 
-<embed src="1440p60/WriteStuff.mp4" width="854" height="480"/>
+<embed src="720p30/WriteStuff.mp4" width="854" height="480"/>
