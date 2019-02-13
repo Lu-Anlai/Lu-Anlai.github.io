@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="网上的教程都不够详细，并且早已过时。">
+  <meta name="description" content="网上的教程都不够详细，并且早已过时。 $\text{Manim}$项目地址。">
 <meta name="keywords" content="教程,Manim">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Manim的安装指南（Windows）">
 <meta property="og:url" content="https://www.Lu-Anlai.top/2019/02/13/Manim的安装指南（Windows）/index.html">
 <meta property="og:site_name" content="Lu-Anlai&#39;s Blog">
-<meta property="og:description" content="网上的教程都不够详细，并且早已过时。">
+<meta property="og:description" content="网上的教程都不够详细，并且早已过时。 $\text{Manim}$项目地址。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-13T07:04:13.096Z">
+<meta property="og:updated_time" content="2019-02-13T09:18:34.095Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Manim的安装指南（Windows）">
-<meta name="twitter:description" content="网上的教程都不够详细，并且早已过时。">
+<meta name="twitter:description" content="网上的教程都不够详细，并且早已过时。 $\text{Manim}$项目地址。">
 
 
 
@@ -467,7 +467,7 @@
                 
               
 
-              <time title="创建时间：2019-02-13 14:16:44 / 修改时间：15:04:13" itemprop="dateCreated datePublished" datetime="2019-02-13T14:16:44+08:00">2019-02-13</time>
+              <time title="创建时间：2019-02-13 14:16:44 / 修改时间：17:18:34" itemprop="dateCreated datePublished" datetime="2019-02-13T14:16:44+08:00">2019-02-13</time>
             
 
             
@@ -532,16 +532,17 @@
 
       
         <p>网上的教程都不够详细，并且早已过时。</p>
+<p><a href="https://github.com/3b1b/manim/" target="_blank" rel="noopener">$\text{Manim}$项目地址</a>。</p>
 <a id="more"></a>
 <h1 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h1><ol>
-<li><p>$\text{Manim}$基于$\text{Python}3.7$，请确保$\text{Windows}$下安装了$\text{Python}3.7$；</p>
+<li><p><a href="https://github.com/3b1b/manim/" target="_blank" rel="noopener">$\text{Manim}$</a>基于<a href="https://www.python.org/" target="_blank" rel="noopener">$\text{Python}3.7$</a>，请确保$\text{Windows}$下安装了<a href="https://www.python.org/" target="_blank" rel="noopener">$\text{Python}3.7$</a>；</p>
 </li>
-<li><p>$\text{Manim}$托管于$\text{GitHub}$，请确保$\text{Windows}$下安装了$\text{Git}$；</p>
+<li><p><a href="https://github.com/3b1b/manim/" target="_blank" rel="noopener">$\text{Manim}$</a>托管于<a href="https://github.com/" target="_blank" rel="noopener">$\text{GitHub}$</a>，请确保$\text{Windows}$下安装了<a href="https://github.com/" target="_blank" rel="noopener">$\text{GitHub}$</a>；</p>
 </li>
 <li><p>请确保$\text{pip}$的版本是最新的。</p>
 </li>
 </ol>
-<h1 id="text-Manim-及其环境的配置"><a href="#text-Manim-及其环境的配置" class="headerlink" title="$\text{Manim}$及其环境的配置"></a>$\text{Manim}$及其环境的配置</h1><p>随便找一个目录，按住<code>Shift</code>键并右键选择<code>在此处打开 PowerShell 窗口</code>（$\text{Windows}10$以下的系统显示的是<code>命令提示符</code>）。</p>
+<h1 id="text-Manim-及其环境的配置"><a href="#text-Manim-及其环境的配置" class="headerlink" title="$\text{Manim}$及其环境的配置"></a><a href="https://github.com/3b1b/manim/" target="_blank" rel="noopener">$\text{Manim}$</a>及其环境的配置</h1><p>随便找一个目录，按住<code>Shift</code>键并右键选择<code>在此处打开 PowerShell 窗口</code>（$\text{Windows}10$以下的系统显示的是<code>命令提示符</code>）。</p>
 <p>输入命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/3b1b/manim.git</span><br><span class="line">cd manim</span><br></pre></td></tr></table></figure>
 <p>完成后可以发现原目录下多了一个叫做<code>manim</code>的文件夹，这就是以后的工作目录。</p>
@@ -559,15 +560,20 @@
 </ol>
 <h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p>输入命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m manim example_scenes.py SquareToCircle -pl</span><br></pre></td></tr></table></figure>
-<p>如果弹出了一段下面这样的视频（分辨率为$854 \times 480$），说明$\text{Manim}$配置成功。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;video width=&quot;854&quot; height=&quot;480&quot; controls=&quot;controls&quot; type=&quot;video/mp4&quot; preload=&quot;auto&quot;&gt;</span><br><span class="line">    &lt;source src=&quot;SquareToCircle.mp4&quot; autostart=&quot;true&quot;&gt;</span><br><span class="line">        Your browser does not support the video tag.</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></table></figure>
-<embed src="SquareToCircle.mp4" width="854" height="480">
+<p>如果弹出了一段下面这样的视频（分辨率为$854 \times 480$，帧率为$15 \text{FPS}$），说明$\text{Manim}$配置成功。</p>
+<embed src="480p15/SquareToCircle.mp4" width="854" height="480">
 
 <p>常见问题：</p>
 <p>如果看到形如<code>ModuleNotFoundError: No module named &lt;pack name&gt;</code>的错误提示，请运行命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install &lt;pack name&gt;</span><br></pre></td></tr></table></figure>
 <p>特别的，如果遇见<code>ModuleNotFoundError: No module named &#39;readline&#39;</code>，请输入：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pyreadline</span><br></pre></td></tr></table></figure>
+<h2 id="欣赏影片"><a href="#欣赏影片" class="headerlink" title="欣赏影片"></a>欣赏影片</h2><p>以下影片分辨率为$2560 \times 1440$，帧率为$60 \text{FPS}$</p>
+<embed src="1440p60/SquareToCircle.mp4" width="854" height="480">
+
+<embed src="1440p60/WarpSquare.mp4" width="854" height="480">
+
+<embed src="1440p60/WriteStuff.mp4" width="854" height="480">
 
       
     </div>
@@ -860,7 +866,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前期准备"><span class="nav-number">1.</span> <span class="nav-text">前期准备</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#text-Manim-及其环境的配置"><span class="nav-number">2.</span> <span class="nav-text">$\text{Manim}$及其环境的配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">2.1.</span> <span class="nav-text">问题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#测试"><span class="nav-number">3.</span> <span class="nav-text">测试</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前期准备"><span class="nav-number">1.</span> <span class="nav-text">前期准备</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#text-Manim-及其环境的配置"><span class="nav-number">2.</span> <span class="nav-text">$\text{Manim}$及其环境的配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">2.1.</span> <span class="nav-text">问题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#测试"><span class="nav-number">3.</span> <span class="nav-text">测试</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#欣赏影片"><span class="nav-number">3.1.</span> <span class="nav-text">欣赏影片</span></a></li></ol></li></ol></div>
             
 
           </div>

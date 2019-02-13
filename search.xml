@@ -8,7 +8,7 @@
   <entry>
     <title><![CDATA[Manim的安装指南（Windows）]]></title>
     <url>%2F2019%2F02%2F13%2FManim%E7%9A%84%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97%EF%BC%88Windows%EF%BC%89%2F</url>
-    <content type="text"><![CDATA[网上的教程都不够详细，并且早已过时。 前期准备 $\text{Manim}$基于$\text{Python}3.7$，请确保$\text{Windows}$下安装了$\text{Python}3.7$； $\text{Manim}$托管于$\text{GitHub}$，请确保$\text{Windows}$下安装了$\text{Git}$； 请确保$\text{pip}$的版本是最新的。 $\text{Manim}$及其环境的配置随便找一个目录，按住Shift键并右键选择在此处打开 PowerShell 窗口（$\text{Windows}10$以下的系统显示的是命令提示符）。 输入命令： 12git clone https://github.com/3b1b/manim.gitcd manim 完成后可以发现原目录下多了一个叫做manim的文件夹，这就是以后的工作目录。 继续在之前的窗口中输入命令（或者在manim文件夹中打开$\text{PowerShell}$窗口）： 1python -m pip install -r requirements.txt 问题常见问题： 在这一步中如果看到类似于Error或者Visual Build 14.0的字样，请自行上网搜索解决办法，搜索引擎推荐使用$\text{Google}$。 如果看到形如ModuleNotFoundError: No module named &lt;pack name&gt;的错误提示，请运行命令： 1pip install &lt;pack name&gt; 特别的，如果遇见ModuleNotFoundError: No module named &#39;readline&#39;，请输入： 1pip install pyreadline 测试输入命令： 1python -m manim example_scenes.py SquareToCircle -pl 如果弹出了一段下面这样的视频（分辨率为$854 \times 480$），说明$\text{Manim}$配置成功。 1234&lt;video width=&quot;854&quot; height=&quot;480&quot; controls=&quot;controls&quot; type=&quot;video/mp4&quot; preload=&quot;auto&quot;&gt; &lt;source src=&quot;SquareToCircle.mp4&quot; autostart=&quot;true&quot;&gt; Your browser does not support the video tag.&lt;/video&gt; 常见问题： 如果看到形如ModuleNotFoundError: No module named &lt;pack name&gt;的错误提示，请运行命令： 1pip install &lt;pack name&gt; 特别的，如果遇见ModuleNotFoundError: No module named &#39;readline&#39;，请输入： 1pip install pyreadline]]></content>
+    <content type="text"><![CDATA[网上的教程都不够详细，并且早已过时。 $\text{Manim}$项目地址。 前期准备 $\text{Manim}$基于$\text{Python}3.7$，请确保$\text{Windows}$下安装了$\text{Python}3.7$； $\text{Manim}$托管于$\text{GitHub}$，请确保$\text{Windows}$下安装了$\text{GitHub}$； 请确保$\text{pip}$的版本是最新的。 $\text{Manim}$及其环境的配置随便找一个目录，按住Shift键并右键选择在此处打开 PowerShell 窗口（$\text{Windows}10$以下的系统显示的是命令提示符）。 输入命令： 12git clone https://github.com/3b1b/manim.gitcd manim 完成后可以发现原目录下多了一个叫做manim的文件夹，这就是以后的工作目录。 继续在之前的窗口中输入命令（或者在manim文件夹中打开$\text{PowerShell}$窗口）： 1python -m pip install -r requirements.txt 问题常见问题： 在这一步中如果看到类似于Error或者Visual Build 14.0的字样，请自行上网搜索解决办法，搜索引擎推荐使用$\text{Google}$。 如果看到形如ModuleNotFoundError: No module named &lt;pack name&gt;的错误提示，请运行命令： 1pip install &lt;pack name&gt; 特别的，如果遇见ModuleNotFoundError: No module named &#39;readline&#39;，请输入： 1pip install pyreadline 测试输入命令： 1python -m manim example_scenes.py SquareToCircle -pl 如果弹出了一段下面这样的视频（分辨率为$854 \times 480$，帧率为$15 \text{FPS}$），说明$\text{Manim}$配置成功。 常见问题： 如果看到形如ModuleNotFoundError: No module named &lt;pack name&gt;的错误提示，请运行命令： 1pip install &lt;pack name&gt; 特别的，如果遇见ModuleNotFoundError: No module named &#39;readline&#39;，请输入： 1pip install pyreadline 欣赏影片以下影片分辨率为$2560 \times 1440$，帧率为$60 \text{FPS}$]]></content>
       <categories>
         <category>教程</category>
       </categories>
@@ -107,8 +107,8 @@
         <category>题解</category>
       </categories>
       <tags>
-        <tag>并查集</tag>
         <tag>题解</tag>
+        <tag>并查集</tag>
         <tag>洛谷</tag>
         <tag>Kruskal</tag>
       </tags>
@@ -121,8 +121,8 @@
         <category>题解</category>
       </categories>
       <tags>
-        <tag>数据结构</tag>
         <tag>题解</tag>
+        <tag>数据结构</tag>
         <tag>洛谷</tag>
         <tag>线段树</tag>
       </tags>
@@ -196,8 +196,8 @@
         <category>题解</category>
       </categories>
       <tags>
-        <tag>并查集</tag>
         <tag>题解</tag>
+        <tag>并查集</tag>
         <tag>洛谷</tag>
         <tag>NOIp提高组</tag>
         <tag>图论</tag>
@@ -211,8 +211,8 @@
         <category>题解</category>
       </categories>
       <tags>
-        <tag>并查集</tag>
         <tag>题解</tag>
+        <tag>并查集</tag>
         <tag>洛谷</tag>
         <tag>NOIp提高组</tag>
         <tag>图论</tag>
