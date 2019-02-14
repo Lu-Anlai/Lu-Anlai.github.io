@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Lu-Anlai&#39;s Blog">
 <meta property="og:description" content="原题题面请查看洛谷 P4825 [USACO15FEB]Cow Hopscotch (Silver) 牛跳房子(银)。 题解动态规划">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-14T14:30:48.769Z">
+<meta property="og:updated_time" content="2019-02-14T14:32:49.988Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【题解】【洛谷 P4825】 [USACO15FEB]Cow Hopscotch (Silver) 牛跳房子(银)">
 <meta name="twitter:description" content="原题题面请查看洛谷 P4825 [USACO15FEB]Cow Hopscotch (Silver) 牛跳房子(银)。 题解动态规划">
@@ -484,7 +484,7 @@
                 
               
 
-              <time title="创建时间：2019-02-14 21:50:48 / 修改时间：22:30:48" itemprop="dateCreated datePublished" datetime="2019-02-14T21:50:48+08:00">2019-02-14</time>
+              <time title="创建时间：2019-02-14 21:50:48 / 修改时间：22:32:49" itemprop="dateCreated datePublished" datetime="2019-02-14T21:50:48+08:00">2019-02-14</time>
             
 
             
@@ -587,7 +587,7 @@
 <blockquote>
 <p>如果将数据范围代入算法对应的多项式时间复杂度，所得的数字小于$5 \times 10^{7}$，则这个算法可以在$1 \text{s}$内通过。</p>
 </blockquote>
-<p>把$n=100$带入$\frac{n^{4}}){2}$，得$T(n)=\frac{100^{4}}){2}=5 \times 10^{7}$，预计可以通过。</p>
+<p>把$n=100$带入$\frac{n^{4}}{2})$，得$T(n)=\frac{100^{4}}{2})=5 \times 10^{7}$，预计可以通过。</p>
 <h5 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h5><p>另外，程序运行时间也与计算机性能有关，主要是$\text{CPU}$主频这个参数。</p>
 <p>在$\text{C/C++}$中，你可以运行下面这个程序来获取$\text{CPU}$型号和主频。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdint.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cpuid.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">cpuid</span><span class="params">(<span class="keyword">uint32_t</span> func,<span class="keyword">uint32_t</span> sub,<span class="keyword">uint32_t</span> data[<span class="number">4</span>])</span></span>&#123;</span><br><span class="line">    __cpuid_count(func,sub,data[<span class="number">0</span>],data[<span class="number">1</span>],data[<span class="number">2</span>],data[<span class="number">3</span>]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">    <span class="keyword">uint32_t</span> data[<span class="number">4</span>];</span><br><span class="line">    <span class="keyword">char</span> str[<span class="number">48</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">3</span>;i++)&#123;</span><br><span class="line">        cpuid(<span class="number">0x80000002</span>+i,<span class="number">0</span>,data);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;<span class="number">4</span>;j++)</span><br><span class="line">            <span class="keyword">reinterpret_cast</span>&lt;<span class="keyword">uint32_t</span>*&gt;(str)[i*<span class="number">4</span>+j]=data[j];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%s\n"</span>,str);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
