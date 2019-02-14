@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Lu-Anlai&#39;s Blog">
 <meta property="og:description" content="原题题面请查看洛谷 P4825 [USACO15FEB]Cow Hopscotch (Silver) 牛跳房子(银)。 题解动态规划">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-14T14:34:47.496Z">
+<meta property="og:updated_time" content="2019-02-14T14:56:27.745Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【题解】【洛谷 P4825】 [USACO15FEB]Cow Hopscotch (Silver) 牛跳房子(银)">
 <meta name="twitter:description" content="原题题面请查看洛谷 P4825 [USACO15FEB]Cow Hopscotch (Silver) 牛跳房子(银)。 题解动态规划">
@@ -484,7 +484,7 @@
                 
               
 
-              <time title="创建时间：2019-02-14 21:50:48 / 修改时间：22:34:47" itemprop="dateCreated datePublished" datetime="2019-02-14T21:50:48+08:00">2019-02-14</time>
+              <time title="创建时间：2019-02-14 21:50:48 / 修改时间：22:56:27" itemprop="dateCreated datePublished" datetime="2019-02-14T21:50:48+08:00">2019-02-14</time>
             
 
             
@@ -580,7 +580,7 @@
 <h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>动态规划</p>
 <a id="more"></a>
 <h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>直接动态规划即可，状态转移方程为：</p>
-<p>$$f_{ij}=\begin{cases} 1 &amp; {i=j=1} \newline \sum^{R}\limits_{k=1} \sum^{C}\limits_{l=1} f_{kl} &amp; {a_{ij} \neq a_{kl}} \end{cases}$$</p>
+<p>$$f_{ij}=\begin{cases} 1 &amp; {i=j=1} \newline \sum^{i-1}\limits_{k=1} \sum^{j-1}\limits_{l=1} f_{kl} &amp; {a_{ij} \neq a_{kl}} \end{cases}$$</p>
 <h4 id="时间复杂度分析"><a href="#时间复杂度分析" class="headerlink" title="时间复杂度分析"></a>时间复杂度分析</h4><p>时间复杂度为$\Omega (\frac{n^{4}-n^{2}}{2}),O (\frac{n^{4}}{2})$。</p>
 <p>（注：$n$即为题目中的$R,C$）</p>
 <p>需要注意的一点是：</p>
