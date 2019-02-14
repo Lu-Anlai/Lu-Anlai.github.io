@@ -138,12 +138,13 @@ exturl: false
 # External url should start with http:// or https://
 menu:
   home: / || home
-  pictures: /pictures/ || image
   categories: /categories/ || th
   tags: /tags/ || tags
   archives: /archives/ || archive
-  about: /about/ || user
+  pictures: /pictures/ || image
+  sources: /sources/ || cloud-download
   schedule: /schedule/ || calendar
+  about: /about/ || user
   sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
 
@@ -306,7 +307,7 @@ post_meta:
 symbols_count_time:
   separated_meta: true
   item_text_post: true
-  item_text_total: false
+  item_text_total: true
   awl: 4
   wpm: 275
 
@@ -574,7 +575,7 @@ gitment:
 # Demo: https://gitalk.github.io
 # Reference: https://asdfv1929.github.io/2018/01/20/gitalk/, https://liujunzhou.top/2018/8/10/gitalk-error/
 gitalk:
-  enable: true
+  enable: false
   github_id: Lu-Anlai # Github repo owner
   repo: Lu-Anlai.github.io # Repository name to store issues.
   client_id: e6139d5b53728420b116 # Github Application Client ID
@@ -871,7 +872,7 @@ canvas_nest:
   color: '0,0,0' # Black
   opacity: 1 # the opacity of line: 0~1
   zIndex: -1 # z-index property of the background
-  count: 300 # the number of lines
+  count: 99 # the number of lines
 
 # JavaScript 3D library.
 # Dependencies: https://github.com/theme-next/theme-next-three
