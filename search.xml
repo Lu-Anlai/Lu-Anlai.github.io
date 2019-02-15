@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[欢迎]]></title>
     <url>%2F2038%2F01%2F19%2F%E6%AC%A2%E8%BF%8E%2F</url>
-    <content type="text"><![CDATA[欢迎来到$\text{Lu-Anlai’s Blog}$本博客由 Hexo 强力驱动 v3.8.0 | 主题 – NexT.Gemini v7.0.0 背景是随机二次元图片$\text{API}$，您可以点击右侧的图片查看更多。 博客主要内容是题解（水题题解），之前在洛谷博客和$\text{CSDN}$博客发布的文章不久就会转移到这个博客上来（咕咕咕）。 本网站可能有些卡顿。]]></content>
+    <content type="text"><![CDATA[欢迎来到$\text{Lu-Anlai’s Blog}$本博客由 Hexo 强力驱动 v3.8.0 | 主题 – NexT.Gemini v7.0.0 背景是随机二次元图片$\text{API}$，您可以点击右侧的资源查看更多。 博客主要内容是题解（水题题解），之前在洛谷博客和$\text{CSDN}$博客发布的文章不久就会转移到这个博客上来（咕咕咕）。]]></content>
   </entry>
   <entry>
     <title><![CDATA[【题解】【洛谷 P4825】 [USACO15FEB]Cow Hopscotch (Silver) 牛跳房子(银)]]></title>
@@ -226,8 +226,8 @@
         <tag>并查集</tag>
         <tag>题解</tag>
         <tag>洛谷</tag>
-        <tag>NOIp提高组</tag>
         <tag>图论</tag>
+        <tag>NOIp提高组</tag>
       </tags>
   </entry>
   <entry>
@@ -241,8 +241,8 @@
         <tag>并查集</tag>
         <tag>题解</tag>
         <tag>洛谷</tag>
-        <tag>NOIp提高组</tag>
         <tag>图论</tag>
+        <tag>NOIp提高组</tag>
         <tag>Kruskal</tag>
         <tag>LCA</tag>
       </tags>
