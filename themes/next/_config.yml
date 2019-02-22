@@ -141,7 +141,7 @@ menu:
   categories: /categories/ || th
   tags: /tags/ || tags
   archives: /archives/ || archive
-  pictures: /pictures/ || image
+  #pictures: /pictures/ || image
   sources: /sources/ || cloud-download
   schedule: /schedule/ || calendar
   about: /about/ || user
@@ -621,7 +621,7 @@ needmoreshare2:
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters
-#google_site_verification: XH6ROIhFuvaMkl8rntkOhYdKVP0idZe-CIqEBLzAeqw
+google_site_verification: YK1xMIijXllpSrpe-7FSZUGGpIX-XTPhR6AL2L95_YY
 
 # Google Analytics
 #google_analytics:
