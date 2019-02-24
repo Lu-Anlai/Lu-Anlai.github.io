@@ -6,6 +6,20 @@
     <content type="text"><![CDATA[欢迎来到$\text{Lu-Anlai’s Blog}$本博客由 Hexo 强力驱动 v3.8.0 | 主题 – NexT.Gemini v7.0.0 博客主要内容是题解（水题题解），之前在洛谷博客和$\text{CSDN}$博客发布的文章不久就会转移到这个博客上来（咕咕咕）。]]></content>
   </entry>
   <entry>
+    <title><![CDATA[【题解（水）】【Codeforces 982A】 Row]]></title>
+    <url>%2F2019%2F02%2F24%2F%E9%A2%98%E8%A7%A3%2FCodeforces%2F%E3%80%90%E9%A2%98%E8%A7%A3%EF%BC%88%E6%B0%B4%EF%BC%89%E3%80%91%E3%80%90Codeforces-982A%E3%80%91-Row%2F</url>
+    <content type="text"><![CDATA[原题题面请查看Codeforces 982A Row。 也可在洛谷上查看：传送门。 题解模拟+字符串 思路此题太水，略去不写。 代码代码如下： 123456789101112131415161718192021#include &lt;cstdio&gt;#include &lt;cstring&gt;char str[1002];int n;int main(void)&#123; register int i; scanf("%d%s", &amp;n, str + 1); str[0] = str[n + 1] = '0'; for (i = 1; i &lt;= n; ++i) if (str[i] == '0' &amp;&amp; !(str[i - 1] == '1' || str[i + 1] == '1')) return puts("No"), 0; else if (str[i] == '1' &amp;&amp; (str[i - 1] == '1' || str[i + 1] == '1')) return puts("No"), 0; else continue; puts("Yes"); return 0;&#125; 我的评测记录 Codeforces； 洛谷。]]></content>
+      <categories>
+        <category>题解（水）</category>
+      </categories>
+      <tags>
+        <tag>模拟</tag>
+        <tag>题解（水）</tag>
+        <tag>Codeforces</tag>
+        <tag>字符串</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[杨辉三角]]></title>
     <url>%2F2019%2F02%2F23%2F%E6%95%B0%E5%AD%A6%2F%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92%2F</url>
     <content type="text"><![CDATA[杨辉三角是一个形如下面这样的一个三角形。 $$1\\1 \quad 1\\1 \quad 2 \quad 1\\1 \quad 3 \quad 3 \quad 1\\1 \quad 4 \quad 6 \quad 4 \quad 1\\…$$ 注：本文中用$\dbinom{n}{k}$代替$C^{k}_{n}$。 杨辉三角的定义杨辉三角有多种定义，这里简单介绍两种： 记$P_{i,j}$表示杨辉三角从上往下第$i$行，从左往右第$j$列的数字。 那么第一种定义方法可以表示成： $$P_{i,j}=\begin{cases} 1 &amp; {i=1 \quad \text{or} \quad j=i} \\P_{i-1,j-1}+P_{i-1,j} &amp; {0 &lt; j &lt; i} \end{cases}$$ 第二种定义方法可以表示为： $$P_{i,j}=\dbinom{i-1}{j-1} \quad 0 &lt; j &lt; i $$ 两种定义方法是等价的，证明极其容易，主要原理是$\dbinom{a}{0}=1$以及$\dbinom{n}{k}=\dbinom{n-1}{k-1}+\dbinom{n-1}{k}$。 杨辉三角的奇妙之处$11$的幂如果我们将杨辉三角的每一位连起来，我们就会发现第$n$行的数，正好对应$11$的$n-1$次幂。 $$1=11^{0}\\11=11^{1}\\121=11^{2}\\1331=11^{3}\\14641=11^{4}\\1 \quad 5 \quad 10 \quad 10 \quad 5 \quad 1 \to 161051=11^{5}\\…$$ 用公式表达为： $$\sum^{n}_{i=1} 10^{n-i} \times P_{i,n} =11^{n-1} \quad n &gt; 0$$ 规律的证明（未完待续）]]></content>
@@ -78,8 +92,8 @@
       </categories>
       <tags>
         <tag>模拟</tag>
-        <tag>Codeforces</tag>
         <tag>题解（水）</tag>
+        <tag>Codeforces</tag>
         <tag>二进制</tag>
       </tags>
   </entry>
@@ -135,8 +149,8 @@
       <tags>
         <tag>题解</tag>
         <tag>洛谷</tag>
-        <tag>JSOI2008</tag>
         <tag>线段树</tag>
+        <tag>JSOI2008</tag>
       </tags>
   </entry>
   <entry>
