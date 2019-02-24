@@ -1,6 +1,5 @@
 ---
 title: 资源
-date: 2019-02-14 11:27:00
 type: "sources"
 ---
 
@@ -12,7 +11,7 @@ type: "sources"
 
 # 站外资源
 
-图床：[$\text{SM.MS}$](https://sm.ms/)；
+图床：[$\text{SM.MS}$](https://sm.ms/)，[路过图床](https://imgchr.com/)；
 
 特效绘图：[$\text{Silk}$](http://weavesilk.com/)；
 
@@ -32,6 +31,15 @@ $\text{CS Academy}$的三大$\text{APP}$：
 
     用于比较代码（或者文本）差异。
 
+# 博客背景
+
+博客原背景为随机二次元图片，现已更换。
+
+现在的壁纸：（[路过图床](https://imgchr.com/)）
+
+[![k593SP.jpg](https://s2.ax1x.com/2019/02/24/k593SP.jpg)](https://imgchr.com/i/k593SP)
+
+~~~md
 # 图片
 
 <!-- 页面不透明，方便观赏 -->
@@ -73,3 +81,4 @@ $\text{CS Academy}$的三大$\text{APP}$：
 <!--img src="http://acg.bakayun.cn/randbg.php" width="1600em" height="900em"-->
 <!--img src="https://random.52ecy.cn/random.php"   alt="" width="160em" height="90em" -->
 ```
+~~~
