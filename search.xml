@@ -6,6 +6,18 @@
     <content type="text"><![CDATA[欢迎来到$\text{Lu-Anlai’s Blog}$本博客由 Hexo 强力驱动 v3.8.0 | 主题 – NexT.Gemini v7.0.0 公式渲染引擎是$\text{MathJax}$。 博客主要内容是题解（水题题解），之前在洛谷博客和$\text{CSDN}$博客发布的文章不久就会转移到这个博客上来（咕咕咕）。 更新日志啥也没有。。。]]></content>
   </entry>
   <entry>
+    <title><![CDATA[NaOH的变质]]></title>
+    <url>%2F2019%2F03%2F02%2Fstudy%2Fchemistry%2F9%2F2%2FNaOH%E5%8F%98%E8%B4%A8%2F</url>
+    <content type="text"><![CDATA[原理$$\ce{2NaOH + CO2 -&gt; Na2CO3 + H2O}$$ 问题这个知识点总共有三个问题：是否变质，变质程度以及除杂。 检验是否变质检验$\ce{NaOH}$是否变质。 分析 未变质：成分为$\ce{NaOH}$； 已变质：成分一定有$\ce{Na2CO3}$。 方法方法有三种。 取样，加足量稀盐酸。有气泡产生，则已变质； 取样，滴加$\ce{BaCl2}$溶液（或$\ce{CaCl2}$溶液）。有白色沉淀，则已变质； 取样，滴加$\ce{Ba(OH)2}$溶液（或$\ce{Ca(OH)2}$溶液）。有白色沉淀，则已变质。 检验变质程度检验$\ce{NaOH}$是完全变质还是部分变质。 分析 部分变质：成分为$\ce{NaOH},\ce{Na2CO3}$； 完全变质：成分为$\ce{Na2CO3}$。 方法 先取样，加入足量的$\ce{BaCl2}$溶液（或$\ce{CaCl2}$溶液）； 目的：除去$\ce{Na2CO3}$，排除对$\ce{NaOH}$检验的干扰。 再向溶液中滴加酚酞试液，若变红，则有$\ce{NaOH}$，为部分变质，否则是完全变质。 除杂除杂$\ce{NaOH}(\ce{Na2CO3})$。 方法原理$$\ce{Na2CO3 + Ba(OH)2 -&gt; 2NaOH + BaCO3 v}$$ 操作滴加适量$\ce{Ba(OH)2}$溶液（或$\ce{Ca(OH)2}$溶液），过滤。]]></content>
+      <categories>
+        <category>文化</category>
+      </categories>
+      <tags>
+        <tag>化学</tag>
+        <tag>初三</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[【题解（水）】【Codeforces 982A】 Row]]></title>
     <url>%2F2019%2F02%2F24%2F%E9%A2%98%E8%A7%A3%2FCodeforces%2F%E3%80%90%E9%A2%98%E8%A7%A3%EF%BC%88%E6%B0%B4%EF%BC%89%E3%80%91%E3%80%90Codeforces-982A%E3%80%91-Row%2F</url>
     <content type="text"><![CDATA[原题题面请查看Codeforces 982A Row。 也可在洛谷上查看：传送门。 题解模拟+字符串 思路此题太水，略去不写。 代码代码如下： 123456789101112131415161718192021#include &lt;cstdio&gt;#include &lt;cstring&gt;char str[1002];int n;int main(void)&#123; register int i; scanf("%d%s", &amp;n, str + 1); str[0] = str[n + 1] = '0'; for (i = 1; i &lt;= n; ++i) if (str[i] == '0' &amp;&amp; !(str[i - 1] == '1' || str[i + 1] == '1')) return puts("No"), 0; else if (str[i] == '1' &amp;&amp; (str[i - 1] == '1' || str[i + 1] == '1')) return puts("No"), 0; else continue; puts("Yes"); return 0;&#125; 我的评测记录 Codeforces； 洛谷。]]></content>
@@ -253,8 +265,8 @@
         <tag>并查集</tag>
         <tag>题解</tag>
         <tag>洛谷</tag>
-        <tag>图论</tag>
         <tag>NOIp提高组</tag>
+        <tag>图论</tag>
       </tags>
   </entry>
   <entry>
@@ -268,9 +280,9 @@
         <tag>并查集</tag>
         <tag>题解</tag>
         <tag>洛谷</tag>
+        <tag>NOIp提高组</tag>
         <tag>图论</tag>
         <tag>Kruskal</tag>
-        <tag>NOIp提高组</tag>
         <tag>LCA</tag>
       </tags>
   </entry>

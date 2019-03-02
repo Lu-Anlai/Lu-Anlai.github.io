@@ -191,7 +191,7 @@
     </div>
     
       
-        <p class="site-subtitle">现在已经$2019$年了</p>
+        <p class="site-subtitle">现在已经2019年了</p>
       
     
     
@@ -227,6 +227,23 @@
     
 
     <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-study">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/study/" rel="section"><i class="menu-item-icon fa fa-fw fa-save"></i> <br>文化</a>
 
   </li>
         
@@ -702,7 +719,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">21</span>
+                    <span class="site-state-item-count">22</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -725,7 +742,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">5</span>
+                      
+                    
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -798,7 +817,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">30</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">32</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -923,7 +946,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">38k</span>
+    <span title="站点总字数">39k</span>
   
 
   
@@ -1431,6 +1454,8 @@
     
       <script type="text/x-mathjax-config">
   
+    MathJax.Ajax.config.path['mhchem'] = '//cdn.jsdelivr.net/npm/mathjax-mhchem@3';
+  
 
   MathJax.Hub.Config({
     tex2jax: {
@@ -1439,6 +1464,8 @@
       skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
     },
     TeX: {
+      
+        extensions: ['[mhchem]/mhchem.js'],
       
       equationNumbers: {
         autoNumber: "AMS"
