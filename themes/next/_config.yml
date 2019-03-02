@@ -138,10 +138,10 @@ exturl: false
 # External url should start with http:// or https://
 menu:
   home: / || home
+  study: /study/ || save
   categories: /categories/ || th
   tags: /tags/ || tags
   archives: /archives/ || archive
-  #pictures: /pictures/ || image
   sources: /sources/ || cloud-download
   schedule: /schedule/ || calendar
   about: /about/ || user
@@ -469,7 +469,7 @@ math:
     #cdn: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML
 
     # See: https://mhchem.github.io/MathJax-mhchem/
-    #mhchem: //cdn.jsdelivr.net/npm/mathjax-mhchem@3
+    mhchem: //cdn.jsdelivr.net/npm/mathjax-mhchem@3
     #mhchem: //cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.3.0
 
   # hexo-renderer-markdown-it-plus (or hexo-renderer-markdown-it with markdown-it-katex plugin) needed to full Katex support.
