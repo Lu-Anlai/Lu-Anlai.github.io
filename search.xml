@@ -6,6 +6,18 @@
     <content type="text"><![CDATA[欢迎来到$\text{Lu-Anlai’s Blog}$本博客由 Hexo 强力驱动 v3.8.0 | 主题 – NexT.Gemini v7.0.0 公式渲染引擎是$\text{MathJax}$。 博客主要内容是题解（水题题解），之前在洛谷博客和$\text{CSDN}$博客发布的文章不久就会转移到这个博客上来（咕咕咕）。 更新日志啥也没有。。。]]></content>
   </entry>
   <entry>
+    <title><![CDATA[【题解】【CodeVS 天梯】 青铜 Bronze]]></title>
+    <url>%2F2019%2F03%2F03%2F%E9%A2%98%E8%A7%A3%2FCodeVS%2F%E3%80%90%E9%A2%98%E8%A7%A3%E3%80%91%E3%80%90CodeVS-%E5%A4%A9%E6%A2%AF%E3%80%91-%E9%9D%92%E9%93%9C-Bronze%2F</url>
+    <content type="text"><![CDATA[原题题目请查看CodeVS 天梯 青铜 Bronze。 题解1201 最小数和最大数1234567891011121314151617181920#include &lt;cstdio&gt;#define INF 0X7FFFFFFF#define min(a, b) ((a) &lt; (b) ? (a) : (b))#define max(a, b) ((a) &gt; (b) ? (a) : (b))int n, temp;int main(void)&#123; register int Min = INF, Max = -INF; scanf("%d", &amp;n); while (n--) &#123; scanf("%d", &amp;temp); Min = min(Min, temp); Max = max(Max, temp); &#125; printf("%d %d\n", Min, Max); return 0;&#125; 1202 求和12345678910111213141516#include &lt;cstdio&gt;int n, temp;int main(void)&#123; register int sum = 0; scanf("%d", &amp;n); while (n--) &#123; scanf("%d", &amp;temp); sum += temp; &#125; printf("%d\n", sum); return 0;&#125; 1203 判断浮点数是否相等123456789101112131415#include &lt;cmath&gt;#include &lt;cstdio&gt;#define eps 1e-8double a, b;int main(void)&#123; scanf("%lf%lf", &amp;a, &amp;b); if (fabs(a - b) &lt; eps) puts("yes"); else puts("no"); return 0;&#125; 1206 保留两位小数12345678910#include &lt;cstdio&gt;double a;int main(void)&#123; scanf("%lf", &amp;a); printf("%.2f\n", a); return 0;&#125; 2235 机票打折123456789101112131415#include &lt;cstdio&gt;int a;double b;int main(void)&#123; scanf("%d%lf", &amp;a, &amp;b); a *= b / 10; if (a % 10 &gt; 4) printf("%d\n", a / 10 * 10 + 10); else printf("%d\n", a / 10 * 10); return 0;&#125; 1204 寻找子串位置1234567891011121314#include &lt;cstdio&gt;#include &lt;iostream&gt;using std::cin;#include &lt;string&gt;using std::string;string a, b;int main(void)&#123; cin &gt;&gt; a &gt;&gt; b; printf("%llu\n", a.find(b) + 1); return 0;&#125; 1205 单词翻转1234567891011121314151617181920212223242526#include &lt;cstdio&gt;#include &lt;iostream&gt;using std::cin;using std::cout;#include &lt;string&gt;using std::string;#include &lt;stack&gt;using std::stack;string temp;stack&lt;string&gt; S;int main(void)&#123; while (cin &gt;&gt; temp) S.push(temp); cout &lt;&lt; S.top(); S.pop(); while (!S.empty()) &#123; cout &lt;&lt; ' ' &lt;&lt; S.top(); S.pop(); &#125; putchar('\n'); return 0;&#125;]]></content>
+      <categories>
+        <category>题解</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>CodeVS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[NaOH的变质]]></title>
     <url>%2F2019%2F03%2F02%2Fstudy%2Fchemistry%2F9%2F2%2FNaOH%E5%8F%98%E8%B4%A8%2F</url>
     <content type="text"><![CDATA[原理$$\ce{2NaOH + CO2 -&gt; Na2CO3 + H2O}$$ 问题这个知识点总共有三个问题：是否变质，变质程度以及除杂。 检验是否变质检验$\ce{NaOH}$是否变质。 分析 未变质：成分为$\ce{NaOH}$； 已变质：成分一定有$\ce{Na2CO3}$。 方法方法有三种。 取样，加足量稀盐酸。有气泡产生，则已变质； 取样，滴加$\ce{BaCl2}$溶液（或$\ce{CaCl2}$溶液）。有白色沉淀，则已变质； 取样，滴加$\ce{Ba(OH)2}$溶液（或$\ce{Ca(OH)2}$溶液）。有白色沉淀，则已变质。 检验变质程度检验$\ce{NaOH}$是完全变质还是部分变质。 分析 部分变质：成分为$\ce{NaOH},\ce{Na2CO3}$； 完全变质：成分为$\ce{Na2CO3}$。 方法 先取样，加入足量的$\ce{BaCl2}$溶液（或$\ce{CaCl2}$溶液）； 目的：除去$\ce{Na2CO3}$，排除对$\ce{NaOH}$检验的干扰。 再向溶液中滴加酚酞试液，若变红，则有$\ce{NaOH}$，为部分变质，否则是完全变质。 除杂除杂$\ce{NaOH}(\ce{Na2CO3})$。 方法原理$$\ce{Na2CO3 + Ba(OH)2 -&gt; 2NaOH + BaCO3 v}$$ 操作滴加适量$\ce{Ba(OH)2}$溶液（或$\ce{Ca(OH)2}$溶液），过滤。]]></content>
@@ -25,9 +37,9 @@
         <category>题解（水）</category>
       </categories>
       <tags>
-        <tag>题解（水）</tag>
         <tag>模拟</tag>
         <tag>Codeforces</tag>
+        <tag>题解（水）</tag>
         <tag>字符串</tag>
       </tags>
   </entry>
@@ -103,9 +115,9 @@
         <category>题解（水）</category>
       </categories>
       <tags>
-        <tag>题解（水）</tag>
         <tag>模拟</tag>
         <tag>Codeforces</tag>
+        <tag>题解（水）</tag>
         <tag>二进制</tag>
       </tags>
   </entry>
@@ -117,8 +129,8 @@
         <category>题解</category>
       </categories>
       <tags>
-        <tag>模拟</tag>
         <tag>题解</tag>
+        <tag>模拟</tag>
         <tag>Codeforces</tag>
         <tag>排序</tag>
       </tags>
@@ -131,9 +143,9 @@
         <category>题解（水）</category>
       </categories>
       <tags>
-        <tag>题解（水）</tag>
         <tag>AtCoder</tag>
         <tag>模拟</tag>
+        <tag>题解（水）</tag>
       </tags>
   </entry>
   <entry>
@@ -211,9 +223,9 @@
         <category>题解</category>
       </categories>
       <tags>
+        <tag>题解</tag>
         <tag>AtCoder</tag>
         <tag>模拟</tag>
-        <tag>题解</tag>
       </tags>
   </entry>
   <entry>
@@ -224,9 +236,9 @@
         <category>题解</category>
       </categories>
       <tags>
+        <tag>题解</tag>
         <tag>AtCoder</tag>
         <tag>模拟</tag>
-        <tag>题解</tag>
       </tags>
   </entry>
   <entry>
