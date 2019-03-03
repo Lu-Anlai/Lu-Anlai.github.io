@@ -1,0 +1,1716 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+  <meta name="google-site-verification" content="YK1xMIijXllpSrpe-7FSZUGGpIX-XTPhR6AL2L95_YY">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.0.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="【NOIp2018】【初赛】普及组原题&amp;amp;题解">
+<meta name="keywords" content="NOIp2018,初赛,普及组">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【NOIp2018】【初赛】普及组原题&amp;题解">
+<meta property="og:url" content="https://www.Lu-Anlai.top/2019/03/03/NOIP/2018/PJ/【NOIp2018】【初赛】普及组原题-题解/index.html">
+<meta property="og:site_name" content="Lu-Anlai&#39;s Blog">
+<meta property="og:description" content="【NOIp2018】【初赛】普及组原题&amp;amp;题解">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://www.lu-anlai.top/2019/03/03/NOIP/2018/PJ/【NOIp2018】【初赛】普及组原题-题解/T11.png">
+<meta property="og:image" content="https://www.lu-anlai.top/2019/03/03/NOIP/2018/PJ/【NOIp2018】【初赛】普及组原题-题解/T15.png">
+<meta property="og:updated_time" content="2019-03-03T04:10:03.999Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【NOIp2018】【初赛】普及组原题&amp;题解">
+<meta name="twitter:description" content="【NOIp2018】【初赛】普及组原题&amp;amp;题解">
+<meta name="twitter:image" content="https://www.lu-anlai.top/2019/03/03/NOIP/2018/PJ/【NOIp2018】【初赛】普及组原题-题解/T11.png">
+
+
+
+
+
+
+  <link rel="canonical" href="https://www.Lu-Anlai.top/2019/03/03/NOIP/2018/PJ/【NOIp2018】【初赛】普及组原题-题解/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>【NOIp2018】【初赛】普及组原题&题解 | Lu-Anlai's Blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Lu-Anlai's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">现在已经2019年了</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-study">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/study/" rel="section"><i class="menu-item-icon fa fa-fw fa-save"></i> <br>文化</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sources">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/sources/" rel="section"><i class="menu-item-icon fa fa-fw fa-cloud-download"></i> <br>资源</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-schedule">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/schedule/" rel="section"><i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>日程表</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sitemap">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/sitemap.xml" rel="section"><i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>站点地图</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.Lu-Anlai.top/2019/03/03/NOIP/2018/PJ/【NOIp2018】【初赛】普及组原题-题解/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="卢安来">
+      <meta itemprop="description" content="学生，江西赣州人">
+      <meta itemprop="image" content="/images/author.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lu-Anlai's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">【NOIp2018】【初赛】普及组原题&题解
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-03 11:37:39 / 修改时间：12:10:03" itemprop="dateCreated datePublished" datetime="2019-03-03T11:37:39+08:00">2019-03-03</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/NOIp/" itemprop="url" rel="index"><span itemprop="name">NOIp</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">6.7k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">6 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>【NOIp2018】【初赛】普及组原题&amp;题解</p>
+<a id="more"></a>
+<h2 id="原题-amp-答案"><a href="#原题-amp-答案" class="headerlink" title="原题&amp;答案"></a>原题&amp;答案</h2><p>普及组<code>C++</code>语言试题：</p>
+<embed src="NOIp2018-PJ-problem.pdf" title="第二十四届全国青少年信息学奥林匹克联赛初赛 普及组 C++语言试题" width="720" height="600">
+
+<p>普及组答案：</p>
+<embed src="NOIp2018-PJ-answer.pdf" title="第二十四届全国青少年信息学奥林匹克联赛初赛 普及组 C++语言试题" width="720" height="600">
+
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="单项选择题"><a href="#单项选择题" class="headerlink" title="单项选择题"></a>单项选择题</h3><h4 id="第-1-题"><a href="#第-1-题" class="headerlink" title="第$1$题"></a>第$1$题</h4><p>以下哪一种设备属于输出设备：（ ）</p>
+<p>$$<br>\text{A. 扫描仪}\quad<br>\text{B. 键盘}\quad<br>\text{C. 鼠标}\quad<br>\text{D. 打印机}<br>$$</p>
+<p>答案：$\text{D}$，打印机属于输出设备。</p>
+<hr>
+<h4 id="第-2-题"><a href="#第-2-题" class="headerlink" title="第$2$题"></a>第$2$题</h4><p>下列四个不同进制的数中，与其它三项数值上不相等的是（ ）。</p>
+<p>$$<br>\text{A. }(269)_{16}\quad<br>\text{B. }(617)_{10}\quad<br>\text{C. }(1151)_{8}\quad<br>\text{D. }(1001101011)_{2}<br>$$</p>
+<p>答案：$\text{D}$，计算。</p>
+<hr>
+<h4 id="第-3-题"><a href="#第-3-题" class="headerlink" title="第$3$题"></a>第$3$题</h4><p>$1\text{MB}$等于（ ）。</p>
+<p>$$<br>\text{A. }1000 \text{字节}\quad<br>\text{B. }1024 \text{字节}\quad<br>\text{C. }1000 \times 1000 \text{字节}\quad<br>\text{D. }1024 \times 1024 \text{字节}<br>$$</p>
+<p>答案：$\text{D}$，$1\text{MB}=2^{20}\text{Byte}$。</p>
+<hr>
+<h4 id="第-4-题"><a href="#第-4-题" class="headerlink" title="第$4$题"></a>第$4$题</h4><p>广域网的英文缩写是（ ）。</p>
+<p>$$<br>\text{A. LAN}\quad<br>\text{B. WAN}\quad<br>\text{C. MAN}\quad<br>\text{D. LNA}<br>$$</p>
+<p>答案：$\text{B}$，广域网（$\text{Wide Area Network}$）的缩写是$\text{WAN}$。</p>
+<hr>
+<h4 id="第-5-题"><a href="#第-5-题" class="headerlink" title="第$5$题"></a>第$5$题</h4><p>中国计算机学会于（ ）年创办全国青少年计算机程序设计竞赛。</p>
+<p>$$<br>\text{A. }1983\quad<br>\text{B. }1984\quad<br>\text{C. }1985\quad<br>\text{D. }1986<br>$$</p>
+<p>答案：$\text{B}$，$1984$年邓小平指出：“计算机的普及要从娃娃做起。”因此，教育部和中国科协委托中国计算机学会举办了全国青少年计算机程序设计竞赛。</p>
+<hr>
+<h4 id="第-6-题"><a href="#第-6-题" class="headerlink" title="第$6$题"></a>第$6$题</h4><p>如果开始时计算机处于小写输入状态，现在有一只小老鼠反复按照<code>CapsLock</code>、字母键$\text{A}$、字母键$\text{S}$、字母键$\text{D}$、字母键$\text{F}$的顺序循环按键，即<code>CapsLock、A、S、D、F、CapsLock、A、S、D、F、……</code>，屏幕上输出的第$81$个字符是字母（ ）。</p>
+<p>$$<br>\text{A. A}\quad<br>\text{B. S}\quad<br>\text{C. D}\quad<br>\text{D. a}<br>$$</p>
+<p>答案：$\text{A}$，模拟可得结果为$\text{A}$。</p>
+<hr>
+<h4 id="第-7-题"><a href="#第-7-题" class="headerlink" title="第$7$题"></a>第$7$题</h4><p>根节点深度为$0$，一棵深度为$h$的满$k(k&gt;1)$叉树，即除最后一层无任何子节点外，每一层上的所有结点都有$k$个子结点的树，共有（ ）个结点。</p>
+<p>$$<br>\text{A. }(k^{h+1}-1)/(k-1)\quad<br>\text{B. }k^{h-1}\quad<br>\text{C. }k^{h}\quad<br>\text{D. }(k^{h-1})/(k-1)<br>$$</p>
+<p>答案：$\text{A}$：</p>
+<p>根据推理得出总的节点数$$S=\sum^{h}_{i=0}k^i$$</p>
+<p>再根据等比数列求和公式得：$$S=1\times\frac{1-q^{n}}{1-q}=\frac{1-k^{h+1}}{1-k}=\frac{k^{h+1}-1}{k-1},q=k$$。</p>
+<hr>
+<h4 id="第-8-题"><a href="#第-8-题" class="headerlink" title="第$8$题"></a>第$8$题</h4><p>以下排序算法中，不需要进行关键字比较操作的算法是（ ）。</p>
+<p>$$<br>\text{A. 基数排序}\quad<br>\text{B. 冒泡排序}\quad<br>\text{C. 堆排序}\quad<br>\text{D. 直接插入排序}<br>$$</p>
+<p>答案：$\text{A}$。</p>
+<hr>
+<h4 id="第-9-题"><a href="#第-9-题" class="headerlink" title="第$9$题"></a>第$9$题</h4><p>给定一个含$N$个不相同数字的数组，在最坏情况下，找出其中最大或最小的数，至少需要$N-1$次比较操作。则最坏情况下，在该数组中同时找最大与最小的数至少需要（ ）次比较操作。（$⌈ ⌉$表示向上取整，$⌊ ⌋$表示向下取整）</p>
+<p>$$<br>\text{A. }⌈3N / 2⌉ - 2\quad<br>\text{B. }⌊3N / 2⌋ - 2\quad<br>\text{C. }2N - 2\quad<br>\text{D. }2N - 4<br>$$</p>
+<p>答案：$\text{A}$。</p>
+<hr>
+<h4 id="第-10-题"><a href="#第-10-题" class="headerlink" title="第$10$题"></a>第$10$题</h4><p>下面的故事与（ ）算法有着异曲同工之妙。从前有座山，山里有座庙，庙里有个老和尚在给小和尚讲故事：“从前有座山，山里有座庙，庙里有个老和尚在给小和尚讲故事：‘从前有座山，山里有座庙，庙里有个老和尚给小和尚讲故事……’”</p>
+<p>$$<br>\text{A. 枚举}\quad<br>\text{B. 递归}\quad<br>\text{C. 贪心}\quad<br>\text{D. 分治}<br>$$</p>
+<p>答案：$\text{B}$。</p>
+<hr>
+<h4 id="第-11-题"><a href="#第-11-题" class="headerlink" title="第$11$题"></a>第$11$题</h4><p>由四个没有区别的点构成的简单无向连通图的个数是（ ）。</p>
+<p>$$<br>\text{A. }6\quad<br>\text{B. }7\quad<br>\text{C. }8\quad<br>\text{D. }9<br>$$</p>
+<p>答案：$\text{A}$。</p>
+<p>如下：</p>
+<p><img src="T11.png" alt="T11.png"></p>
+<hr>
+<h4 id="第-12-题"><a href="#第-12-题" class="headerlink" title="第$12$题"></a>第$12$题</h4><p>设含有$10$个元素的集合的全部子集数为$S$，其中由$7$个元素组成的子集数为$T$，则$T/S$的值为（ ）。</p>
+<p>$$<br>\text{A. }5 / 32\quad<br>\text{B. }15 / 128\quad<br>\text{C. }1 / 8\quad<br>\text{D. }21 / 128<br>$$</p>
+<p>答案：$\text{B}$。$T=120,S=1024$。</p>
+<hr>
+<h4 id="第-13-题"><a href="#第-13-题" class="headerlink" title="第$13$题"></a>第$13$题</h4><p>$10000$以内，与$10000$互质的正整数有（ ）个。</p>
+<p>$$<br>\text{A. }2000\quad<br>\text{B. }4000\quad<br>\text{C. }6000\quad<br>\text{D. }8000<br>$$</p>
+<p>答案：$\text{B}$。</p>
+<hr>
+<h4 id="第-14-题"><a href="#第-14-题" class="headerlink" title="第$14$题"></a>第$14$题</h4><p>为了统计一个非负整数的二进制形式中$1$的个数，代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">CountBit</span><span class="params">(<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> ret = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (x)</span><br><span class="line">    &#123;</span><br><span class="line">        ret++;</span><br><span class="line">        ___________;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>则空格内要填入的语句是（ ）。</p>
+<p>$$<br>\text{A. }x&gt;&gt;1\quad<br>\text{B. }x\&amp;=x-1\quad<br>\text{C. }x|=x&gt;&gt;1\quad<br>\text{D. }x&lt;&lt;1<br>$$</p>
+<p>答案：$\text{B}$。</p>
+<hr>
+<h4 id="第-15-题"><a href="#第-15-题" class="headerlink" title="第$15$题"></a>第$15$题</h4><p>下图中所使用的数据结构是（ ）。</p>
+<p><img src="T15.png" alt="T15.png"></p>
+<p>$$<br>\text{A. 哈希表}\quad<br>\text{B. 栈}\quad<br>\text{C. 队列}\quad<br>\text{D. 二叉树}<br>$$</p>
+<p>答案：$\text{B}$。</p>
+<hr>
+<h3 id="问题求解"><a href="#问题求解" class="headerlink" title="问题求解"></a>问题求解</h3><h4 id="第-1-题-1"><a href="#第-1-题-1" class="headerlink" title="第$1$题"></a>第$1$题</h4><p>甲乙丙丁四人在考虑周末要不要外出郊游。已知①如果周末下雨，并且乙不去，则甲一定不去；②如果乙去，则丁一定去；③如果丙去，则丁一定不去；④如果丁不去，而且甲不去，则丙一定不去。如果周末丙去了，则甲<strong>____</strong>（去了/没去），乙<strong>____</strong>（去了/没去），丁<strong>____</strong>（去了/没去），周末<strong>____</strong>（下雨/没下雨）。</p>
+<p>因为丙去了，由③知：<strong>丁没去</strong>；</p>
+<p>因为丁没去，由②知：<strong>乙没去</strong>；</p>
+<p>因为丁没去，丙去了，由④知：<strong>甲去了</strong>；</p>
+<p>因为甲去了，乙没去，由①知：<strong>周末没下雨</strong>；</p>
+<hr>
+<h4 id="第-2-题-1"><a href="#第-2-题-1" class="headerlink" title="第$2$题"></a>第$2$题</h4><p>从$1$到$2018$这$2018$个数中，共有<strong><strong>__</strong></strong>个包含数字 8 的数。</p>
+<p>$544$个。</p>
+<hr>
+<h3 id="阅读程序写结果"><a href="#阅读程序写结果" class="headerlink" title="阅读程序写结果"></a>阅读程序写结果</h3><h4 id="第-1-题-2"><a href="#第-1-题-2" class="headerlink" title="第$1$题"></a>第$1$题</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="keyword">char</span> st[<span class="number">100</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%s"</span>, st);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; st[i]; ++i) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="string">'A'</span> &lt;= st[i] &amp;&amp; st[i] &lt;= <span class="string">'Z'</span>)</span><br><span class="line">    st[i] += <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%s\n"</span>, st);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>输入：QuanGuoLianSai<br>输出：<strong><strong>_</strong></strong></p>
+<p>阅读程序可知，此程序的作用是：</p>
+<ol>
+<li>将大写字母的<code>ASCII</code>码增加$1$，如$Q → R,G → H$；</li>
+<li>将小写字母或其他字符原样输出。</li>
+</ol>
+<p>所以结果是：RuanHuoMianTai</p>
+<hr>
+<h4 id="第-2-题-2"><a href="#第-2-题-2" class="headerlink" title="第$2$题"></a>第$2$题</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;x);</span><br><span class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; x; ++i) &#123;</span><br><span class="line">        <span class="keyword">if</span> (i * i % x == <span class="number">1</span>) &#123;</span><br><span class="line">            ++res;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>, res);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>输入：15<br>输出：<strong><strong>_</strong></strong></p>
+<p>模拟可得：答案为$4$。</p>
+<hr>
+<h4 id="第-3-题-1"><a href="#第-3-题-1" class="headerlink" title="第$3$题"></a>第$3$题</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n, m;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">findans</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> m)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (n == <span class="number">0</span>) <span class="keyword">return</span> m;</span><br><span class="line">    <span class="keyword">if</span> (m == <span class="number">0</span>) <span class="keyword">return</span> n % <span class="number">3</span>;</span><br><span class="line">    <span class="keyword">return</span> findans(n - <span class="number">1</span>, m) - findans(n, m - <span class="number">1</span>) + findans(n <span class="number">-1</span>, m - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; findans(n, m) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>输入：5 6<br>输出：<strong><strong>_</strong></strong></p>
+<p>模拟可得：答案为$8$</p>
+<hr>
+<h4 id="第-4-题-1"><a href="#第-4-题-1" class="headerlink" title="第$4$题"></a>第$4$题</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="keyword">int</span> n, d[<span class="number">100</span>];</span><br><span class="line"><span class="keyword">bool</span> v[<span class="number">100</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, d + i);</span><br><span class="line">        v[i] = <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> cnt = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">        <span class="keyword">if</span> (!v[i]) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i; !v[j]; j = d[j]) &#123;</span><br><span class="line">                v[j] = <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            ++cnt;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, cnt);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>输入：10 7 1 4 3 2 5 9 8 0 6<br>输出：<strong><strong>_</strong></strong></p>
+<p>模拟可得：答案为$6$</p>
+<hr>
+<h3 id="完善程序"><a href="#完善程序" class="headerlink" title="完善程序"></a>完善程序</h3><h4 id="第-1-题-3"><a href="#第-1-题-3" class="headerlink" title="第$1$题"></a>第$1$题</h4><p><strong>（最大公约数之和）</strong>下列程序想要求解整数𝑛的所有约数两两之间最大公约数的和对$10007$求余后的值，试补全程序。（第一空 2 分，其余 3 分）</p>
+<p>举例来说，$4$的所有约数是$1,2,4$。$1$和$2$的最大公约数为$1$；$2$和$4$的最大公约数为$2$；$1$和$4$的最大公约数为$1$。于是答案为$1+2+1=4$。</p>
+<p>要求<code>getDivisor</code>函数的复杂度为$O(\sqrt{n})$，<code>gcd</code>函数的复杂度为$O(logmax(a,b))$。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">110000</span>, P = <span class="number">10007</span>;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">int</span> a[N], len;</span><br><span class="line"><span class="keyword">int</span> ans;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">getDivisor</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    len = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; (<span class="number">1</span>) &lt;= n; ++i)</span><br><span class="line">        <span class="keyword">if</span> (n % i == <span class="number">0</span>) &#123;</span><br><span class="line">            a[++len] = i;</span><br><span class="line">            <span class="keyword">if</span> ( (<span class="number">2</span>) != i) a[++len] = n / i;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (b == <span class="number">0</span>) &#123;</span><br><span class="line">        (<span class="number">3</span>) ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> gcd(b, (<span class="number">4</span>) );</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    getDivisor();</span><br><span class="line">    ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= len; ++i) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt;= len; ++j) &#123;</span><br><span class="line">            ans = ( (<span class="number">5</span>) ) % P;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>答案：</p>
+<ol>
+<li><code>i*i</code>$**`；枚举到$\sqrt{n}$；</li>
+<li><code>n/i</code>；</li>
+<li><code>return a</code>；注意没有<code>;</code></li>
+<li><code>a%b</code>；</li>
+<li><code>gcd(a[i],a[j])+ans</code>。</li>
+</ol>
+<hr>
+<h4 id="第-2-题-3"><a href="#第-2-题-3" class="headerlink" title="第$2$题"></a>第$2$题</h4><p>对于一个$1$到$n$的排列$P$（即$1$到$n$中每一个数在$P$中出现了恰好一次），令$q_{i}$为第$i$个位置之后第一个比$P_{i}$值更大的位置，如果不存在这样的位置，则$q_{i}=n+1$。</p>
+<p>举例来说，如果$n=5$且$P$为$1 5 4 2 3$，则$q$为$2 6 6 5 6$。<br>下列程序读入了排列$P$，使用双向链表求解了答案。试补全程序。（第二空$2$分，其余$3$分）<br>数据范围$1 \leq n \leq 10^{5}$。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">100010</span>;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">int</span> L[N], R[N], a[N];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">        <span class="keyword">int</span> x;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; x;</span><br><span class="line">         (<span class="number">1</span>) ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">        R[i] = (<span class="number">2</span>) ;</span><br><span class="line">        L[i] = i - <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">        L[ (<span class="number">3</span>) ] = L[a[i]];</span><br><span class="line">        R[L[a[i]]] = R[ (<span class="number">4</span>) ];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; (<span class="number">5</span>) &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>答案：</p>
+<ol>
+<li><code>a[x]=i</code></li>
+<li><code>i+1</code></li>
+<li><code>R[a[i]]</code></li>
+<li><code>a[i]</code></li>
+<li><code>R[i]</code></li>
+</ol>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/NOIp2018/" rel="tag"># NOIp2018</a>
+          
+            <a href="/tags/初赛/" rel="tag"># 初赛</a>
+          
+            <a href="/tags/普及组/" rel="tag"># 普及组</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/03/题解/CodeVS/【题解】【CodeVS-天梯】-青铜-Bronze/" rel="next" title="【题解】【CodeVS 天梯】 青铜 Bronze">
+                <i class="fa fa-chevron-left"></i> 【题解】【CodeVS 天梯】 青铜 Bronze
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2038/01/19/欢迎/" rel="prev" title="欢迎">
+                欢迎 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/author.jpg" alt="卢安来">
+            
+              <p class="site-author-name" itemprop="name">卢安来</p>
+              <p class="site-description motion-element" itemprop="description">学生，江西赣州人</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">24</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">36</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/Lu-Anlai" title="GitHub &rarr; https://github.com/Lu-Anlai" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.luogu.org/space/show?uid=38502" title="洛谷 &rarr; https://www.luogu.org/space/show?uid=38502" rel="noopener" target="_blank"><i class="fa fa-fw fa-code"></i>洛谷</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.luogu.org/" title="https://www.luogu.org/" rel="noopener" target="_blank">洛谷</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.ccf.org.cn/" title="https://www.ccf.org.cn/" rel="noopener" target="_blank">CCF（中国计算机学会）</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.noi.cn/" title="http://www.noi.cn/" rel="noopener" target="_blank">全国青少年信息学奥林匹克竞赛</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#原题-amp-答案"><span class="nav-number">1.</span> <span class="nav-text">原题&amp;答案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题解"><span class="nav-number">2.</span> <span class="nav-text">题解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#单项选择题"><span class="nav-number">2.1.</span> <span class="nav-text">单项选择题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#第-1-题"><span class="nav-number">2.1.1.</span> <span class="nav-text">第$1$题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第-2-题"><span class="nav-number">2.1.2.</span> <span class="nav-text">第$2$题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第-3-题"><span class="nav-number">2.1.3.</span> <span class="nav-text">第$3$题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第-4-题"><span class="nav-number">2.1.4.</span> <span class="nav-text">第$4$题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第-5-题"><span class="nav-number">2.1.5.</span> <span class="nav-text">第$5$题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第-6-题"><span class="nav-number">2.1.6.</span> <span class="nav-text">第$6$题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第-7-题"><span class="nav-number">2.1.7.</span> <span class="nav-text">第$7$题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第-8-题"><span class="nav-number">2.1.8.</span> <span class="nav-text">第$8$题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第-9-题"><span class="nav-number">2.1.9.</span> <span class="nav-text">第$9$题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第-10-题"><span class="nav-number">2.1.10.</span> <span class="nav-text">第$10$题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第-11-题"><span class="nav-number">2.1.11.</span> <span class="nav-text">第$11$题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第-12-题"><span class="nav-number">2.1.12.</span> <span class="nav-text">第$12$题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第-13-题"><span class="nav-number">2.1.13.</span> <span class="nav-text">第$13$题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第-14-题"><span class="nav-number">2.1.14.</span> <span class="nav-text">第$14$题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第-15-题"><span class="nav-number">2.1.15.</span> <span class="nav-text">第$15$题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题求解"><span class="nav-number">2.2.</span> <span class="nav-text">问题求解</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#第-1-题-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">第$1$题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第-2-题-1"><span class="nav-number">2.2.2.</span> <span class="nav-text">第$2$题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#阅读程序写结果"><span class="nav-number">2.3.</span> <span class="nav-text">阅读程序写结果</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#第-1-题-2"><span class="nav-number">2.3.1.</span> <span class="nav-text">第$1$题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第-2-题-2"><span class="nav-number">2.3.2.</span> <span class="nav-text">第$2$题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第-3-题-1"><span class="nav-number">2.3.3.</span> <span class="nav-text">第$3$题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第-4-题-1"><span class="nav-number">2.3.4.</span> <span class="nav-text">第$4$题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#完善程序"><span class="nav-number">2.4.</span> <span class="nav-text">完善程序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#第-1-题-3"><span class="nav-number">2.4.1.</span> <span class="nav-text">第$1$题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第-2-题-3"><span class="nav-number">2.4.2.</span> <span class="nav-text">第$2$题</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">卢安来</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点总字数：</span>
+    
+    <span title="站点总字数">48k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    
+    <span title="站点阅读时长">43 分钟</span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.0.0</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+  
+  <script color="0,0,0" opacity="1" zindex="-1" count="99" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.0"></script>
+
+  <script src="/js/src/motion.js?v=7.0.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.0"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.0"></script>
+<script src="/js/src/post-details.js?v=7.0.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=7.0.0"></script>
+
+
+
+  
+
+
+  
+
+
+  
+
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+    MathJax.Ajax.config.path['mhchem'] = '//cdn.jsdelivr.net/npm/mathjax-mhchem@3';
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+        extensions: ['[mhchem]/mhchem.js'],
+      
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+      for (i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<style>
+.MathJax_Display {
+  overflow: auto hidden;
+}
+</style>
+
+    
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function(i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+        var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var range = document.createRange(); //For Chrome
+        var sel = window.getSelection(); //For Chrome
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; //Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.value = code;
+        ta.textContent = code; //For FireFox
+        ta.contentEditable = true;
+        ta.readOnly = false;
+        document.body.appendChild(ta);
+        range.selectNode(ta);
+        sel.removeAllRanges();
+        sel.addRange(range);
+        ta.setSelectionRange(0, code.length);
+        var result = document.execCommand('copy');
+        
+          if (result) $(this).text('复制成功');
+          else $(this).text('复制失败');
+        
+        ta.blur(); //For iOS
+        $(this).blur();
+      })).on('mouseleave', function(e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function() {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
+  </script>
+
+
+  
+
+</body>
+</html>
