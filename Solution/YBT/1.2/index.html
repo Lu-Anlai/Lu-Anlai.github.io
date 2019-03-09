@@ -1,0 +1,1813 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+  <meta name="google-site-verification" content="YK1xMIijXllpSrpe-7FSZUGGpIX-XTPhR6AL2L95_YY">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.0.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="信息学奥赛一本通（C++版）第一部分 C++语言 第二章 顺序结构程序设计">
+<meta name="keywords" content="题解,信息学奥赛一本通">
+<meta property="og:type" content="article">
+<meta property="og:title" content="信息学奥赛一本通（C++版）第一部分 C++语言 第二章 顺序结构程序设计">
+<meta property="og:url" content="https://www.Lu-Anlai.top/Solution/YBT/1.2/index.html">
+<meta property="og:site_name" content="Lu-Anlai&#39;s Blog">
+<meta property="og:description" content="信息学奥赛一本通（C++版）第一部分 C++语言 第二章 顺序结构程序设计">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-09T10:06:31.204Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="信息学奥赛一本通（C++版）第一部分 C++语言 第二章 顺序结构程序设计">
+<meta name="twitter:description" content="信息学奥赛一本通（C++版）第一部分 C++语言 第二章 顺序结构程序设计">
+
+
+
+
+
+
+  <link rel="canonical" href="https://www.Lu-Anlai.top/Solution/YBT/1.2/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>信息学奥赛一本通（C++版）第一部分 C++语言 第二章 顺序结构程序设计 | Lu-Anlai's Blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Lu-Anlai's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">现在已经2019年了</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-study">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/study/" rel="section"><i class="menu-item-icon fa fa-fw fa-save"></i> <br>文化</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sources">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/sources/" rel="section"><i class="menu-item-icon fa fa-fw fa-cloud-download"></i> <br>资源</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-schedule">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/schedule/" rel="section"><i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>日程表</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sitemap">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/sitemap.xml" rel="section"><i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>站点地图</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.Lu-Anlai.top/Solution/YBT/1.2/index.html">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="卢安来">
+      <meta itemprop="description" content="学生，江西赣州人">
+      <meta itemprop="image" content="/images/author.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lu-Anlai's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">信息学奥赛一本通（C++版）第一部分 C++语言 第二章 顺序结构程序设计
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-09 17:53:45 / 修改时间：18:06:31" itemprop="dateCreated datePublished" datetime="2019-03-09T17:53:45+08:00">2019-03-09</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Solution/" itemprop="url" rel="index"><span itemprop="name">Solution</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">12k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">11 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>信息学奥赛一本通（C++版）第一部分 C++语言 第二章 顺序结构程序设计</p>
+<a id="more"></a>
+<h2 id="第一节-运算符和表达式"><a href="#第一节-运算符和表达式" class="headerlink" title="第一节 运算符和表达式"></a>第一节 运算符和表达式</h2><h3 id="T1006-A-B问题"><a href="#T1006-A-B问题" class="headerlink" title="T1006 : A+B问题"></a>T1006 : A+B问题</h3><h4 id="【题目描述】"><a href="#【题目描述】" class="headerlink" title="【题目描述】"></a>【题目描述】</h4><p>大部分的在线题库，都会将$A+B$问题作为第一题，以帮助新手熟悉平台的使用方法。</p>
+<p>$A+B$问题的题目描述如下：给定两个整数$A$和$B$，输出$A+B$的值。保证$A,B$及结果均在整型范围内。现在请你解决这一问题。</p>
+<h4 id="【输入】"><a href="#【输入】" class="headerlink" title="【输入】"></a>【输入】</h4><p>一行，包含两个整数$A,B$，中间用单个空格隔开。$A$和$B$均在整型范围内。</p>
+<h4 id="【输出】"><a href="#【输出】" class="headerlink" title="【输出】"></a>【输出】</h4><p>一个整数，即$A+B$的值。保证结果在整型范围内。</p>
+<h4 id="【输入样例】"><a href="#【输入样例】" class="headerlink" title="【输入样例】"></a>【输入样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 2</span><br></pre></td></tr></table></figure>
+<h4 id="【输出样例】"><a href="#【输出样例】" class="headerlink" title="【输出样例】"></a>【输出样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
+<h4 id="【答案-amp-代码】"><a href="#【答案-amp-代码】" class="headerlink" title="【答案&amp;代码】"></a>【答案&amp;代码】</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a,b;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;a,&amp;b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,a+b);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="T1007-计算-a-b-×c的值"><a href="#T1007-计算-a-b-×c的值" class="headerlink" title="T1007 : 计算(a+b)×c的值"></a>T1007 : 计算(a+b)×c的值</h3><h4 id="【题目描述】-1"><a href="#【题目描述】-1" class="headerlink" title="【题目描述】"></a>【题目描述】</h4><p>给定$3$个整数$a,b,c$，计算表达式$(a+b)×c$的值。</p>
+<h4 id="【输入】-1"><a href="#【输入】-1" class="headerlink" title="【输入】"></a>【输入】</h4><p>输入仅一行，包括三个整数$a,b,c$, 数与数之间以一个空格分开。$(-10^{4} &lt; a,b,c &lt; 10^{4})$</p>
+<h4 id="【输出】-1"><a href="#【输出】-1" class="headerlink" title="【输出】"></a>【输出】</h4><p>输出一行，即表达式的值。</p>
+<h4 id="【输入样例】-1"><a href="#【输入样例】-1" class="headerlink" title="【输入样例】"></a>【输入样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2 3 5</span><br></pre></td></tr></table></figure>
+<h4 id="【输出样例】-1"><a href="#【输出样例】-1" class="headerlink" title="【输出样例】"></a>【输出样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">25</span><br></pre></td></tr></table></figure>
+<h4 id="【答案-amp-代码】-1"><a href="#【答案-amp-代码】-1" class="headerlink" title="【答案&amp;代码】"></a>【答案&amp;代码】</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a,b,c;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;a,&amp;b,&amp;c);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,(a+b)*c);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="T1008-计算-a-b-c的值"><a href="#T1008-计算-a-b-c的值" class="headerlink" title="T1008 : 计算(a+b)/c的值"></a>T1008 : 计算(a+b)/c的值</h3><h4 id="【题目描述】-2"><a href="#【题目描述】-2" class="headerlink" title="【题目描述】"></a>【题目描述】</h4><p>给定$3$个整数$a,b,c$，计算表达式$(a+b)÷c$的值。</p>
+<h4 id="【输入】-2"><a href="#【输入】-2" class="headerlink" title="【输入】"></a>【输入】</h4><p>输入仅一行，包括三个整数$a,b,c$, 数与数之间以一个空格分开。$(-10^{4} &lt; a,b,c &lt; 10^{4} , c \neq 0)$</p>
+<h4 id="【输出】-2"><a href="#【输出】-2" class="headerlink" title="【输出】"></a>【输出】</h4><p>输出一行，即表达式的值。</p>
+<h4 id="【输入样例】-2"><a href="#【输入样例】-2" class="headerlink" title="【输入样例】"></a>【输入样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 1 3</span><br></pre></td></tr></table></figure>
+<h4 id="【输出样例】-2"><a href="#【输出样例】-2" class="headerlink" title="【输出样例】"></a>【输出样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0</span><br></pre></td></tr></table></figure>
+<h4 id="【答案-amp-代码】-2"><a href="#【答案-amp-代码】-2" class="headerlink" title="【答案&amp;代码】"></a>【答案&amp;代码】</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a,b,c;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;a,&amp;b,&amp;c);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,(a+b)/c);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="T1009-带余除法"><a href="#T1009-带余除法" class="headerlink" title="T1009 : 带余除法"></a>T1009 : 带余除法</h3><h4 id="【题目描述】-3"><a href="#【题目描述】-3" class="headerlink" title="【题目描述】"></a>【题目描述】</h4><p>给定被除数和除数，求整数商及余数。此题中请使用默认的整除和取余运算，无需对结果进行任何特殊处理。</p>
+<h4 id="【输入】-3"><a href="#【输入】-3" class="headerlink" title="【输入】"></a>【输入】</h4><p>一行，包含两个整数，依次为被除数和除数（除数非零），中间用一个空格隔开。</p>
+<h4 id="【输出】-3"><a href="#【输出】-3" class="headerlink" title="【输出】"></a>【输出】</h4><p>一行，包含两个整数，依次为整数商和余数，中间用一个空格隔开。</p>
+<h4 id="【输入样例】-3"><a href="#【输入样例】-3" class="headerlink" title="【输入样例】"></a>【输入样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10 3</span><br></pre></td></tr></table></figure>
+<h4 id="【输出样例】-3"><a href="#【输出样例】-3" class="headerlink" title="【输出样例】"></a>【输出样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 1</span><br></pre></td></tr></table></figure>
+<h4 id="【答案-amp-代码】-3"><a href="#【答案-amp-代码】-3" class="headerlink" title="【答案&amp;代码】"></a>【答案&amp;代码】</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a,b;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;a,&amp;b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d %d"</span>,a/b,a%b);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="T1010-计算分数的浮点数值"><a href="#T1010-计算分数的浮点数值" class="headerlink" title="T1010 : 计算分数的浮点数值"></a>T1010 : 计算分数的浮点数值</h3><h4 id="【题目描述】-4"><a href="#【题目描述】-4" class="headerlink" title="【题目描述】"></a>【题目描述】</h4><p>两个整数$a$和$b$分别作为分子和分母，既分数$\frac{a}{b}$，求它的浮点数值(双精度浮点数，保留小数点后$9$位)。</p>
+<h4 id="【输入】-4"><a href="#【输入】-4" class="headerlink" title="【输入】"></a>【输入】</h4><p>输入仅一行，包括两个整数$a$和$b$。</p>
+<h4 id="【输出】-4"><a href="#【输出】-4" class="headerlink" title="【输出】"></a>【输出】</h4><p>输出也仅一行，分数$\frac{a}{b}$的浮点数值（双精度浮点数，保留小数点后$9$位）。</p>
+<h4 id="【输入样例】-4"><a href="#【输入样例】-4" class="headerlink" title="【输入样例】"></a>【输入样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5 7</span><br></pre></td></tr></table></figure>
+<h4 id="【输出样例】-4"><a href="#【输出样例】-4" class="headerlink" title="【输出样例】"></a>【输出样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0.714285714</span><br></pre></td></tr></table></figure>
+<h4 id="【答案-amp-代码】-4"><a href="#【答案-amp-代码】-4" class="headerlink" title="【答案&amp;代码】"></a>【答案&amp;代码】</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> a,b;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%lf%lf"</span>,&amp;a,&amp;b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%.9f"</span>,a/b);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="第二节-常量和变量"><a href="#第二节-常量和变量" class="headerlink" title="第二节 常量和变量"></a>第二节 常量和变量</h2><h3 id="T1011-甲流疫情死亡率"><a href="#T1011-甲流疫情死亡率" class="headerlink" title="T1011 : 甲流疫情死亡率"></a>T1011 : 甲流疫情死亡率</h3><h4 id="【题目描述】-5"><a href="#【题目描述】-5" class="headerlink" title="【题目描述】"></a>【题目描述】</h4><p>甲流并不可怕，在中国，它的死亡率并不是很高。请根据截止$2009$年$12$月$22$日各省报告的甲流确诊数和死亡数，计算甲流在各省的死亡率。</p>
+<h4 id="【输入】-5"><a href="#【输入】-5" class="headerlink" title="【输入】"></a>【输入】</h4><p>输入仅一行，有两个整数，第一个为确诊数，第二个为死亡数。</p>
+<h4 id="【输出】-5"><a href="#【输出】-5" class="headerlink" title="【输出】"></a>【输出】</h4><p>输出仅一行，甲流死亡率，以百分数形式输出，精确到小数点后$3$位。</p>
+<h4 id="【输入样例】-5"><a href="#【输入样例】-5" class="headerlink" title="【输入样例】"></a>【输入样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10433 60</span><br></pre></td></tr></table></figure>
+<h4 id="【输出样例】-5"><a href="#【输出样例】-5" class="headerlink" title="【输出样例】"></a>【输出样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0.575%</span><br></pre></td></tr></table></figure>
+<h4 id="【答案-amp-代码】-5"><a href="#【答案-amp-代码】-5" class="headerlink" title="【答案&amp;代码】"></a>【答案&amp;代码】</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> a,b;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%lf%lf"</span>,&amp;a,&amp;b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%.3f%%"</span>,b/a*<span class="number">100</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="T1012-计算多项式的值"><a href="#T1012-计算多项式的值" class="headerlink" title="T1012 : 计算多项式的值"></a>T1012 : 计算多项式的值</h3><h4 id="【题目描述】-6"><a href="#【题目描述】-6" class="headerlink" title="【题目描述】"></a>【题目描述】</h4><p>对于多项式$f(x)=ax^{3}+bx^{2}+cx+d$和给定的$a,b,c,d,x$，计算$f(x)$的值，保留到小数点后$7$位。</p>
+<h4 id="【输入】-6"><a href="#【输入】-6" class="headerlink" title="【输入】"></a>【输入】</h4><p>输入仅一行，包含$5$个实数，分别是$x$，及参数$a,b,c,d$的值，每个数都是绝对值不超过$100$的双精度浮点数。数与数之间以一个空格分开。</p>
+<h4 id="【输出】-6"><a href="#【输出】-6" class="headerlink" title="【输出】"></a>【输出】</h4><p>输出一个实数，即$f(x)$的值，保留到小数点后$7$位。</p>
+<h4 id="【输入样例】-6"><a href="#【输入样例】-6" class="headerlink" title="【输入样例】"></a>【输入样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2.31 1.2 2 2 3</span><br></pre></td></tr></table></figure>
+<h4 id="【输出样例】-6"><a href="#【输出样例】-6" class="headerlink" title="【输出样例】"></a>【输出样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">33.0838692</span><br></pre></td></tr></table></figure>
+<h4 id="【答案-amp-代码】-6"><a href="#【答案-amp-代码】-6" class="headerlink" title="【答案&amp;代码】"></a>【答案&amp;代码】</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> a,b,c,d,x;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%lf%lf%lf%lf%lf"</span>,&amp;x,&amp;a,&amp;b,&amp;c,&amp;d);</span><br><span class="line">	<span class="keyword">double</span> ans=a*<span class="built_in">pow</span>(x,<span class="number">3</span>)+b*x*x+c*x+d;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%.7f"</span>,ans);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="T1013-温度表达转化"><a href="#T1013-温度表达转化" class="headerlink" title="T1013 : 温度表达转化"></a>T1013 : 温度表达转化</h3><h4 id="【题目描述】-7"><a href="#【题目描述】-7" class="headerlink" title="【题目描述】"></a>【题目描述】</h4><p>利用公式$C=5×(F−32)÷9$（其中$C$表示摄氏温度，$F$表示华氏温度）进行计算转化,输入华氏温度$F$，输出摄氏温度$C$，要求精确到小数点后$5$位。</p>
+<h4 id="【输入】-7"><a href="#【输入】-7" class="headerlink" title="【输入】"></a>【输入】</h4><p>输入一行，包含一个实数$F$，表示华氏温度。$(F≥−459.67)$</p>
+<h4 id="【输出】-7"><a href="#【输出】-7" class="headerlink" title="【输出】"></a>【输出】</h4><p>输出一行，包含一个实数，表示对应的摄氏温度，要求精确到小数点后$5$位。</p>
+<h4 id="【输入样例】-7"><a href="#【输入样例】-7" class="headerlink" title="【输入样例】"></a>【输入样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">41</span><br></pre></td></tr></table></figure>
+<h4 id="【输出样例】-7"><a href="#【输出样例】-7" class="headerlink" title="【输出样例】"></a>【输出样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5.00000</span><br></pre></td></tr></table></figure>
+<h4 id="【答案-amp-代码】-7"><a href="#【答案-amp-代码】-7" class="headerlink" title="【答案&amp;代码】"></a>【答案&amp;代码】</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> F;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%lf"</span>,&amp;F);</span><br><span class="line">	<span class="keyword">double</span> C=<span class="number">5</span>*(F<span class="number">-32</span>)/<span class="number">9</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%.5f"</span>,C);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="T1014-与圆相关的计算"><a href="#T1014-与圆相关的计算" class="headerlink" title="T1014 : 与圆相关的计算"></a>T1014 : 与圆相关的计算</h3><h4 id="【题目描述】-8"><a href="#【题目描述】-8" class="headerlink" title="【题目描述】"></a>【题目描述】</h4><p>给出圆的半径，求圆的直径、周长和面积。输入圆的半径实数$r$，输出圆的直径、周长、面积，每个数保留小数点后$4$位。圆周率取值为$3.14159$。</p>
+<h4 id="【输入】-8"><a href="#【输入】-8" class="headerlink" title="【输入】"></a>【输入】</h4><p>输入包含一个实数$r(0 &lt; r \leq 10^{4})$，表示圆的半径。</p>
+<h4 id="【输出】-8"><a href="#【输出】-8" class="headerlink" title="【输出】"></a>【输出】</h4><p>输出一行，包含三个数，分别表示圆的直径、周长、面积，数与数之间以一个空格分开，每个数保留小数点后$4$位。</p>
+<h4 id="【输入样例】-8"><a href="#【输入样例】-8" class="headerlink" title="【输入样例】"></a>【输入样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3.0</span><br></pre></td></tr></table></figure>
+<h4 id="【输出样例】-8"><a href="#【输出样例】-8" class="headerlink" title="【输出样例】"></a>【输出样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">6.0000 18.8495 28.2743</span><br></pre></td></tr></table></figure>
+<h4 id="【答案-amp-代码】-8"><a href="#【答案-amp-代码】-8" class="headerlink" title="【答案&amp;代码】"></a>【答案&amp;代码】</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PI 3.14159</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> r;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%lf"</span>,&amp;r);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%.4f %.4f %.4f"</span>,<span class="number">2</span>*r,<span class="number">2</span>*r*PI,r*r*PI);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="T1015-计算并联电阻的阻值"><a href="#T1015-计算并联电阻的阻值" class="headerlink" title="T1015 : 计算并联电阻的阻值"></a>T1015 : 计算并联电阻的阻值</h3><h4 id="【题目描述】-9"><a href="#【题目描述】-9" class="headerlink" title="【题目描述】"></a>【题目描述】</h4><p>对于阻值为$R_{1}$和$R_{2}$的电阻，其并联电阻阻值公式计算如下：$R=\frac{1}{\frac{1}{R_{1}}+\frac{1}{R_{2}}}$。输入两个电阻阻抗大小，浮点型。输出并联之后的阻抗大小，结果保留小数点后$2$位。</p>
+<h4 id="【输入】-9"><a href="#【输入】-9" class="headerlink" title="【输入】"></a>【输入】</h4><p>两个电阻阻抗大小，浮点型，以一个空格分开。</p>
+<h4 id="【输出】-9"><a href="#【输出】-9" class="headerlink" title="【输出】"></a>【输出】</h4><p>并联之后的阻抗大小，结果保留小数点后$2$位。</p>
+<h4 id="【输入样例】-9"><a href="#【输入样例】-9" class="headerlink" title="【输入样例】"></a>【输入样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 2</span><br></pre></td></tr></table></figure>
+<h4 id="【输出样例】-9"><a href="#【输出样例】-9" class="headerlink" title="【输出样例】"></a>【输出样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0.67</span><br></pre></td></tr></table></figure>
+<h4 id="【答案-amp-代码】-9"><a href="#【答案-amp-代码】-9" class="headerlink" title="【答案&amp;代码】"></a>【答案&amp;代码】</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> r1,r2;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%lf%lf"</span>,&amp;r1,&amp;r2);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%.2f"</span>,<span class="number">1</span>/(<span class="number">1</span>/r1+<span class="number">1</span>/r2));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="第三节-标准数据类型"><a href="#第三节-标准数据类型" class="headerlink" title="第三节 标准数据类型"></a>第三节 标准数据类型</h2><h3 id="T1016-整型数据类型存储空间大小"><a href="#T1016-整型数据类型存储空间大小" class="headerlink" title="T1016 : 整型数据类型存储空间大小"></a>T1016 : 整型数据类型存储空间大小</h3><h4 id="【题目描述】-10"><a href="#【题目描述】-10" class="headerlink" title="【题目描述】"></a>【题目描述】</h4><p>分别定义<code>int</code>，<code>short</code>类型的变量各一个，并依次输出它们的存储空间大小(单位：字节)。</p>
+<h4 id="【输入】-10"><a href="#【输入】-10" class="headerlink" title="【输入】"></a>【输入】</h4><p>(无）</p>
+<h4 id="【输出】-10"><a href="#【输出】-10" class="headerlink" title="【输出】"></a>【输出】</h4><p>一行，两个整数，分别是两个变量的存储空间大小，用一个空格隔开。</p>
+<h4 id="【答案-amp-代码】-10"><a href="#【答案-amp-代码】-10" class="headerlink" title="【答案&amp;代码】"></a>【答案&amp;代码】</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d %d"</span>,<span class="keyword">sizeof</span>(<span class="keyword">int</span>),<span class="keyword">sizeof</span>(<span class="keyword">short</span>));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="T1017-浮点型数据类型存储空间大小"><a href="#T1017-浮点型数据类型存储空间大小" class="headerlink" title="T1017 : 浮点型数据类型存储空间大小"></a>T1017 : 浮点型数据类型存储空间大小</h3><h4 id="【题目描述】-11"><a href="#【题目描述】-11" class="headerlink" title="【题目描述】"></a>【题目描述】</h4><p>分别定义<code>float</code>，<code>double</code>类型的变量各一个，并依次输出它们的存储空间大小(单位：字节)。</p>
+<h4 id="【输入】-11"><a href="#【输入】-11" class="headerlink" title="【输入】"></a>【输入】</h4><p>(无）</p>
+<h4 id="【输出】-11"><a href="#【输出】-11" class="headerlink" title="【输出】"></a>【输出】</h4><p>一行，两个整数，分别是两个变量的存储空间大小，用一个空格隔开。</p>
+<h4 id="【答案-amp-代码】-11"><a href="#【答案-amp-代码】-11" class="headerlink" title="【答案&amp;代码】"></a>【答案&amp;代码】</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d %d"</span>,<span class="keyword">sizeof</span>(<span class="keyword">float</span>),<span class="keyword">sizeof</span>(<span class="keyword">double</span>));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="T1018-其他数据类型存储空间大小"><a href="#T1018-其他数据类型存储空间大小" class="headerlink" title="T1018 : 其他数据类型存储空间大小"></a>T1018 : 其他数据类型存储空间大小</h3><h4 id="【题目描述】-12"><a href="#【题目描述】-12" class="headerlink" title="【题目描述】"></a>【题目描述】</h4><p>分别定义<code>bool</code>，<code>char</code>类型的变量各一个，并依次输出它们的存储空间大小(单位：字节)。</p>
+<h4 id="【输入】-12"><a href="#【输入】-12" class="headerlink" title="【输入】"></a>【输入】</h4><p>(无）</p>
+<h4 id="【输出】-12"><a href="#【输出】-12" class="headerlink" title="【输出】"></a>【输出】</h4><p>一行，两个整数，分别是两个变量的存储空间大小，用一个空格隔开。</p>
+<h4 id="【答案-amp-代码】-12"><a href="#【答案-amp-代码】-12" class="headerlink" title="【答案&amp;代码】"></a>【答案&amp;代码】</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d %d"</span>,<span class="keyword">sizeof</span>(<span class="keyword">bool</span>),<span class="keyword">sizeof</span>(<span class="keyword">char</span>));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="T1019-其他数据类型存储空间大小"><a href="#T1019-其他数据类型存储空间大小" class="headerlink" title="T1019 : 其他数据类型存储空间大小"></a>T1019 : 其他数据类型存储空间大小</h3><h4 id="【题目描述】-13"><a href="#【题目描述】-13" class="headerlink" title="【题目描述】"></a>【题目描述】</h4><p>输入一个单精度浮点数，将其向零舍入到整数。说明：向零舍入的含义是，正数向下舍入，负数向上舍入。提示：可以使用强制类型转换来实现。</p>
+<h4 id="【输入】-13"><a href="#【输入】-13" class="headerlink" title="【输入】"></a>【输入】</h4><p>一个单精度浮点数。</p>
+<h4 id="【输出】-13"><a href="#【输出】-13" class="headerlink" title="【输出】"></a>【输出】</h4><p>一个整数，即向零舍入到整数的结果。</p>
+<h4 id="【输入样例】-10"><a href="#【输入样例】-10" class="headerlink" title="【输入样例】"></a>【输入样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2.3</span><br></pre></td></tr></table></figure>
+<h4 id="【输出样例】-10"><a href="#【输出样例】-10" class="headerlink" title="【输出样例】"></a>【输出样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2</span><br></pre></td></tr></table></figure>
+<h4 id="【答案-amp-代码】-13"><a href="#【答案-amp-代码】-13" class="headerlink" title="【答案&amp;代码】"></a>【答案&amp;代码】</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> num;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%lf"</span>,&amp;num);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,(<span class="keyword">int</span>)num);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="T1020-打印ASCII码"><a href="#T1020-打印ASCII码" class="headerlink" title="T1020 : 打印ASCII码"></a>T1020 : 打印ASCII码</h3><h4 id="【题目描述】-14"><a href="#【题目描述】-14" class="headerlink" title="【题目描述】"></a>【题目描述】</h4><p>输入一个除空格以外的可见字符（保证在函数<code>scanf</code>中可使用格式说明符<code>%c</code>读入），输出其<code>ASCII</code>码。</p>
+<h4 id="【输入】-14"><a href="#【输入】-14" class="headerlink" title="【输入】"></a>【输入】</h4><p>一个除空格以外的可见字符。</p>
+<h4 id="【输出】-14"><a href="#【输出】-14" class="headerlink" title="【输出】"></a>【输出】</h4><p>一个十进制整数，即该字符的<code>ASCII</code>码。</p>
+<h4 id="【输入样例】-11"><a href="#【输入样例】-11" class="headerlink" title="【输入样例】"></a>【输入样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A</span><br></pre></td></tr></table></figure>
+<h4 id="【输出样例】-11"><a href="#【输出样例】-11" class="headerlink" title="【输出样例】"></a>【输出样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">65</span><br></pre></td></tr></table></figure>
+<h4 id="【答案-amp-代码】-14"><a href="#【答案-amp-代码】-14" class="headerlink" title="【答案&amp;代码】"></a>【答案&amp;代码】</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> ch;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%c"</span>,&amp;ch);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,ch);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="T1021-打印字符"><a href="#T1021-打印字符" class="headerlink" title="T1021 : 打印字符"></a>T1021 : 打印字符</h3><h4 id="【题目描述】-15"><a href="#【题目描述】-15" class="headerlink" title="【题目描述】"></a>【题目描述】</h4><p>输入一个整数，即字符的<code>ASCII</code>码，保证存在对应的可见字符。输出相对应的字符。</p>
+<h4 id="【输入】-15"><a href="#【输入】-15" class="headerlink" title="【输入】"></a>【输入】</h4><p>一个整数，即字符的<code>ASCII</code>码，保证存在对应的可见字符。</p>
+<h4 id="【输出】-15"><a href="#【输出】-15" class="headerlink" title="【输出】"></a>【输出】</h4><p>一行，包含相应的字符。</p>
+<h4 id="【输入样例】-12"><a href="#【输入样例】-12" class="headerlink" title="【输入样例】"></a>【输入样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">65</span><br></pre></td></tr></table></figure>
+<h4 id="【输出样例】-12"><a href="#【输出样例】-12" class="headerlink" title="【输出样例】"></a>【输出样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A</span><br></pre></td></tr></table></figure>
+<h4 id="【答案-amp-代码】-15"><a href="#【答案-amp-代码】-15" class="headerlink" title="【答案&amp;代码】"></a>【答案&amp;代码】</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> ch;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;ch);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%c"</span>,ch);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="T1022-整型与布尔型的转换"><a href="#T1022-整型与布尔型的转换" class="headerlink" title="T1022 : 整型与布尔型的转换"></a>T1022 : 整型与布尔型的转换</h3><h4 id="【题目描述】-16"><a href="#【题目描述】-16" class="headerlink" title="【题目描述】"></a>【题目描述】</h4><p>将一个整型变量的值赋给一个布尔型变量，再将这个布尔型变量的值赋给一个整型变量，得到的值是多少？</p>
+<h4 id="【输入】-16"><a href="#【输入】-16" class="headerlink" title="【输入】"></a>【输入】</h4><p>一个整型范围内的整数，即初始时整型变量的值。</p>
+<h4 id="【输出】-16"><a href="#【输出】-16" class="headerlink" title="【输出】"></a>【输出】</h4><p>一个整数，经过上述过程后得到的结果。</p>
+<h4 id="【输入样例】-13"><a href="#【输入样例】-13" class="headerlink" title="【输入样例】"></a>【输入样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
+<h4 id="【输出样例】-13"><a href="#【输出样例】-13" class="headerlink" title="【输出样例】"></a>【输出样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1</span><br></pre></td></tr></table></figure>
+<h4 id="【答案-amp-代码】-16"><a href="#【答案-amp-代码】-16" class="headerlink" title="【答案&amp;代码】"></a>【答案&amp;代码】</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">	<span class="keyword">bool</span> temp=n;</span><br><span class="line">	n=temp;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,n);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="T1023-Hello-World-的大小"><a href="#T1023-Hello-World-的大小" class="headerlink" title="T1023 : Hello,World!的大小"></a>T1023 : Hello,World!的大小</h3><h4 id="【题目描述】-17"><a href="#【题目描述】-17" class="headerlink" title="【题目描述】"></a>【题目描述】</h4><p>我们曾经输出过的<code>&quot;Hello, World!&quot;</code>吗？它虽然不是本章所涉及的基本数据类型的数据，但我们同样可以用<code>sizeof</code>函数获得它所占用的空间大小。</p>
+<h4 id="【输入】-17"><a href="#【输入】-17" class="headerlink" title="【输入】"></a>【输入】</h4><p>（无）</p>
+<h4 id="【输出】-17"><a href="#【输出】-17" class="headerlink" title="【输出】"></a>【输出】</h4><p>一个整数，即<code>&quot;Hello, World!&quot;</code>的大小。</p>
+<h4 id="【答案-amp-代码】-17"><a href="#【答案-amp-代码】-17" class="headerlink" title="【答案&amp;代码】"></a>【答案&amp;代码】</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,<span class="keyword">sizeof</span>(<span class="string">"Hello, World!"</span>));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="第四节-数据输入输出"><a href="#第四节-数据输入输出" class="headerlink" title="第四节 数据输入输出"></a>第四节 数据输入输出</h2><h3 id="T1024-保留3位小数的浮点数"><a href="#T1024-保留3位小数的浮点数" class="headerlink" title="T1024 : 保留3位小数的浮点数"></a>T1024 : 保留3位小数的浮点数</h3><h4 id="【题目描述】-18"><a href="#【题目描述】-18" class="headerlink" title="【题目描述】"></a>【题目描述】</h4><p>读入一个单精度浮点数，保留$3$位小数输出这个浮点数。</p>
+<h4 id="【输入】-18"><a href="#【输入】-18" class="headerlink" title="【输入】"></a>【输入】</h4><p>只有一行，一个单精度浮点数。</p>
+<h4 id="【输出】-18"><a href="#【输出】-18" class="headerlink" title="【输出】"></a>【输出】</h4><p>也只有一行，读入的单精度浮点数。</p>
+<h4 id="【输入样例】-14"><a href="#【输入样例】-14" class="headerlink" title="【输入样例】"></a>【输入样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">12.34521</span><br></pre></td></tr></table></figure>
+<h4 id="【输出样例】-14"><a href="#【输出样例】-14" class="headerlink" title="【输出样例】"></a>【输出样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">12.345</span><br></pre></td></tr></table></figure>
+<h4 id="【答案-amp-代码】-18"><a href="#【答案-amp-代码】-18" class="headerlink" title="【答案&amp;代码】"></a>【答案&amp;代码】</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> num;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%lf"</span>,&amp;num);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%.3f"</span>,num);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="T1025-保留12位小数的浮点数"><a href="#T1025-保留12位小数的浮点数" class="headerlink" title="T1025 : 保留12位小数的浮点数"></a>T1025 : 保留12位小数的浮点数</h3><h4 id="【题目描述】-19"><a href="#【题目描述】-19" class="headerlink" title="【题目描述】"></a>【题目描述】</h4><p>读入一个双精度浮点数，保留$12$位小数，输出这个浮点数。</p>
+<h4 id="【输入】-19"><a href="#【输入】-19" class="headerlink" title="【输入】"></a>【输入】</h4><p>只有一行，一个双精度浮点数。</p>
+<h4 id="【输出】-19"><a href="#【输出】-19" class="headerlink" title="【输出】"></a>【输出】</h4><p>也只有一行，保留$12$位小数的浮点数。</p>
+<h4 id="【输入样例】-15"><a href="#【输入样例】-15" class="headerlink" title="【输入样例】"></a>【输入样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3.1415926535798932</span><br></pre></td></tr></table></figure>
+<h4 id="【输出样例】-15"><a href="#【输出样例】-15" class="headerlink" title="【输出样例】"></a>【输出样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3.141592653580</span><br></pre></td></tr></table></figure>
+<h4 id="【答案-amp-代码】-19"><a href="#【答案-amp-代码】-19" class="headerlink" title="【答案&amp;代码】"></a>【答案&amp;代码】</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> num;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%lf"</span>,&amp;num);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%.12lf"</span>,num);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="T1026-空格分隔输出"><a href="#T1026-空格分隔输出" class="headerlink" title="T1026 : 空格分隔输出"></a>T1026 : 空格分隔输出</h3><h4 id="【题目描述】-20"><a href="#【题目描述】-20" class="headerlink" title="【题目描述】"></a>【题目描述】</h4><p>读入一个字符，一个整数，一个单精度浮点数，一个双精度浮点数，然后按顺序输出它们，并且要求在他们之间用一个空格分隔。输出浮点数时保留$6$位小数。</p>
+<h4 id="【输入】-20"><a href="#【输入】-20" class="headerlink" title="【输入】"></a>【输入】</h4><p>第一行是一个字符；</p>
+<p>第二行是一个整数；</p>
+<p>第三行是一个单精度浮点数；</p>
+<p>第四行是一个双精度浮点数。</p>
+<h4 id="【输出】-20"><a href="#【输出】-20" class="headerlink" title="【输出】"></a>【输出】</h4><p>输出字符、整数、单精度浮点数和双精度浮点数，之间用空格分隔。</p>
+<h4 id="【输入样例】-16"><a href="#【输入样例】-16" class="headerlink" title="【输入样例】"></a>【输入样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a</span><br><span class="line">12</span><br><span class="line">2.3</span><br><span class="line">3.2</span><br></pre></td></tr></table></figure>
+<h4 id="【输出样例】-16"><a href="#【输出样例】-16" class="headerlink" title="【输出样例】"></a>【输出样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a 12 2.300000 3.200000</span><br></pre></td></tr></table></figure>
+<h4 id="【答案-amp-代码】-20"><a href="#【答案-amp-代码】-20" class="headerlink" title="【答案&amp;代码】"></a>【答案&amp;代码】</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> ch;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="keyword">double</span> a,b;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%c%d%lf%lf"</span>,&amp;ch,&amp;n,&amp;a,&amp;b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%c %d %.6f %.6f"</span>,ch,n,a,b);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="T1027-输出浮点数"><a href="#T1027-输出浮点数" class="headerlink" title="T1027 : 输出浮点数"></a>T1027 : 输出浮点数</h3><h4 id="【题目描述】-21"><a href="#【题目描述】-21" class="headerlink" title="【题目描述】"></a>【题目描述】</h4><p>读入一个双精度浮点数，分别按输出格式<code>%f</code>，<code>%f</code>保留$5$位小数，<code>%e</code>和<code>%g</code>的形式输出这个整数，每次在单独一行上输出。</p>
+<h4 id="【输入】-21"><a href="#【输入】-21" class="headerlink" title="【输入】"></a>【输入】</h4><p>一个双精度浮点数。</p>
+<h4 id="【输出】-21"><a href="#【输出】-21" class="headerlink" title="【输出】"></a>【输出】</h4><p>第一行是按<code>%f</code>输出的双精度浮点数；</p>
+<p>第二行是按<code>%f</code>保留$5$位小数输出的双精度浮点数；</p>
+<p>第三行是按<code>%e</code>输出的双精度浮点数；</p>
+<p>第四行是按<code>%g</code>输出的双精度浮点数。</p>
+<h4 id="【输入样例】-17"><a href="#【输入样例】-17" class="headerlink" title="【输入样例】"></a>【输入样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">12.3456789</span><br></pre></td></tr></table></figure>
+<h4 id="【输出样例】-17"><a href="#【输出样例】-17" class="headerlink" title="【输出样例】"></a>【输出样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">12.345679</span><br><span class="line">12.34568</span><br><span class="line">1.234568e+001</span><br><span class="line">12.3457</span><br></pre></td></tr></table></figure>
+<h4 id="【答案-amp-代码】-21"><a href="#【答案-amp-代码】-21" class="headerlink" title="【答案&amp;代码】"></a>【答案&amp;代码】</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> n;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%lf"</span>,&amp;n);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%.6f\n%.5f\n%e\n%g"</span>,n,n,n,n);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="T1028-字符菱形"><a href="#T1028-字符菱形" class="headerlink" title="T1028 : 字符菱形"></a>T1028 : 字符菱形</h3><h4 id="【题目描述】-22"><a href="#【题目描述】-22" class="headerlink" title="【题目描述】"></a>【题目描述】</h4><p>给定一个字符，用它构造一个对角线长$5$个字符，倾斜放置的菱形。</p>
+<h4 id="【输入】-22"><a href="#【输入】-22" class="headerlink" title="【输入】"></a>【输入】</h4><p>输入只有一行， 包含一个字符。</p>
+<h4 id="【输出】-22"><a href="#【输出】-22" class="headerlink" title="【输出】"></a>【输出】</h4><p>该字符构成的菱形。</p>
+<h4 id="【输入样例】-18"><a href="#【输入样例】-18" class="headerlink" title="【输入样例】"></a>【输入样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*</span><br></pre></td></tr></table></figure>
+<h4 id="【输出样例】-18"><a href="#【输出样例】-18" class="headerlink" title="【输出样例】"></a>【输出样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  *</span><br><span class="line"> ***</span><br><span class="line">*****</span><br><span class="line"> ***</span><br><span class="line">  *</span><br></pre></td></tr></table></figure>
+<h4 id="【答案-amp-代码】-22"><a href="#【答案-amp-代码】-22" class="headerlink" title="【答案&amp;代码】"></a>【答案&amp;代码】</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> ch;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%c"</span>,&amp;ch);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"  %c  \n %c%c%c \n%c%c%c%c%c\n %c%c%c \n  %c  "</span>,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="第五节-顺序结构实例"><a href="#第五节-顺序结构实例" class="headerlink" title="第五节 顺序结构实例"></a>第五节 顺序结构实例</h2><h3 id="T1029-计算浮点数相除的余"><a href="#T1029-计算浮点数相除的余" class="headerlink" title="T1029 : 计算浮点数相除的余"></a>T1029 : 计算浮点数相除的余</h3><h4 id="【题目描述】-23"><a href="#【题目描述】-23" class="headerlink" title="【题目描述】"></a>【题目描述】</h4><p>计算两个双精度浮点数$a$和$b$的相除的余数，$a$和$b$都是双精度浮点数。这里余数$r$的定义是：$a=k×b+r$，其中$k$是整数，$0≤r&lt;b$。</p>
+<h4 id="【输入】-23"><a href="#【输入】-23" class="headerlink" title="【输入】"></a>【输入】</h4><p>输入仅一行，包括两个双精度浮点数$a$和$b$。</p>
+<h4 id="【输出】-23"><a href="#【输出】-23" class="headerlink" title="【输出】"></a>【输出】</h4><p>输出也仅一行，$a÷b$的余数。</p>
+<h4 id="【输入样例】-19"><a href="#【输入样例】-19" class="headerlink" title="【输入样例】"></a>【输入样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">73.263 0.9973</span><br></pre></td></tr></table></figure>
+<h4 id="【输出样例】-19"><a href="#【输出样例】-19" class="headerlink" title="【输出样例】"></a>【输出样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0.4601</span><br></pre></td></tr></table></figure>
+<h4 id="【答案-amp-代码】-23"><a href="#【答案-amp-代码】-23" class="headerlink" title="【答案&amp;代码】"></a>【答案&amp;代码】</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> a,b;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%lf%lf"</span>,&amp;a,&amp;b);</span><br><span class="line">	<span class="keyword">int</span> k=(<span class="keyword">int</span>)(a/b);</span><br><span class="line">	<span class="keyword">double</span> r=a-k*b;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%g"</span>,r);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="T1030-计算球的体积"><a href="#T1030-计算球的体积" class="headerlink" title="T1030 : 计算球的体积"></a>T1030 : 计算球的体积</h3><h4 id="【题目描述】-24"><a href="#【题目描述】-24" class="headerlink" title="【题目描述】"></a>【题目描述】</h4><p>对于半径为$r$的球，其体积的计算公式为$V=\frac{4}{3}πr^{3}$，这里取$π=3.14$。现给定$r$，即球半径，类型为$double$，求球的体积$V$，保留到小数点后$2$位。</p>
+<h4 id="【输入】-24"><a href="#【输入】-24" class="headerlink" title="【输入】"></a>【输入】</h4><p>输入为一个不超过$100$的非负实数，即球半径，类型为$double$。</p>
+<h4 id="【输出】-24"><a href="#【输出】-24" class="headerlink" title="【输出】"></a>【输出】</h4><p>输出一个实数，即球的体积，保留到小数点后$2$位。</p>
+<h4 id="【输入样例】-20"><a href="#【输入样例】-20" class="headerlink" title="【输入样例】"></a>【输入样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4</span><br></pre></td></tr></table></figure>
+<h4 id="【输出样例】-20"><a href="#【输出样例】-20" class="headerlink" title="【输出样例】"></a>【输出样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">267.95</span><br></pre></td></tr></table></figure>
+<h4 id="【答案-amp-代码】-24"><a href="#【答案-amp-代码】-24" class="headerlink" title="【答案&amp;代码】"></a>【答案&amp;代码】</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PI 3.14</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> r;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%lf"</span>,&amp;r);</span><br><span class="line">	<span class="keyword">double</span> V=<span class="built_in">pow</span>(r,<span class="number">3</span>)*PI*<span class="number">4</span>/<span class="number">3</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%.2f"</span>,V);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="T1031-反向输出一个三位数"><a href="#T1031-反向输出一个三位数" class="headerlink" title="T1031 : 反向输出一个三位数"></a>T1031 : 反向输出一个三位数</h3><h4 id="【题目描述】-25"><a href="#【题目描述】-25" class="headerlink" title="【题目描述】"></a>【题目描述】</h4><p>将一个三位数反向输出，例如输入$358$，反向输出$853$。</p>
+<h4 id="【输入】-25"><a href="#【输入】-25" class="headerlink" title="【输入】"></a>【输入】</h4><p>一个三位数$n$。</p>
+<h4 id="【输出】-25"><a href="#【输出】-25" class="headerlink" title="【输出】"></a>【输出】</h4><p>反向输出$n$。</p>
+<h4 id="【输入样例】-21"><a href="#【输入样例】-21" class="headerlink" title="【输入样例】"></a>【输入样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">100</span><br></pre></td></tr></table></figure>
+<h4 id="【输出样例】-21"><a href="#【输出样例】-21" class="headerlink" title="【输出样例】"></a>【输出样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">001</span><br></pre></td></tr></table></figure>
+<h4 id="【答案-amp-代码】-25"><a href="#【答案-amp-代码】-25" class="headerlink" title="【答案&amp;代码】"></a>【答案&amp;代码】</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> num;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;num);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,num%<span class="number">10</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,(num/<span class="number">10</span>)%<span class="number">10</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,num/<span class="number">100</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="T1032-大象喝水查"><a href="#T1032-大象喝水查" class="headerlink" title="T1032 : 大象喝水查"></a>T1032 : 大象喝水查</h3><h4 id="【题目描述】-26"><a href="#【题目描述】-26" class="headerlink" title="【题目描述】"></a>【题目描述】</h4><p>一只大象口渴了，要喝$20$升水才能解渴，但现在只有一个深$h$厘米，底面半径为$r$厘米的小圆桶($h$和$r$都是整数)。问大象至少要喝多少桶水才会解渴。</p>
+<h4 id="【输入】-26"><a href="#【输入】-26" class="headerlink" title="【输入】"></a>【输入】</h4><p>输入有一行：包行两个整数，以一个空格分开，分别表示小圆桶的深$h$和底面半径$r$，单位都是厘米。</p>
+<h4 id="【输出】-26"><a href="#【输出】-26" class="headerlink" title="【输出】"></a>【输出】</h4><p>输出一行，包含一个整数，表示大象至少要喝水的桶数。</p>
+<h4 id="【输入样例】-22"><a href="#【输入样例】-22" class="headerlink" title="【输入样例】"></a>【输入样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">23 11</span><br></pre></td></tr></table></figure>
+<h4 id="【输出样例】-22"><a href="#【输出样例】-22" class="headerlink" title="【输出样例】"></a>【输出样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
+<h4 id="【答案-amp-代码】-26"><a href="#【答案-amp-代码】-26" class="headerlink" title="【答案&amp;代码】"></a>【答案&amp;代码】</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> h,r;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%lf%lf"</span>,&amp;h,&amp;r);</span><br><span class="line">	<span class="keyword">double</span> V=r*r*M_PI*h;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,(<span class="keyword">int</span>)<span class="built_in">ceil</span>(<span class="number">20000</span>/V));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="T1033-计算线段长度"><a href="#T1033-计算线段长度" class="headerlink" title="T1033 : 计算线段长度"></a>T1033 : 计算线段长度</h3><h4 id="【题目描述】-27"><a href="#【题目描述】-27" class="headerlink" title="【题目描述】"></a>【题目描述】</h4><p>已知线段的两个端点的坐标$A(X_{a},Y_{b}),B(X_{b},Y_{b})$，求线段$AB$的长度，保留到小数点后$3$位。</p>
+<h4 id="【输入】-27"><a href="#【输入】-27" class="headerlink" title="【输入】"></a>【输入】</h4><p>第一行是两个实数$X_{a},Y_{b}$，即$A$的坐标。</p>
+<p>第二行是两个实数$X_{b},Y_{b}$，即$B$的坐标。</p>
+<p>输入中所有实数的绝对值均不超过$10000$。</p>
+<h4 id="【输出】-27"><a href="#【输出】-27" class="headerlink" title="【输出】"></a>【输出】</h4><p>一个实数，即线段$AB$的长度，保留到小数点后$3$位。</p>
+<h4 id="【输入样例】-23"><a href="#【输入样例】-23" class="headerlink" title="【输入样例】"></a>【输入样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1 1</span><br><span class="line">2 2</span><br></pre></td></tr></table></figure>
+<h4 id="【输出样例】-23"><a href="#【输出样例】-23" class="headerlink" title="【输出样例】"></a>【输出样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1.414</span><br></pre></td></tr></table></figure>
+<h4 id="【答案-amp-代码】-27"><a href="#【答案-amp-代码】-27" class="headerlink" title="【答案&amp;代码】"></a>【答案&amp;代码】</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> Xa,Ya;</span><br><span class="line">	<span class="keyword">double</span> Xb,Yb;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%lf%lf%lf%lf"</span>,&amp;Xa,&amp;Ya,&amp;Xb,&amp;Yb);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%.3f"</span>,<span class="built_in">sqrt</span>((Xb-Xa)*(Xb-Xa)+(Yb-Ya)*(Yb-Ya)));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="T1034-计算三角形面积"><a href="#T1034-计算三角形面积" class="headerlink" title="T1034 : 计算三角形面积"></a>T1034 : 计算三角形面积</h3><h4 id="【题目描述】-28"><a href="#【题目描述】-28" class="headerlink" title="【题目描述】"></a>【题目描述】</h4><p>平面上有一个三角形，它的三个顶点坐标分别为$(x_{1}, y_{1}), (x_{2}, y_{2}), (x_{3}, y_{3})$，那么请问这个三角形的面积是多少，精确到小数点后两位。</p>
+<h4 id="【输入】-28"><a href="#【输入】-28" class="headerlink" title="【输入】"></a>【输入】</h4><p>输入仅一行，包括$6$个单精度浮点数，分别对应$x_{1}, y_{1}, x_{2}, y_{2}, x_{3}, y_{3}$。</p>
+<h4 id="【输出】-28"><a href="#【输出】-28" class="headerlink" title="【输出】"></a>【输出】</h4><p>输出也是一行，输出三角形的面积，精确到小数点后两位。</p>
+<h4 id="【输入样例】-24"><a href="#【输入样例】-24" class="headerlink" title="【输入样例】"></a>【输入样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0 0 4 0 0 3</span><br></pre></td></tr></table></figure>
+<h4 id="【输出样例】-24"><a href="#【输出样例】-24" class="headerlink" title="【输出样例】"></a>【输出样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">6.00</span><br></pre></td></tr></table></figure>
+<h4 id="【答案-amp-代码】-28"><a href="#【答案-amp-代码】-28" class="headerlink" title="【答案&amp;代码】"></a>【答案&amp;代码】</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">len</span><span class="params">(<span class="keyword">double</span> Xa,<span class="keyword">double</span> Ya,<span class="keyword">double</span> Xb,<span class="keyword">double</span> Yb)</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">sqrt</span>((Xb-Xa)*(Xb-Xa)+(Yb-Ya)*(Yb-Ya));</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> X1,Y1;</span><br><span class="line">	<span class="keyword">double</span> X2,Y2;</span><br><span class="line">	<span class="keyword">double</span> X3,Y3;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%lf%lf%lf%lf%lf%lf"</span>,&amp;X1,&amp;Y1,&amp;X2,&amp;Y2,&amp;X3,&amp;Y3);</span><br><span class="line">	<span class="keyword">double</span> len1=len(X1,Y1,X2,Y2);</span><br><span class="line">	<span class="keyword">double</span> len2=len(X2,Y2,X3,Y3);</span><br><span class="line">	<span class="keyword">double</span> len3=len(X1,Y1,X3,Y3);</span><br><span class="line">	<span class="keyword">double</span> q=(len1+len2+len3)/<span class="number">2</span>;</span><br><span class="line">	<span class="keyword">double</span> S=<span class="built_in">sqrt</span>(q*(q-len1)*(q-len2)*(q-len3));</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%.2f"</span>,S);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="T1035-等差数列末项计算"><a href="#T1035-等差数列末项计算" class="headerlink" title="T1035 : 等差数列末项计算"></a>T1035 : 等差数列末项计算</h3><h4 id="【题目描述】-29"><a href="#【题目描述】-29" class="headerlink" title="【题目描述】"></a>【题目描述】</h4><p>给出一个等差数列的前两项$a_{1},a_{2}$，求第$n$项是多少。</p>
+<h4 id="【输入】-29"><a href="#【输入】-29" class="headerlink" title="【输入】"></a>【输入】</h4><p>一行，包含三个整数$a_{1},a_{2},n$。$−100 \leq a_{1},a_{2} \leq 100,0 &lt; n \leq 1000$。</p>
+<h4 id="【输出】-29"><a href="#【输出】-29" class="headerlink" title="【输出】"></a>【输出】</h4><p>一个整数，即第$n$项的值。</p>
+<h4 id="【输入样例】-25"><a href="#【输入样例】-25" class="headerlink" title="【输入样例】"></a>【输入样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 4 100</span><br></pre></td></tr></table></figure>
+<h4 id="【输出样例】-25"><a href="#【输出样例】-25" class="headerlink" title="【输出样例】"></a>【输出样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">298</span><br></pre></td></tr></table></figure>
+<h4 id="【答案-amp-代码】-29"><a href="#【答案-amp-代码】-29" class="headerlink" title="【答案&amp;代码】"></a>【答案&amp;代码】</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a1,a2,n;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;a1,&amp;a2,&amp;n);</span><br><span class="line">	<span class="keyword">int</span> gc=a2-a1;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,gc*(n<span class="number">-1</span>)+a1);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="T1036-A×B问题"><a href="#T1036-A×B问题" class="headerlink" title="T1036 : A×B问题"></a>T1036 : A×B问题</h3><h4 id="【题目描述】-30"><a href="#【题目描述】-30" class="headerlink" title="【题目描述】"></a>【题目描述】</h4><p>输入两个正整数$A$和$B$，求$A×B$的值。注意乘积的范围和数据类型的选择。</p>
+<h4 id="【输入】-30"><a href="#【输入】-30" class="headerlink" title="【输入】"></a>【输入】</h4><p>一行，包含两个正整数$A$和$B$，中间用单个空格隔开。$1 \leq A,B \leq 50000$。</p>
+<h4 id="【输出】-30"><a href="#【输出】-30" class="headerlink" title="【输出】"></a>【输出】</h4><p>一个整数，即$A×B$的值。</p>
+<h4 id="【输入样例】-26"><a href="#【输入样例】-26" class="headerlink" title="【输入样例】"></a>【输入样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 4</span><br></pre></td></tr></table></figure>
+<h4 id="【输出样例】-26"><a href="#【输出样例】-26" class="headerlink" title="【输出样例】"></a>【输出样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">12</span><br></pre></td></tr></table></figure>
+<h4 id="【答案-amp-代码】-30"><a href="#【答案-amp-代码】-30" class="headerlink" title="【答案&amp;代码】"></a>【答案&amp;代码】</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> a,b;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%llu%llu"</span>,&amp;a,&amp;b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%llu"</span>,a*b);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="T1037-计算2的幂"><a href="#T1037-计算2的幂" class="headerlink" title="T1037 : 计算2的幂"></a>T1037 : 计算2的幂</h3><h4 id="【题目描述】-31"><a href="#【题目描述】-31" class="headerlink" title="【题目描述】"></a>【题目描述】</h4><p>给定非负整数$n$，求$2^{n}$的值，即$2$的$n$次方。</p>
+<h4 id="【输入】-31"><a href="#【输入】-31" class="headerlink" title="【输入】"></a>【输入】</h4><p>一个整数$n$。$0≤n&lt;31$。</p>
+<h4 id="【输出】-31"><a href="#【输出】-31" class="headerlink" title="【输出】"></a>【输出】</h4><p>一个整数，即$2$的$n$次方。</p>
+<h4 id="【输入样例】-27"><a href="#【输入样例】-27" class="headerlink" title="【输入样例】"></a>【输入样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
+<h4 id="【输出样例】-27"><a href="#【输出样例】-27" class="headerlink" title="【输出样例】"></a>【输出样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">8</span><br></pre></td></tr></table></figure>
+<h4 id="【答案-amp-代码】-31"><a href="#【答案-amp-代码】-31" class="headerlink" title="【答案&amp;代码】"></a>【答案&amp;代码】</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,<span class="number">1</span>&lt;&lt;n);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="T1038-苹果和虫子"><a href="#T1038-苹果和虫子" class="headerlink" title="T1038 : 苹果和虫子"></a>T1038 : 苹果和虫子</h3><h4 id="【题目描述】-32"><a href="#【题目描述】-32" class="headerlink" title="【题目描述】"></a>【题目描述】</h4><p>你买了一箱$n$个苹果，很不幸的是买完时箱子里混进了一条虫子。虫子每$x$小时能吃掉一个苹果，假设虫子在吃完一个苹果之前不会吃另一个，那么经过$y$小时你还有多少个完整的苹果？</p>
+<h4 id="【输入】-32"><a href="#【输入】-32" class="headerlink" title="【输入】"></a>【输入】</h4><p>输入仅一行，包括$n,x,y$（均为整数）。</p>
+<h4 id="【输出】-32"><a href="#【输出】-32" class="headerlink" title="【输出】"></a>【输出】</h4><p>输出也仅一行，剩下的苹果个数。</p>
+<h4 id="【输入样例】-28"><a href="#【输入样例】-28" class="headerlink" title="【输入样例】"></a>【输入样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10 4 9</span><br></pre></td></tr></table></figure>
+<h4 id="【输出样例】-28"><a href="#【输出样例】-28" class="headerlink" title="【输出样例】"></a>【输出样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">7</span><br></pre></td></tr></table></figure>
+<h4 id="【答案-amp-代码】-32"><a href="#【答案-amp-代码】-32" class="headerlink" title="【答案&amp;代码】"></a>【答案&amp;代码】</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x,y,n;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;n,&amp;x,&amp;y);</span><br><span class="line">	<span class="keyword">int</span> temp=(<span class="keyword">int</span>)<span class="built_in">ceil</span>((<span class="keyword">double</span>)y/x);</span><br><span class="line">	<span class="keyword">if</span>(temp&gt;n)</span><br><span class="line">		temp=n;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,n-temp);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/题解/" rel="tag"># 题解</a>
+          
+            <a href="/tags/信息学奥赛一本通/" rel="tag"># 信息学奥赛一本通</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Solution/YBT/1.1/index.html" rel="next" title="信息学奥赛一本通（C++版）第一部分 C++语言 第一章 C++语言入门">
+                <i class="fa fa-chevron-left"></i> 信息学奥赛一本通（C++版）第一部分 C++语言 第一章 C++语言入门
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/start/index.html" rel="prev" title="欢迎">
+                欢迎 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/author.jpg" alt="卢安来">
+            
+              <p class="site-author-name" itemprop="name">卢安来</p>
+              <p class="site-description motion-element" itemprop="description">学生，江西赣州人</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">36</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/Lu-Anlai" title="GitHub &rarr; https://github.com/Lu-Anlai" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.luogu.org/space/show?uid=38502" title="洛谷 &rarr; https://www.luogu.org/space/show?uid=38502" rel="noopener" target="_blank"><i class="fa fa-fw fa-code"></i>洛谷</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.luogu.org/" title="https://www.luogu.org/" rel="noopener" target="_blank">洛谷</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.ccf.org.cn/" title="https://www.ccf.org.cn/" rel="noopener" target="_blank">CCF（中国计算机学会）</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.noi.cn/" title="http://www.noi.cn/" rel="noopener" target="_blank">全国青少年信息学奥林匹克竞赛</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一节-运算符和表达式"><span class="nav-number">1.</span> <span class="nav-text">第一节 运算符和表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#T1006-A-B问题"><span class="nav-number">1.1.</span> <span class="nav-text">T1006 : A+B问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#【题目描述】"><span class="nav-number">1.1.1.</span> <span class="nav-text">【题目描述】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入】"><span class="nav-number">1.1.2.</span> <span class="nav-text">【输入】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出】"><span class="nav-number">1.1.3.</span> <span class="nav-text">【输出】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入样例】"><span class="nav-number">1.1.4.</span> <span class="nav-text">【输入样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出样例】"><span class="nav-number">1.1.5.</span> <span class="nav-text">【输出样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【答案-amp-代码】"><span class="nav-number">1.1.6.</span> <span class="nav-text">【答案&amp;代码】</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#T1007-计算-a-b-×c的值"><span class="nav-number">1.2.</span> <span class="nav-text">T1007 : 计算(a+b)×c的值</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#【题目描述】-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">【题目描述】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入】-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">【输入】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出】-1"><span class="nav-number">1.2.3.</span> <span class="nav-text">【输出】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入样例】-1"><span class="nav-number">1.2.4.</span> <span class="nav-text">【输入样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出样例】-1"><span class="nav-number">1.2.5.</span> <span class="nav-text">【输出样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【答案-amp-代码】-1"><span class="nav-number">1.2.6.</span> <span class="nav-text">【答案&amp;代码】</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#T1008-计算-a-b-c的值"><span class="nav-number">1.3.</span> <span class="nav-text">T1008 : 计算(a+b)/c的值</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#【题目描述】-2"><span class="nav-number">1.3.1.</span> <span class="nav-text">【题目描述】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入】-2"><span class="nav-number">1.3.2.</span> <span class="nav-text">【输入】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出】-2"><span class="nav-number">1.3.3.</span> <span class="nav-text">【输出】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入样例】-2"><span class="nav-number">1.3.4.</span> <span class="nav-text">【输入样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出样例】-2"><span class="nav-number">1.3.5.</span> <span class="nav-text">【输出样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【答案-amp-代码】-2"><span class="nav-number">1.3.6.</span> <span class="nav-text">【答案&amp;代码】</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#T1009-带余除法"><span class="nav-number">1.4.</span> <span class="nav-text">T1009 : 带余除法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#【题目描述】-3"><span class="nav-number">1.4.1.</span> <span class="nav-text">【题目描述】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入】-3"><span class="nav-number">1.4.2.</span> <span class="nav-text">【输入】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出】-3"><span class="nav-number">1.4.3.</span> <span class="nav-text">【输出】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入样例】-3"><span class="nav-number">1.4.4.</span> <span class="nav-text">【输入样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出样例】-3"><span class="nav-number">1.4.5.</span> <span class="nav-text">【输出样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【答案-amp-代码】-3"><span class="nav-number">1.4.6.</span> <span class="nav-text">【答案&amp;代码】</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#T1010-计算分数的浮点数值"><span class="nav-number">1.5.</span> <span class="nav-text">T1010 : 计算分数的浮点数值</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#【题目描述】-4"><span class="nav-number">1.5.1.</span> <span class="nav-text">【题目描述】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入】-4"><span class="nav-number">1.5.2.</span> <span class="nav-text">【输入】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出】-4"><span class="nav-number">1.5.3.</span> <span class="nav-text">【输出】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入样例】-4"><span class="nav-number">1.5.4.</span> <span class="nav-text">【输入样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出样例】-4"><span class="nav-number">1.5.5.</span> <span class="nav-text">【输出样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【答案-amp-代码】-4"><span class="nav-number">1.5.6.</span> <span class="nav-text">【答案&amp;代码】</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二节-常量和变量"><span class="nav-number">2.</span> <span class="nav-text">第二节 常量和变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#T1011-甲流疫情死亡率"><span class="nav-number">2.1.</span> <span class="nav-text">T1011 : 甲流疫情死亡率</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#【题目描述】-5"><span class="nav-number">2.1.1.</span> <span class="nav-text">【题目描述】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入】-5"><span class="nav-number">2.1.2.</span> <span class="nav-text">【输入】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出】-5"><span class="nav-number">2.1.3.</span> <span class="nav-text">【输出】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入样例】-5"><span class="nav-number">2.1.4.</span> <span class="nav-text">【输入样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出样例】-5"><span class="nav-number">2.1.5.</span> <span class="nav-text">【输出样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【答案-amp-代码】-5"><span class="nav-number">2.1.6.</span> <span class="nav-text">【答案&amp;代码】</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#T1012-计算多项式的值"><span class="nav-number">2.2.</span> <span class="nav-text">T1012 : 计算多项式的值</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#【题目描述】-6"><span class="nav-number">2.2.1.</span> <span class="nav-text">【题目描述】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入】-6"><span class="nav-number">2.2.2.</span> <span class="nav-text">【输入】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出】-6"><span class="nav-number">2.2.3.</span> <span class="nav-text">【输出】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入样例】-6"><span class="nav-number">2.2.4.</span> <span class="nav-text">【输入样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出样例】-6"><span class="nav-number">2.2.5.</span> <span class="nav-text">【输出样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【答案-amp-代码】-6"><span class="nav-number">2.2.6.</span> <span class="nav-text">【答案&amp;代码】</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#T1013-温度表达转化"><span class="nav-number">2.3.</span> <span class="nav-text">T1013 : 温度表达转化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#【题目描述】-7"><span class="nav-number">2.3.1.</span> <span class="nav-text">【题目描述】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入】-7"><span class="nav-number">2.3.2.</span> <span class="nav-text">【输入】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出】-7"><span class="nav-number">2.3.3.</span> <span class="nav-text">【输出】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入样例】-7"><span class="nav-number">2.3.4.</span> <span class="nav-text">【输入样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出样例】-7"><span class="nav-number">2.3.5.</span> <span class="nav-text">【输出样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【答案-amp-代码】-7"><span class="nav-number">2.3.6.</span> <span class="nav-text">【答案&amp;代码】</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#T1014-与圆相关的计算"><span class="nav-number">2.4.</span> <span class="nav-text">T1014 : 与圆相关的计算</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#【题目描述】-8"><span class="nav-number">2.4.1.</span> <span class="nav-text">【题目描述】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入】-8"><span class="nav-number">2.4.2.</span> <span class="nav-text">【输入】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出】-8"><span class="nav-number">2.4.3.</span> <span class="nav-text">【输出】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入样例】-8"><span class="nav-number">2.4.4.</span> <span class="nav-text">【输入样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出样例】-8"><span class="nav-number">2.4.5.</span> <span class="nav-text">【输出样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【答案-amp-代码】-8"><span class="nav-number">2.4.6.</span> <span class="nav-text">【答案&amp;代码】</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#T1015-计算并联电阻的阻值"><span class="nav-number">2.5.</span> <span class="nav-text">T1015 : 计算并联电阻的阻值</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#【题目描述】-9"><span class="nav-number">2.5.1.</span> <span class="nav-text">【题目描述】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入】-9"><span class="nav-number">2.5.2.</span> <span class="nav-text">【输入】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出】-9"><span class="nav-number">2.5.3.</span> <span class="nav-text">【输出】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入样例】-9"><span class="nav-number">2.5.4.</span> <span class="nav-text">【输入样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出样例】-9"><span class="nav-number">2.5.5.</span> <span class="nav-text">【输出样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【答案-amp-代码】-9"><span class="nav-number">2.5.6.</span> <span class="nav-text">【答案&amp;代码】</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三节-标准数据类型"><span class="nav-number">3.</span> <span class="nav-text">第三节 标准数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#T1016-整型数据类型存储空间大小"><span class="nav-number">3.1.</span> <span class="nav-text">T1016 : 整型数据类型存储空间大小</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#【题目描述】-10"><span class="nav-number">3.1.1.</span> <span class="nav-text">【题目描述】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入】-10"><span class="nav-number">3.1.2.</span> <span class="nav-text">【输入】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出】-10"><span class="nav-number">3.1.3.</span> <span class="nav-text">【输出】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【答案-amp-代码】-10"><span class="nav-number">3.1.4.</span> <span class="nav-text">【答案&amp;代码】</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#T1017-浮点型数据类型存储空间大小"><span class="nav-number">3.2.</span> <span class="nav-text">T1017 : 浮点型数据类型存储空间大小</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#【题目描述】-11"><span class="nav-number">3.2.1.</span> <span class="nav-text">【题目描述】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入】-11"><span class="nav-number">3.2.2.</span> <span class="nav-text">【输入】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出】-11"><span class="nav-number">3.2.3.</span> <span class="nav-text">【输出】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【答案-amp-代码】-11"><span class="nav-number">3.2.4.</span> <span class="nav-text">【答案&amp;代码】</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#T1018-其他数据类型存储空间大小"><span class="nav-number">3.3.</span> <span class="nav-text">T1018 : 其他数据类型存储空间大小</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#【题目描述】-12"><span class="nav-number">3.3.1.</span> <span class="nav-text">【题目描述】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入】-12"><span class="nav-number">3.3.2.</span> <span class="nav-text">【输入】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出】-12"><span class="nav-number">3.3.3.</span> <span class="nav-text">【输出】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【答案-amp-代码】-12"><span class="nav-number">3.3.4.</span> <span class="nav-text">【答案&amp;代码】</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#T1019-其他数据类型存储空间大小"><span class="nav-number">3.4.</span> <span class="nav-text">T1019 : 其他数据类型存储空间大小</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#【题目描述】-13"><span class="nav-number">3.4.1.</span> <span class="nav-text">【题目描述】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入】-13"><span class="nav-number">3.4.2.</span> <span class="nav-text">【输入】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出】-13"><span class="nav-number">3.4.3.</span> <span class="nav-text">【输出】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入样例】-10"><span class="nav-number">3.4.4.</span> <span class="nav-text">【输入样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出样例】-10"><span class="nav-number">3.4.5.</span> <span class="nav-text">【输出样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【答案-amp-代码】-13"><span class="nav-number">3.4.6.</span> <span class="nav-text">【答案&amp;代码】</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#T1020-打印ASCII码"><span class="nav-number">3.5.</span> <span class="nav-text">T1020 : 打印ASCII码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#【题目描述】-14"><span class="nav-number">3.5.1.</span> <span class="nav-text">【题目描述】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入】-14"><span class="nav-number">3.5.2.</span> <span class="nav-text">【输入】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出】-14"><span class="nav-number">3.5.3.</span> <span class="nav-text">【输出】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入样例】-11"><span class="nav-number">3.5.4.</span> <span class="nav-text">【输入样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出样例】-11"><span class="nav-number">3.5.5.</span> <span class="nav-text">【输出样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【答案-amp-代码】-14"><span class="nav-number">3.5.6.</span> <span class="nav-text">【答案&amp;代码】</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#T1021-打印字符"><span class="nav-number">3.6.</span> <span class="nav-text">T1021 : 打印字符</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#【题目描述】-15"><span class="nav-number">3.6.1.</span> <span class="nav-text">【题目描述】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入】-15"><span class="nav-number">3.6.2.</span> <span class="nav-text">【输入】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出】-15"><span class="nav-number">3.6.3.</span> <span class="nav-text">【输出】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入样例】-12"><span class="nav-number">3.6.4.</span> <span class="nav-text">【输入样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出样例】-12"><span class="nav-number">3.6.5.</span> <span class="nav-text">【输出样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【答案-amp-代码】-15"><span class="nav-number">3.6.6.</span> <span class="nav-text">【答案&amp;代码】</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#T1022-整型与布尔型的转换"><span class="nav-number">3.7.</span> <span class="nav-text">T1022 : 整型与布尔型的转换</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#【题目描述】-16"><span class="nav-number">3.7.1.</span> <span class="nav-text">【题目描述】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入】-16"><span class="nav-number">3.7.2.</span> <span class="nav-text">【输入】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出】-16"><span class="nav-number">3.7.3.</span> <span class="nav-text">【输出】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入样例】-13"><span class="nav-number">3.7.4.</span> <span class="nav-text">【输入样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出样例】-13"><span class="nav-number">3.7.5.</span> <span class="nav-text">【输出样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【答案-amp-代码】-16"><span class="nav-number">3.7.6.</span> <span class="nav-text">【答案&amp;代码】</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#T1023-Hello-World-的大小"><span class="nav-number">3.8.</span> <span class="nav-text">T1023 : Hello,World!的大小</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#【题目描述】-17"><span class="nav-number">3.8.1.</span> <span class="nav-text">【题目描述】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入】-17"><span class="nav-number">3.8.2.</span> <span class="nav-text">【输入】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出】-17"><span class="nav-number">3.8.3.</span> <span class="nav-text">【输出】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【答案-amp-代码】-17"><span class="nav-number">3.8.4.</span> <span class="nav-text">【答案&amp;代码】</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四节-数据输入输出"><span class="nav-number">4.</span> <span class="nav-text">第四节 数据输入输出</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#T1024-保留3位小数的浮点数"><span class="nav-number">4.1.</span> <span class="nav-text">T1024 : 保留3位小数的浮点数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#【题目描述】-18"><span class="nav-number">4.1.1.</span> <span class="nav-text">【题目描述】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入】-18"><span class="nav-number">4.1.2.</span> <span class="nav-text">【输入】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出】-18"><span class="nav-number">4.1.3.</span> <span class="nav-text">【输出】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入样例】-14"><span class="nav-number">4.1.4.</span> <span class="nav-text">【输入样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出样例】-14"><span class="nav-number">4.1.5.</span> <span class="nav-text">【输出样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【答案-amp-代码】-18"><span class="nav-number">4.1.6.</span> <span class="nav-text">【答案&amp;代码】</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#T1025-保留12位小数的浮点数"><span class="nav-number">4.2.</span> <span class="nav-text">T1025 : 保留12位小数的浮点数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#【题目描述】-19"><span class="nav-number">4.2.1.</span> <span class="nav-text">【题目描述】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入】-19"><span class="nav-number">4.2.2.</span> <span class="nav-text">【输入】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出】-19"><span class="nav-number">4.2.3.</span> <span class="nav-text">【输出】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入样例】-15"><span class="nav-number">4.2.4.</span> <span class="nav-text">【输入样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出样例】-15"><span class="nav-number">4.2.5.</span> <span class="nav-text">【输出样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【答案-amp-代码】-19"><span class="nav-number">4.2.6.</span> <span class="nav-text">【答案&amp;代码】</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#T1026-空格分隔输出"><span class="nav-number">4.3.</span> <span class="nav-text">T1026 : 空格分隔输出</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#【题目描述】-20"><span class="nav-number">4.3.1.</span> <span class="nav-text">【题目描述】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入】-20"><span class="nav-number">4.3.2.</span> <span class="nav-text">【输入】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出】-20"><span class="nav-number">4.3.3.</span> <span class="nav-text">【输出】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入样例】-16"><span class="nav-number">4.3.4.</span> <span class="nav-text">【输入样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出样例】-16"><span class="nav-number">4.3.5.</span> <span class="nav-text">【输出样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【答案-amp-代码】-20"><span class="nav-number">4.3.6.</span> <span class="nav-text">【答案&amp;代码】</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#T1027-输出浮点数"><span class="nav-number">4.4.</span> <span class="nav-text">T1027 : 输出浮点数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#【题目描述】-21"><span class="nav-number">4.4.1.</span> <span class="nav-text">【题目描述】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入】-21"><span class="nav-number">4.4.2.</span> <span class="nav-text">【输入】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出】-21"><span class="nav-number">4.4.3.</span> <span class="nav-text">【输出】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入样例】-17"><span class="nav-number">4.4.4.</span> <span class="nav-text">【输入样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出样例】-17"><span class="nav-number">4.4.5.</span> <span class="nav-text">【输出样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【答案-amp-代码】-21"><span class="nav-number">4.4.6.</span> <span class="nav-text">【答案&amp;代码】</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#T1028-字符菱形"><span class="nav-number">4.5.</span> <span class="nav-text">T1028 : 字符菱形</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#【题目描述】-22"><span class="nav-number">4.5.1.</span> <span class="nav-text">【题目描述】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入】-22"><span class="nav-number">4.5.2.</span> <span class="nav-text">【输入】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出】-22"><span class="nav-number">4.5.3.</span> <span class="nav-text">【输出】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入样例】-18"><span class="nav-number">4.5.4.</span> <span class="nav-text">【输入样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出样例】-18"><span class="nav-number">4.5.5.</span> <span class="nav-text">【输出样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【答案-amp-代码】-22"><span class="nav-number">4.5.6.</span> <span class="nav-text">【答案&amp;代码】</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第五节-顺序结构实例"><span class="nav-number">5.</span> <span class="nav-text">第五节 顺序结构实例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#T1029-计算浮点数相除的余"><span class="nav-number">5.1.</span> <span class="nav-text">T1029 : 计算浮点数相除的余</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#【题目描述】-23"><span class="nav-number">5.1.1.</span> <span class="nav-text">【题目描述】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入】-23"><span class="nav-number">5.1.2.</span> <span class="nav-text">【输入】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出】-23"><span class="nav-number">5.1.3.</span> <span class="nav-text">【输出】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入样例】-19"><span class="nav-number">5.1.4.</span> <span class="nav-text">【输入样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出样例】-19"><span class="nav-number">5.1.5.</span> <span class="nav-text">【输出样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【答案-amp-代码】-23"><span class="nav-number">5.1.6.</span> <span class="nav-text">【答案&amp;代码】</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#T1030-计算球的体积"><span class="nav-number">5.2.</span> <span class="nav-text">T1030 : 计算球的体积</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#【题目描述】-24"><span class="nav-number">5.2.1.</span> <span class="nav-text">【题目描述】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入】-24"><span class="nav-number">5.2.2.</span> <span class="nav-text">【输入】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出】-24"><span class="nav-number">5.2.3.</span> <span class="nav-text">【输出】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入样例】-20"><span class="nav-number">5.2.4.</span> <span class="nav-text">【输入样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出样例】-20"><span class="nav-number">5.2.5.</span> <span class="nav-text">【输出样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【答案-amp-代码】-24"><span class="nav-number">5.2.6.</span> <span class="nav-text">【答案&amp;代码】</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#T1031-反向输出一个三位数"><span class="nav-number">5.3.</span> <span class="nav-text">T1031 : 反向输出一个三位数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#【题目描述】-25"><span class="nav-number">5.3.1.</span> <span class="nav-text">【题目描述】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入】-25"><span class="nav-number">5.3.2.</span> <span class="nav-text">【输入】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出】-25"><span class="nav-number">5.3.3.</span> <span class="nav-text">【输出】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入样例】-21"><span class="nav-number">5.3.4.</span> <span class="nav-text">【输入样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出样例】-21"><span class="nav-number">5.3.5.</span> <span class="nav-text">【输出样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【答案-amp-代码】-25"><span class="nav-number">5.3.6.</span> <span class="nav-text">【答案&amp;代码】</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#T1032-大象喝水查"><span class="nav-number">5.4.</span> <span class="nav-text">T1032 : 大象喝水查</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#【题目描述】-26"><span class="nav-number">5.4.1.</span> <span class="nav-text">【题目描述】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入】-26"><span class="nav-number">5.4.2.</span> <span class="nav-text">【输入】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出】-26"><span class="nav-number">5.4.3.</span> <span class="nav-text">【输出】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入样例】-22"><span class="nav-number">5.4.4.</span> <span class="nav-text">【输入样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出样例】-22"><span class="nav-number">5.4.5.</span> <span class="nav-text">【输出样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【答案-amp-代码】-26"><span class="nav-number">5.4.6.</span> <span class="nav-text">【答案&amp;代码】</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#T1033-计算线段长度"><span class="nav-number">5.5.</span> <span class="nav-text">T1033 : 计算线段长度</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#【题目描述】-27"><span class="nav-number">5.5.1.</span> <span class="nav-text">【题目描述】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入】-27"><span class="nav-number">5.5.2.</span> <span class="nav-text">【输入】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出】-27"><span class="nav-number">5.5.3.</span> <span class="nav-text">【输出】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入样例】-23"><span class="nav-number">5.5.4.</span> <span class="nav-text">【输入样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出样例】-23"><span class="nav-number">5.5.5.</span> <span class="nav-text">【输出样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【答案-amp-代码】-27"><span class="nav-number">5.5.6.</span> <span class="nav-text">【答案&amp;代码】</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#T1034-计算三角形面积"><span class="nav-number">5.6.</span> <span class="nav-text">T1034 : 计算三角形面积</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#【题目描述】-28"><span class="nav-number">5.6.1.</span> <span class="nav-text">【题目描述】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入】-28"><span class="nav-number">5.6.2.</span> <span class="nav-text">【输入】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出】-28"><span class="nav-number">5.6.3.</span> <span class="nav-text">【输出】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入样例】-24"><span class="nav-number">5.6.4.</span> <span class="nav-text">【输入样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出样例】-24"><span class="nav-number">5.6.5.</span> <span class="nav-text">【输出样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【答案-amp-代码】-28"><span class="nav-number">5.6.6.</span> <span class="nav-text">【答案&amp;代码】</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#T1035-等差数列末项计算"><span class="nav-number">5.7.</span> <span class="nav-text">T1035 : 等差数列末项计算</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#【题目描述】-29"><span class="nav-number">5.7.1.</span> <span class="nav-text">【题目描述】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入】-29"><span class="nav-number">5.7.2.</span> <span class="nav-text">【输入】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出】-29"><span class="nav-number">5.7.3.</span> <span class="nav-text">【输出】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入样例】-25"><span class="nav-number">5.7.4.</span> <span class="nav-text">【输入样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出样例】-25"><span class="nav-number">5.7.5.</span> <span class="nav-text">【输出样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【答案-amp-代码】-29"><span class="nav-number">5.7.6.</span> <span class="nav-text">【答案&amp;代码】</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#T1036-A×B问题"><span class="nav-number">5.8.</span> <span class="nav-text">T1036 : A×B问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#【题目描述】-30"><span class="nav-number">5.8.1.</span> <span class="nav-text">【题目描述】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入】-30"><span class="nav-number">5.8.2.</span> <span class="nav-text">【输入】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出】-30"><span class="nav-number">5.8.3.</span> <span class="nav-text">【输出】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入样例】-26"><span class="nav-number">5.8.4.</span> <span class="nav-text">【输入样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出样例】-26"><span class="nav-number">5.8.5.</span> <span class="nav-text">【输出样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【答案-amp-代码】-30"><span class="nav-number">5.8.6.</span> <span class="nav-text">【答案&amp;代码】</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#T1037-计算2的幂"><span class="nav-number">5.9.</span> <span class="nav-text">T1037 : 计算2的幂</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#【题目描述】-31"><span class="nav-number">5.9.1.</span> <span class="nav-text">【题目描述】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入】-31"><span class="nav-number">5.9.2.</span> <span class="nav-text">【输入】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出】-31"><span class="nav-number">5.9.3.</span> <span class="nav-text">【输出】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入样例】-27"><span class="nav-number">5.9.4.</span> <span class="nav-text">【输入样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出样例】-27"><span class="nav-number">5.9.5.</span> <span class="nav-text">【输出样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【答案-amp-代码】-31"><span class="nav-number">5.9.6.</span> <span class="nav-text">【答案&amp;代码】</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#T1038-苹果和虫子"><span class="nav-number">5.10.</span> <span class="nav-text">T1038 : 苹果和虫子</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#【题目描述】-32"><span class="nav-number">5.10.1.</span> <span class="nav-text">【题目描述】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入】-32"><span class="nav-number">5.10.2.</span> <span class="nav-text">【输入】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出】-32"><span class="nav-number">5.10.3.</span> <span class="nav-text">【输出】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入样例】-28"><span class="nav-number">5.10.4.</span> <span class="nav-text">【输入样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出样例】-28"><span class="nav-number">5.10.5.</span> <span class="nav-text">【输出样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【答案-amp-代码】-32"><span class="nav-number">5.10.6.</span> <span class="nav-text">【答案&amp;代码】</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">卢安来</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点总字数：</span>
+    
+    <span title="站点总字数">62k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    
+    <span title="站点阅读时长">56 分钟</span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.0.0</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+  
+  <script color="0,0,0" opacity="1" zindex="-1" count="99" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.0"></script>
+
+  <script src="/js/src/motion.js?v=7.0.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.0"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.0"></script>
+<script src="/js/src/post-details.js?v=7.0.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=7.0.0"></script>
+
+
+
+  
+
+
+  
+
+
+  
+
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+    MathJax.Ajax.config.path['mhchem'] = '//cdn.jsdelivr.net/npm/mathjax-mhchem@3';
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+        extensions: ['[mhchem]/mhchem.js'],
+      
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+      for (i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<style>
+.MathJax_Display {
+  overflow: auto hidden;
+}
+</style>
+
+    
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function(i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+        var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var range = document.createRange(); //For Chrome
+        var sel = window.getSelection(); //For Chrome
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; //Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.value = code;
+        ta.textContent = code; //For FireFox
+        ta.contentEditable = true;
+        ta.readOnly = false;
+        document.body.appendChild(ta);
+        range.selectNode(ta);
+        sel.removeAllRanges();
+        sel.addRange(range);
+        ta.setSelectionRange(0, code.length);
+        var result = document.execCommand('copy');
+        
+          if (result) $(this).text('复制成功');
+          else $(this).text('复制失败');
+        
+        ta.blur(); //For iOS
+        $(this).blur();
+      })).on('mouseleave', function(e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function() {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
+  </script>
+
+
+  
+
+</body>
+</html>
