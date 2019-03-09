@@ -2,51 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.lu-anlai.top/Solution/YBT/1.5/index.html</loc>
+    <loc>https://www.lu-anlai.top/study/index.html</loc>
+    
+    <lastmod>2019-03-09T13:09:51.506Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.lu-anlai.top/Course/Manim/</loc>
+    
+    <lastmod>2019-03-09T13:09:35.257Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.lu-anlai.top/Solution/YBT/1.5/</loc>
     
     <lastmod>2019-03-09T11:03:43.652Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.lu-anlai.top/Solution/YBT/1.6/index.html</loc>
+    <loc>https://www.lu-anlai.top/Solution/YBT/1.6/</loc>
     
     <lastmod>2019-03-09T10:53:33.318Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.lu-anlai.top/Solution/YBT/1.4/index.html</loc>
+    <loc>https://www.lu-anlai.top/Solution/YBT/1.4/</loc>
     
     <lastmod>2019-03-09T10:47:28.462Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.lu-anlai.top/Solution/YBT/1.3/index.html</loc>
+    <loc>https://www.lu-anlai.top/Solution/YBT/1.3/</loc>
     
     <lastmod>2019-03-09T10:43:32.652Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.lu-anlai.top/Solution/YBT/1.2/index.html</loc>
+    <loc>https://www.lu-anlai.top/Solution/YBT/1.2/</loc>
     
     <lastmod>2019-03-09T10:08:03.278Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.lu-anlai.top/Solution/YBT/1.1/index.html</loc>
+    <loc>https://www.lu-anlai.top/Solution/YBT/1.1/</loc>
     
     <lastmod>2019-03-09T05:36:26.155Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.lu-anlai.top/study/index.html</loc>
-    
-    <lastmod>2019-03-08T14:03:33.012Z</lastmod>
     
   </url>
   
@@ -58,168 +65,161 @@
   </url>
   
   <url>
-    <loc>https://www.lu-anlai.top/NOIp/2018/PJ/Preparation-Solution/index.html</loc>
+    <loc>https://www.lu-anlai.top/NOIp/2018/PJ/Preparation-Solution/</loc>
     
     <lastmod>2019-03-06T04:36:26.484Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.lu-anlai.top/start/index.html</loc>
+    <loc>https://www.lu-anlai.top/start/</loc>
     
     <lastmod>2019-03-05T14:35:51.016Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.lu-anlai.top/Math/Pascal's-Triangle/index.html</loc>
+    <loc>https://www.lu-anlai.top/Math/Pascal's-Triangle/</loc>
     
     <lastmod>2019-03-05T14:32:39.980Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.lu-anlai.top/Course/Hexo-NexT/index.html</loc>
+    <loc>https://www.lu-anlai.top/Course/Hexo-NexT/</loc>
     
     <lastmod>2019-03-05T14:31:40.769Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.lu-anlai.top/Course/Manim/index.html</loc>
-    
-    <lastmod>2019-03-05T14:31:28.735Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.lu-anlai.top/study/chemistry/9-2/NaOH-into-Na2CO3/index.html</loc>
+    <loc>https://www.lu-anlai.top/study/chemistry/9-2/NaOH-into-Na2CO3/</loc>
     
     <lastmod>2019-03-05T14:30:45.596Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.lu-anlai.top/DataStructure/Tree/index.html</loc>
+    <loc>https://www.lu-anlai.top/DataStructure/Tree/</loc>
     
     <lastmod>2019-03-05T14:29:50.386Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.lu-anlai.top/DataStructure/Union-Find/index.html</loc>
+    <loc>https://www.lu-anlai.top/DataStructure/Union-Find/</loc>
     
     <lastmod>2019-03-05T14:29:43.968Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.lu-anlai.top/Solution/AtCoder/AtCoder-Code-Festival-Team-Relay-A/index.html</loc>
+    <loc>https://www.lu-anlai.top/Solution/AtCoder/AtCoder-Code-Festival-Team-Relay-A/</loc>
     
     <lastmod>2019-03-05T14:26:56.227Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.lu-anlai.top/Solution/AtCoder/AtCoder-ABC004-C/index.html</loc>
+    <loc>https://www.lu-anlai.top/Solution/AtCoder/AtCoder-ABC004-C/</loc>
     
     <lastmod>2019-03-05T14:26:47.501Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.lu-anlai.top/Solution/AtCoder/AtCoder-dwacon2017-prelims-A/index.html</loc>
+    <loc>https://www.lu-anlai.top/Solution/AtCoder/AtCoder-dwacon2017-prelims-A/</loc>
     
     <lastmod>2019-03-05T14:26:44.972Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.lu-anlai.top/Solution/Luogu/Luogu-P4825/index.html</loc>
+    <loc>https://www.lu-anlai.top/Solution/Luogu/Luogu-P4825/</loc>
     
     <lastmod>2019-03-05T14:26:03.282Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.lu-anlai.top/Solution/Luogu/Luogu-P2574/index.html</loc>
+    <loc>https://www.lu-anlai.top/Solution/Luogu/Luogu-P2574/</loc>
     
     <lastmod>2019-03-05T14:26:01.028Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.lu-anlai.top/Solution/Luogu/Luogu-P2683/index.html</loc>
+    <loc>https://www.lu-anlai.top/Solution/Luogu/Luogu-P2683/</loc>
     
     <lastmod>2019-03-05T14:25:56.199Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.lu-anlai.top/Solution/Luogu/Luogu-P1967/index.html</loc>
+    <loc>https://www.lu-anlai.top/Solution/Luogu/Luogu-P1967/</loc>
     
     <lastmod>2019-03-05T14:25:47.607Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.lu-anlai.top/Solution/Luogu/Luogu-P1340/index.html</loc>
+    <loc>https://www.lu-anlai.top/Solution/Luogu/Luogu-P1340/</loc>
     
     <lastmod>2019-03-05T14:25:43.106Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.lu-anlai.top/Solution/Luogu/Luogu-P1198/index.html</loc>
+    <loc>https://www.lu-anlai.top/Solution/Luogu/Luogu-P1198/</loc>
     
     <lastmod>2019-03-05T14:22:23.704Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.lu-anlai.top/Solution/Luogu/Luogu-P1196/index.html</loc>
+    <loc>https://www.lu-anlai.top/Solution/Luogu/Luogu-P1196/</loc>
     
     <lastmod>2019-03-05T13:10:35.947Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.lu-anlai.top/Solution/Luogu/Luogu-P1073/index.html</loc>
+    <loc>https://www.lu-anlai.top/Solution/Luogu/Luogu-P1073/</loc>
     
     <lastmod>2019-03-05T13:10:28.395Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.lu-anlai.top/Solution/CodeVS/CodeVS-Bronze/index.html</loc>
+    <loc>https://www.lu-anlai.top/Solution/CodeVS/CodeVS-Bronze/</loc>
     
     <lastmod>2019-03-05T13:10:20.215Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.lu-anlai.top/Solution/Codeforces/Codeforces-982A/index.html</loc>
+    <loc>https://www.lu-anlai.top/Solution/Codeforces/Codeforces-982A/</loc>
     
     <lastmod>2019-03-05T13:10:08.068Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.lu-anlai.top/Solution/Codeforces/Codeforces-579A/index.html</loc>
+    <loc>https://www.lu-anlai.top/Solution/Codeforces/Codeforces-579A/</loc>
     
     <lastmod>2019-03-05T13:09:59.030Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.lu-anlai.top/Solution/Codeforces/Codeforces-271B/index.html</loc>
+    <loc>https://www.lu-anlai.top/Solution/Codeforces/Codeforces-271B/</loc>
     
     <lastmod>2019-03-05T13:09:47.285Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.lu-anlai.top/Solution/Codeforces/Codeforces-574A/index.html</loc>
+    <loc>https://www.lu-anlai.top/Solution/Codeforces/Codeforces-574A/</loc>
     
     <lastmod>2019-03-05T13:09:42.341Z</lastmod>
     
