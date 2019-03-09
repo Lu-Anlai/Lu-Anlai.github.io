@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[欢迎]]></title>
     <url>%2Fstart%2F</url>
-    <content type="text"><![CDATA[欢迎来到$\text{Lu-Anlai’s Blog}$本博客由 Hexo 强力驱动 v3.8.0 | 主题 – NexT.Gemini v7.0.0 公式渲染引擎是$\text{MathJax}$。 博客主要内容是题解（水题题解），之前在洛谷博客和$\text{CSDN}$博客发布的文章不久就会转移到这个博客上来（咕咕咕）。 更新日志 2019-03-05 优化博客结构]]></content>
+    <content type="text"><![CDATA[欢迎来到$\text{Lu-Anlai’s Blog}$本博客由 Hexo 强力驱动 v3.8.0 | 主题 – NexT.Gemini v7.0.0 公式渲染引擎是$\text{MathJax}$。 博客主要内容是题解（水题题解），之前在洛谷博客和$\text{CSDN}$博客发布的文章不久就会转移到这个博客上来（咕咕咕）。 更新日志 2019-03-05 优化博客结构 2019-03-09 修补了一些$BUG$]]></content>
   </entry>
   <entry>
     <title><![CDATA[信息学奥赛一本通（C++版）第二部分 基础算法 第一章 高精度计算]]></title>
@@ -241,8 +241,8 @@
       </categories>
       <tags>
         <tag>题解</tag>
-        <tag>AtCoder</tag>
         <tag>模拟</tag>
+        <tag>AtCoder</tag>
       </tags>
   </entry>
   <entry>
@@ -324,8 +324,8 @@
       </categories>
       <tags>
         <tag>题解</tag>
-        <tag>AtCoder</tag>
         <tag>模拟</tag>
+        <tag>AtCoder</tag>
       </tags>
   </entry>
   <entry>
@@ -337,8 +337,8 @@
       </categories>
       <tags>
         <tag>题解</tag>
-        <tag>AtCoder</tag>
         <tag>模拟</tag>
+        <tag>AtCoder</tag>
       </tags>
   </entry>
   <entry>
@@ -377,8 +377,8 @@
         <tag>并查集</tag>
         <tag>题解</tag>
         <tag>洛谷</tag>
-        <tag>NOIp提高组</tag>
         <tag>图论</tag>
+        <tag>NOIp提高组</tag>
       </tags>
   </entry>
   <entry>
@@ -392,8 +392,8 @@
         <tag>并查集</tag>
         <tag>题解</tag>
         <tag>洛谷</tag>
-        <tag>NOIp提高组</tag>
         <tag>图论</tag>
+        <tag>NOIp提高组</tag>
         <tag>Kruskal</tag>
         <tag>LCA</tag>
       </tags>
