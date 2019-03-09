@@ -1,6 +1,6 @@
 ---
 title: 关于
-date: 2019-02-03 16:01:22
+type: "about"
 ---
 
 $\text{QQ}$：<img alt="QQ:2359800311" src="我的QQ.jpg" width="270" height="370" >
