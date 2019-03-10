@@ -6,6 +6,3646 @@
     <content type="text"><![CDATA[欢迎来到$\text{Lu-Anlai’s Blog}$本博客由 Hexo 强力驱动 v3.8.0 | 主题 – NexT.Gemini v7.0.0 公式渲染引擎是$\text{MathJax}$。 博客主要内容是题解（水题题解），之前在洛谷博客和$\text{CSDN}$博客发布的文章不久就会转移到这个博客上来（咕咕咕）。 更新日志 2019-03-05 优化博客结构 2019-03-09 修补了一些$BUG$]]></content>
   </entry>
   <entry>
+    <title><![CDATA[信息学奥赛一本通（C++版）题解目录]]></title>
+    <url>%2FSolution%2FYBT%2FList%2F</url>
+    <content type="text"><![CDATA[基础(一) C++语言第一章 C++语言入门 T1000 入门测试题目 T1001 Hello,World! T1002 输出第二个整数 T1003 对齐输出 T1004 字符三角形 T1005 地球人口承载力估计 第二章 顺序结构程序设计第一节 运算符和表达式 T1006 A+B问题 T1007 计算(a+b)×c的值 T1008 计算(a+b)/c的值 T1009 带余除法 T1010 计算分数的浮点数值 第二节 常量和变量 T1011 甲流疫情死亡率 T1012 计算多项式的值 T1013 温度表达转化 T1014 与圆相关的计算 T1015 计算并联电阻的阻值 第三节 标准数据类型 T1016 整型数据类型存储空间大小 T1017 浮点型数据类型存储空间大小 T1018 其他数据类型存储空间大小 T1019 浮点数向零舍入 T1020 打印ASCII码 T1021 打印字符 T1022 整型与布尔型的转换 T1023 Hello,World!的大小 第四节 数据输入输出 T1024 保留3位小数的浮点数 T1025 保留12位小数的浮点数 T1026 空格分隔输出 T1027 输出浮点数 T1028 字符菱形 第五节 顺序结构实例 T1029 计算浮点数相除的余 T1030 计算球的体积 T1031 反向输出一个三位数 T1032 大象喝水查 T1033 计算线段长度 T1034 计算三角形面积 T1035 等差数列末项计算 T1036 A×B问题 T1037 计算2的幂 T1038 苹果和虫子 未完待续。]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1038 苹果和虫子]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1038%2F</url>
+    <content type="text"><![CDATA[T1038 : 苹果和虫子 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】你买了一箱$n$个苹果，很不幸的是买完时箱子里混进了一条虫子。虫子每$x$小时能吃掉一个苹果，假设虫子在吃完一个苹果之前不会吃另一个，那么经过$y$小时你还有多少个完整的苹果？ 【输入】输入仅一行，包括$n,x,y$（均为整数）。 【输出】输出也仅一行，剩下的苹果个数。 【输入样例】110 4 9 【输出样例】17 【答案&amp;代码】12345678910#include&lt;cmath&gt;#include&lt;cstdio&gt;int x,y,n;int main(void)&#123; scanf("%d%d%d",&amp;n,&amp;x,&amp;y); printf("%d\n",n-(((int)ceil((double)y/x))&gt;n)?(n):(((int)ceil((double)y/x)))); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1037 计算2的幂]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1037%2F</url>
+    <content type="text"><![CDATA[T1037 : 计算2的幂 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】给定非负整数$n$，求$2^{n}$的值，即$2$的$n$次方。 【输入】一个整数$n$。$0 \leq n &lt; 31$。 【输出】一个整数，即$2$的$n$次方。 【输入样例】13 【输出样例】18 【答案&amp;代码】12345678910#include&lt;cstdio&gt;#include&lt;cmath&gt;int n;int main(void)&#123; scanf("%d",&amp;n); printf("%d\n",1 &lt;&lt; n); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1036 A×B问题]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1036%2F</url>
+    <content type="text"><![CDATA[T1036 : A×B问题 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】输入两个正整数$A$和$B$，求$A×B$的值。注意乘积的范围和数据类型的选择。 【输入】一行，包含两个正整数$A$和$B$，中间用单个空格隔开。$1 \leq A,B \leq 50000$。 【输出】一个整数，即$A×B$的值。 【输入样例】13 4 【输出样例】112 【答案&amp;代码】123456789#include&lt;cstdio&gt;unsigned long long a,b;int main(void)&#123; scanf("%llu%llu",&amp;a,&amp;b); printf("%llu\n",a*b); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1035 等差数列末项计算]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1035%2F</url>
+    <content type="text"><![CDATA[T1035 : 等差数列末项计算 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】给出一个等差数列的前两项$a_{1},a_{2}$，求第$n$项是多少。 【输入】一行，包含三个整数$a_{1},a_{2},n$。$−100 \leq a_{1},a_{2} \leq 100,0 &lt; n \leq 1000$。 【输出】一个整数，即第$n$项的值。 【输入样例】11 4 100 【输出样例】1298 【答案&amp;代码】123456789#include&lt;cstdio&gt;int a1,a2,n;int main(void)&#123; scanf("%d%d%d",&amp;a1,&amp;a2,&amp;n); printf("%d\n",(a2-a1)*(n-1)+a1); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1034 计算三角形面积]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1034%2F</url>
+    <content type="text"><![CDATA[T1034 : 计算三角形面积 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】平面上有一个三角形，它的三个顶点坐标分别为$(x_{1}, y_{1}), (x_{2}, y_{2}), (x_{3}, y_{3})$，那么请问这个三角形的面积是多少，精确到小数点后两位。 【输入】输入仅一行，包括$6$个单精度浮点数，分别对应$x_{1}, y_{1}, x_{2}, y_{2}, x_{3}, y_{3}$。 【输出】输出也是一行，输出三角形的面积，精确到小数点后两位。 【输入样例】10 0 4 0 0 3 【输出样例】16.00 【答案&amp;代码】123456789101112131415161718192021#include&lt;cmath&gt;#include&lt;cstdio&gt;double X1,Y1,X2,Y2,X3,Y3;double len(double,double,double,double);int main(void)&#123; scanf("%lf%lf%lf%lf%lf%lf",&amp;X1,&amp;Y1,&amp;X2,&amp;Y2,&amp;X3,&amp;Y3); double len1=len(X1,Y1,X2,Y2); double len2=len(X2,Y2,X3,Y3); double len3=len(X1,Y1,X3,Y3); double q=(len1+len2+len3)/2; double S=sqrt(q*(q-len1)*(q-len2)*(q-len3)); printf("%.2f\n",S); return 0;&#125;double len(double Xa,double Ya,double Xb,double Yb)&#123; return sqrt((Xb-Xa)*(Xb-Xa)+(Yb-Ya)*(Yb-Ya));&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1033 计算线段长度]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1033%2F</url>
+    <content type="text"><![CDATA[T1033 : 计算线段长度 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】已知线段的两个端点的坐标$A(X_{a},Y_{b}),B(X_{b},Y_{b})$，求线段$AB$的长度，保留到小数点后$3$位。 【输入】第一行是两个实数$X_{a},Y_{b}$，即$A$的坐标。 第二行是两个实数$X_{b},Y_{b}$，即$B$的坐标。 输入中所有实数的绝对值均不超过$10000$。 【输出】一个实数，即线段$AB$的长度，保留到小数点后$3$位。 【输入样例】121 12 2 【输出样例】11.414 【答案&amp;代码】12345678910#include&lt;cmath&gt;#include&lt;cstdio&gt;double Xa,Ya,Xb,Yb;int main(void)&#123; scanf("%lf%lf%lf%lf",&amp;Xa,&amp;Ya,&amp;Xb,&amp;Yb); printf("%.3f\n",sqrt((Xb-Xa)*(Xb-Xa)+(Yb-Ya)*(Yb-Ya))); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1032 大象喝水查]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1032%2F</url>
+    <content type="text"><![CDATA[T1032 : 大象喝水查 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】一只大象口渴了，要喝$20$升水才能解渴，但现在只有一个深$h$厘米，底面半径为$r$厘米的小圆桶($h$和$r$都是整数)。问大象至少要喝多少桶水才会解渴。 【输入】输入有一行：包行两个整数，以一个空格分开，分别表示小圆桶的深$h$和底面半径$r$，单位都是厘米。 【输出】输出一行，包含一个整数，表示大象至少要喝水的桶数。 【输入样例】123 11 【输出样例】13 【答案&amp;代码】12345678910#include&lt;cmath&gt;#include&lt;cstdio&gt;double h,r;int main(void)&#123; scanf("%lf%lf",&amp;h,&amp;r); printf("%d\n",(int)ceil(20000/(r*r*M_PI*h))); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1031 反向输出一个三位数]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1031%2F</url>
+    <content type="text"><![CDATA[T1031 : 反向输出一个三位数 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】将一个三位数反向输出，例如输入$358$，反向输出$853$。 【输入】一个三位数$n$。 【输出】反向输出$n$。 【输入样例】1100 【输出样例】1001 【答案&amp;代码】123456789#include&lt;cstdio&gt;int num;int main(void)&#123; scanf("%d",&amp;num); printf("%d%d%d\n",num%10,(num/10)%10,num/100); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1030 计算球的体积]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1030%2F</url>
+    <content type="text"><![CDATA[T1030 : 计算球的体积 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】对于半径为$r$的球，其体积的计算公式为$V=\frac{4}{3} \pi r^{3}$，这里取$π=3.14$。现给定$r$，即球半径，类型为double，求球的体积$V$，保留到小数点后$2$位。 【输入】输入为一个不超过$100$的非负实数，即球半径，类型为$double$。 【输出】输出一个实数，即球的体积，保留到小数点后$2$位。 【输入样例】14 【输出样例】1267.95 【答案&amp;代码】1234567891011#include&lt;cmath&gt;#include&lt;cstdio&gt;#define PI 3.14double r;int main(void)&#123; scanf("%lf",&amp;r); printf("%.2f\n",pow(r,3)*PI*4/3); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1029 计算浮点数相除的余]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1029%2F</url>
+    <content type="text"><![CDATA[T1029 : 计算浮点数相除的余 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】计算两个双精度浮点数$a$和$b$的相除的余数，$a$和$b$都是双精度浮点数。这里余数$r$的定义是：$a=k \times b+r$，其中$k$是整数，$0 \leq r &lt; b$。 【输入】输入仅一行，包括两个双精度浮点数$a$和$b$。 【输出】输出也仅一行，$a÷b$的余数。 【输入样例】173.263 0.9973 【输出样例】10.4601 【答案&amp;代码】123456789#include&lt;cstdio&gt;double a,b;int main(void)&#123; scanf("%lf%lf",&amp;a,&amp;b); printf("%g\n",a-((int)(a/b))*b); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1028 字符菱形]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1028%2F</url>
+    <content type="text"><![CDATA[T1028 : 字符菱形 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】给定一个字符，用它构造一个对角线长$5$个字符，倾斜放置的菱形。 【输入】输入只有一行， 包含一个字符。 【输出】该字符构成的菱形。 【输入样例】1* 【输出样例】12345 * ******** *** * 【答案&amp;代码】123456789#include&lt;cstdio&gt;char ch;int main(void)&#123; scanf("%c",&amp;ch); printf(" %c \n %c%c%c \n%c%c%c%c%c\n %c%c%c \n %c \n",ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1027 输出浮点数]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1027%2F</url>
+    <content type="text"><![CDATA[T1027 : 输出浮点数 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】读入一个双精度浮点数，分别按输出格式%f，%f保留$5$位小数，%e和%g的形式输出这个整数，每次在单独一行上输出。 【输入】一个双精度浮点数。 【输出】第一行是按%f输出的双精度浮点数； 第二行是按%f保留$5$位小数输出的双精度浮点数； 第三行是按%e输出的双精度浮点数； 第四行是按%g输出的双精度浮点数。 【输入样例】112.3456789 【输出样例】123412.34567912.345681.234568e+00112.3457 【答案&amp;代码】123456789#include&lt;cstdio&gt;double n;int main(void)&#123; scanf("%lf",&amp;n); printf("%.6f\n%.5f\n%e\n%g\n",n,n,n,n); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1026 空格分隔输出]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1026%2F</url>
+    <content type="text"><![CDATA[T1026 : 空格分隔输出 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】读入一个字符，一个整数，一个单精度浮点数，一个双精度浮点数，然后按顺序输出它们，并且要求在他们之间用一个空格分隔。输出浮点数时保留$6$位小数。 【输入】第一行是一个字符； 第二行是一个整数； 第三行是一个单精度浮点数； 第四行是一个双精度浮点数。 【输出】输出字符、整数、单精度浮点数和双精度浮点数，之间用空格分隔。 【输入样例】1234a122.33.2 【输出样例】1a 12 2.300000 3.200000 【答案&amp;代码】1234567891011#include&lt;cstdio&gt;char ch;int n;double a,b;int main(void)&#123; scanf("%c%d%lf%lf",&amp;ch,&amp;n,&amp;a,&amp;b); printf("%c %d %.6f %.6f\n",ch,n,a,b); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1025 保留12位小数的浮点数]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1025%2F</url>
+    <content type="text"><![CDATA[T1025 : 保留12位小数的浮点数 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】读入一个双精度浮点数，保留$12$位小数，输出这个浮点数。 【输入】只有一行，一个双精度浮点数。 【输出】也只有一行，保留$12$位小数的浮点数。 【输入样例】13.1415926535798932 【输出样例】13.141592653580 【答案&amp;代码】123456789#include&lt;cstdio&gt;double num;int main(void)&#123; scanf("%lf",&amp;num); printf("%.12f\n",num); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1024 保留3位小数的浮点数]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1024%2F</url>
+    <content type="text"><![CDATA[T1024 : 保留3位小数的浮点数 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】读入一个单精度浮点数，保留$3$位小数输出这个浮点数。 【输入】只有一行，一个单精度浮点数。 【输出】也只有一行，读入的单精度浮点数。 【输入样例】112.34521 【输出样例】112.345 【答案&amp;代码】123456789#include&lt;cstdio&gt;double num;int main(void)&#123; scanf("%lf",&amp;num); printf("%.3f\n",num); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1023 Hello,World!的大小]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1023%2F</url>
+    <content type="text"><![CDATA[T1023 : Hello,World!的大小 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】我们曾经输出过的&quot;Hello, World!&quot;吗？它虽然不是本章所涉及的基本数据类型的数据，但我们同样可以用sizeof函数获得它所占用的空间大小。 【输入】（无） 【输出】一个整数，即&quot;Hello, World!&quot;的大小。 【答案&amp;代码】123456#include&lt;cstdio&gt;int main(void)&#123; printf("%d\n",sizeof("Hello, World!")); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1022 整型与布尔型的转换]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1022%2F</url>
+    <content type="text"><![CDATA[T1022 : 整型与布尔型的转换 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】将一个整型变量的值赋给一个布尔型变量，再将这个布尔型变量的值赋给一个整型变量，得到的值是多少？ 【输入】一个整型范围内的整数，即初始时整型变量的值。 【输出】一个整数，经过上述过程后得到的结果。 【输入样例】13 【输出样例】11 【答案&amp;代码】123456789#include&lt;cstdio&gt;int n;int main(void)&#123; scanf("%d",&amp;n); printf("%d\n",n!=0); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1021 打印字符]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1021%2F</url>
+    <content type="text"><![CDATA[T1021 : 打印字符 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】输入一个整数，即字符的ASCII码，保证存在对应的可见字符。输出相对应的字符。 【输入】一个整数，即字符的ASCII码，保证存在对应的可见字符。 【输出】一行，包含相应的字符。 【输入样例】165 【输出样例】1A 【答案&amp;代码】123456789#include&lt;cstdio&gt;int ch;int main(void)&#123; scanf("%d",&amp;ch); printf("%c\n",ch); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1020 打印ASCII码]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1020%2F</url>
+    <content type="text"><![CDATA[T1020 : 打印ASCII码 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】输入一个除空格以外的可见字符（保证在函数scanf中可使用格式说明符%c读入），输出其ASCII码。 【输入】一个除空格以外的可见字符。 【输出】一个十进制整数，即该字符的ASCII码。 【输入样例】1A 【输出样例】165 【答案&amp;代码】123456789#include&lt;cstdio&gt;char ch;int main(void)&#123; scanf("%c",&amp;ch); printf("%d\n",ch); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1019 浮点数向零舍入]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1019%2F</url>
+    <content type="text"><![CDATA[T1019 : 浮点数向零舍入 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】输入一个单精度浮点数，将其向零舍入到整数。说明：向零舍入的含义是，正数向下舍入，负数向上舍入。提示：可以使用强制类型转换来实现。 【输入】一个单精度浮点数。 【输出】一个整数，即向零舍入到整数的结果。 【输入样例】12.3 【输出样例】12 【答案&amp;代码】1234567#include&lt;cstdio&gt;int main(void)&#123; double num; scanf("%lf",&amp;num); printf("%d",(int)num); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1018 其他数据类型存储空间大小]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1018%2F</url>
+    <content type="text"><![CDATA[T1018 : 其他数据类型存储空间大小 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】分别定义bool，char类型的变量各一个，并依次输出它们的存储空间大小(单位：字节)。 【输入】(无） 【输出】一行，两个整数，分别是两个变量的存储空间大小，用一个空格隔开。 【答案&amp;代码】123456#include&lt;cstdio&gt;int main(void)&#123; printf("%d %d\n",sizeof(bool),sizeof(char)); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1017 浮点型数据类型存储空间大小]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1017%2F</url>
+    <content type="text"><![CDATA[T1017 : 浮点型数据类型存储空间大小 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】分别定义float，double类型的变量各一个，并依次输出它们的存储空间大小(单位：字节)。 【输入】(无） 【输出】一行，两个整数，分别是两个变量的存储空间大小，用一个空格隔开。 【答案&amp;代码】123456#include&lt;cstdio&gt;int main(void)&#123; printf("%d %d\n",sizeof(float),sizeof(double)); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1016 整型数据类型存储空间大小]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1016%2F</url>
+    <content type="text"><![CDATA[T1016 : 整型数据类型存储空间大小 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】分别定义int，short类型的变量各一个，并依次输出它们的存储空间大小(单位：字节)。 【输入】(无） 【输出】一行，两个整数，分别是两个变量的存储空间大小，用一个空格隔开。 【答案&amp;代码】123456#include&lt;cstdio&gt;int main(void)&#123; printf("%d %d\n",sizeof(int),sizeof(short)); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1015 计算并联电阻的阻值]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1015%2F</url>
+    <content type="text"><![CDATA[T1015 : 计算并联电阻的阻值 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】对于阻值为$R_{1}$和$R_{2}$的电阻，其并联电阻阻值公式计算如下：$R=\frac{1}{\frac{1}{R_{1}}+\frac{1}{R_{2}}}$。输入两个电阻阻抗大小，浮点型。输出并联之后的阻抗大小，结果保留小数点后$2$位。 【输入】两个电阻阻抗大小，浮点型，以一个空格分开。 【输出】并联之后的阻抗大小，结果保留小数点后$2$位。 【输入样例】11 2 【输出样例】10.67 【答案&amp;代码】123456789#include&lt;cstdio&gt;double r1,r2;int main(void)&#123; scanf("%lf%lf",&amp;r1,&amp;r2); printf("%.2f\n",1/(1/r1+1/r2)); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1014 与圆相关的计算]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1014%2F</url>
+    <content type="text"><![CDATA[T1014 : 与圆相关的计算 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】给出圆的半径，求圆的直径、周长和面积。输入圆的半径实数$r$，输出圆的直径、周长、面积，每个数保留小数点后$4$位。圆周率取值为$3.14159$。 【输入】输入包含一个实数$r(0 &lt; r \leq 10^{4})$，表示圆的半径。 【输出】输出一行，包含三个数，分别表示圆的直径、周长、面积，数与数之间以一个空格分开，每个数保留小数点后$4$位。 【输入样例】13.0 【输出样例】16.0000 18.8495 28.2743 【答案&amp;代码】12345678910#include&lt;cstdio&gt;#define PI 3.14159double r;int main(void)&#123; scanf("%lf",&amp;r); printf("%.4f %.4f %.4f\n",2*r,2*r*PI,r*r*PI); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1013 温度表达转化]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1013%2F</url>
+    <content type="text"><![CDATA[T1013 : 温度表达转化 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】利用公式$C=\frac{5 \times (F−32)}{9}$（其中$C$表示摄氏温度，$F$表示华氏温度）进行计算转化,输入华氏温度$F$，输出摄氏温度$C$，要求精确到小数点后$5$位。 【输入】输入一行，包含一个实数$F$，表示华氏温度。$(F \geq -459.67)$ 【输出】输出一行，包含一个实数，表示对应的摄氏温度，要求精确到小数点后$5$位。 【输入样例】141 【输出样例】15.00000 【答案&amp;代码】12345678910#include&lt;cmath&gt;#include&lt;cstdio&gt;double F;int main(void)&#123; scanf("%lf",&amp;F); printf("%.5f\n",5*(F-32)/9); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1012 计算多项式的值]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1012%2F</url>
+    <content type="text"><![CDATA[T1012 : 计算多项式的值 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】对于多项式$f(x)=ax^{3}+bx^{2}+cx+d$和给定的$a,b,c,d,x$，计算$f(x)$的值，保留到小数点后$7$位。 【输入】输入仅一行，包含$5$个实数，分别是$x$，及参数$a,b,c,d$的值，每个数都是绝对值不超过$100$的双精度浮点数。数与数之间以一个空格分开。 【输出】输出一个实数，即$f(x)$的值，保留到小数点后$7$位。 【输入样例】12.31 1.2 2 2 3 【输出样例】133.0838692 【答案&amp;代码】12345678910#include&lt;cmath&gt;#include&lt;cstdio&gt;double a,b,c,d,x;int main(void)&#123; scanf("%lf%lf%lf%lf%lf",&amp;x,&amp;a,&amp;b,&amp;c,&amp;d); printf("%.7f\n",a*pow(x,3)+b*x*x+c*x+d); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1011 甲流疫情死亡率]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1011%2F</url>
+    <content type="text"><![CDATA[T1011 : 甲流疫情死亡率 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】甲流并不可怕，在中国，它的死亡率并不是很高。请根据截止$2009$年$12$月$22$日各省报告的甲流确诊数和死亡数，计算甲流在各省的死亡率。 【输入】输入仅一行，有两个整数，第一个为确诊数，第二个为死亡数。 【输出】输出仅一行，甲流死亡率，以百分数形式输出，精确到小数点后$3$位。 【输入样例】110433 60 【输出样例】10.575% 【答案&amp;代码】123456789#include&lt;cstdio&gt;double a,b;int main(void)&#123; scanf("%lf%lf",&amp;a,&amp;b); printf("%.3f%%\n",b/a*100); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1010 计算分数的浮点数值]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1010%2F</url>
+    <content type="text"><![CDATA[T1010 : 计算分数的浮点数值 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】两个整数$a$和$b$分别作为分子和分母，既分数$\frac{a}{b}$，求它的浮点数值(双精度浮点数，保留小数点后$9$位)。 【输入】输入仅一行，包括两个整数$a$和$b$。 【输出】输出也仅一行，分数$\frac{a}{b}$的浮点数值（双精度浮点数，保留小数点后$9$位）。 【输入样例】15 7 【输出样例】10.714285714 【答案&amp;代码】123456789#include&lt;cstdio&gt;double a,b;int main(void)&#123; scanf("%lf%lf",&amp;a,&amp;b); printf("%.9f\n",a/b); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1009 带余除法]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1009%2F</url>
+    <content type="text"><![CDATA[T1009 : 带余除法 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】给定被除数和除数，求整数商及余数。此题中请使用默认的整除和取余运算，无需对结果进行任何特殊处理。 【输入】一行，包含两个整数，依次为被除数和除数（除数非零），中间用一个空格隔开。 【输出】一行，包含两个整数，依次为整数商和余数，中间用一个空格隔开。 【输入样例】110 3 【输出样例】13 1 【答案&amp;代码】123456789#include&lt;cstdio&gt;int a,b;int main(void)&#123; scanf("%d%d",&amp;a,&amp;b); printf("%d %d\n",a/b,a%b); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1008 计算(a+b)/c的值]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1008%2F</url>
+    <content type="text"><![CDATA[T1008 : 计算(a+b)/c的值 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】给定$3$个整数$a,b,c$，计算表达式$(a+b)÷c$的值。 【输入】输入仅一行，包括三个整数$a,b,c$, 数与数之间以一个空格分开。$(-10^{4} &lt; a,b,c &lt; 10^{4} , c \neq 0)$ 【输出】输出一行，即表达式的值。 【输入样例】11 1 3 【输出样例】10 【答案&amp;代码】123456789#include&lt;cstdio&gt;int a,b,c;int main(void)&#123; scanf("%d%d%d",&amp;a,&amp;b,&amp;c); printf("%d\n",(a+b)/c); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1007 计算(a+b)×c的值]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1007%2F</url>
+    <content type="text"><![CDATA[T1007 : 计算(a+b)×c的值 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】给定$3$个整数$a,b,c$，计算表达式$(a+b)×c$的值。 【输入】输入仅一行，包括三个整数$a,b,c$, 数与数之间以一个空格分开。$(-10^{4} &lt; a,b,c &lt; 10^{4})$ 【输出】输出一行，即表达式的值。 【输入样例】12 3 5 【输出样例】125 【答案&amp;代码】123456789#include&lt;cstdio&gt;int a,b,c;int main(void)&#123; scanf("%d%d%d",&amp;a,&amp;b,&amp;c); printf("%d\n",(a+b)*c); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1006 A+B问题]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1006%2F</url>
+    <content type="text"><![CDATA[T1006 : A+B问题 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】大部分的在线题库，都会将$A+B$问题作为第一题，以帮助新手熟悉平台的使用方法。 $A+B$问题的题目描述如下：给定两个整数$A$和$B$，输出$A+B$的值。保证$A,B$及结果均在整型范围内。现在请你解决这一问题。 【输入】一行，包含两个整数$A,B$，中间用单个空格隔开。$A$和$B$均在整型范围内。 【输出】一个整数，即$A+B$的值。保证结果在整型范围内。 【输入样例】11 2 【输出样例】13 【答案&amp;代码】123456789#include&lt;cstdio&gt;int a,b;int main(void)&#123; scanf("%d%d",&amp;a,&amp;b); printf("%d\n",a+b); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1005 地球人口承载力估计]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1005%2F</url>
+    <content type="text"><![CDATA[T1005 : 地球人口承载力估计 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】假设地球上的新生资源按恒定速度增长。照此测算，地球上现有资源加上新生资源可供$x$亿人生活$a$年，或供$y$亿人生活$b$年。 为了能够实现可持续发展，避免资源枯竭，地球最多能够养活多少亿人？ 【输入】一行，包括四个正整数$x,a,y,b$，两个整数之间用单个空格隔开。$x &gt; y , a &lt; b , ax &lt; by$，各整数均不大于$10000$。 【输出】一个实数$z$，表示地球最多养活$z$亿人，舍入到小数点后两位。 【输入样例】1110 90 90 210 【输出样例】175.00 【答案&amp;代码】123456789#include&lt;cstdio&gt;double a,x,b,y;int main(void)&#123; scanf("%lf%lf%lf%lf",&amp;x,&amp;a,&amp;y,&amp;b); printf("%.2f\n",(b*y-a*x)/(b-a)); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1004 字符三角形]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1004%2F</url>
+    <content type="text"><![CDATA[T1004 : 字符三角形 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】给定一个字符，用它构造一个底边长$5$个字符，高$3$个字符的等腰字符三角形。 【输入】输入只有一行，包含一个字符。 【输出】该字符构成的等腰三角形，底边长$5$个字符，高$3$个字符。 【输入样例】1* 【输出样例】123 * ******** 【答案&amp;代码】123456789#include&lt;cstdio&gt;char ch;int main(void)&#123; scanf("%c",&amp;ch); printf(" %c \n %c%c%c \n%c%c%c%c%c",ch,ch,ch,ch,ch,ch,ch,ch,ch); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1003 对齐输出]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1003%2F</url>
+    <content type="text"><![CDATA[T1003 : 对齐输出 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】读入三个整数，按每个整数占$8$个字符的宽度，右对齐输出它们，按照格式要求依次输出三个整数，之间以一个空格分开。 【输入】只有一行，包含三个整数，整数之间以一个空格分开。 【输出】只有一行，按照格式要求依次输出三个整数，之间以一个空格分开。 【输入样例】1123456789 0 -1 【输出样例】1123456789 0 -1 【答案&amp;代码】123456789#include&lt;cstdio&gt;int a,b,c;int main(void)&#123; scanf("%d%d%d",&amp;a,&amp;b,&amp;c); printf("%8d %8d %8d",a,b,c); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1002 输出第二个整数]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1002%2F</url>
+    <content type="text"><![CDATA[T1002 : 输出第二个整数 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】输入三个整数，整数之间由一个空格分隔，整数是$32$位有符号整数。把第二个输入的整数输出。 【输入】只有一行，共三个整数，整数之间由一个空格分隔。整数是$32$位有符号整数。 【输出】只有一行，一个整数，即输入的第二个整数。 【输入样例】1123 456 789 【输出样例】1456 【答案&amp;代码】123456789#include&lt;cstdio&gt;int n;int main(void)&#123; scanf("%*d%d%*d",&amp;n); printf("%d\n",n); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1001 Hello,World!]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1001%2F</url>
+    <content type="text"><![CDATA[T1001 : Hello,World! 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$ 【题目描述】编写一个能够输出Hello,World!的程序，这个程序常常作为一个初学者接触一门新的编程语言所写的第一个程序，也经常用来测试开发、编译环境是否能够正常工作。 提示：Hello,World!中间没空格。 【输入】无 【输出】Hello,World! 【答案&amp;代码】123456#include&lt;cstdio&gt;int main(void)&#123; puts("Hello,World!"); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[T1000 入门测试题目]]></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1000%2F</url>
+    <content type="text"><![CDATA[T1000 : 入门测试题目 时间限制: $1000 \text{ms}$ 内存限制: $32768 \text{KB}$ 【题目描述】求两个整数的和。 【输入】一行，两个用空格隔开的整数。 【输出】两个整数的和。 【输入样例】11 2 【输出样例】13 【答案&amp;代码】123456789#include&lt;cstdio&gt;int a,b;int main(void)&#123; scanf("%d%d",&amp;a,&amp;b); printf("%d",a+b); return 0;&#125;]]></content>
+      <categories>
+        <category>Solution</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>信息学奥赛一本通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1670%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1669%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1668%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1661%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1662%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1665%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1664%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1663%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1667%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1666%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1654%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1657%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1659%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1653%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1656%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1660%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1658%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1655%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1649%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1648%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1652%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1650%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1651%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1647%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1645%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1646%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1644%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1642%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1643%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1641%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1636%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1640%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1637%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1638%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1639%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1630%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1632%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1631%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1633%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1626%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1628%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1629%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1627%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1635%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1634%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1625%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1623%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1624%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1622%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1620%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1618%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1619%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1621%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1616%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1617%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1613%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1612%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1611%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1610%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1614%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1609%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1608%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1615%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1605%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1600%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1602%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1603%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1601%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1606%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1599%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1604%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1607%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1589%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1596%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1593%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1595%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1592%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1598%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1590%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1597%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1594%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1591%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1588%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1586%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1585%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1584%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1583%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1582%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1581%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1580%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1587%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1578%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1575%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1576%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1577%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1574%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1579%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1573%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1572%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1571%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1562%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1570%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1566%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1564%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1565%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1563%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1569%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1567%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1568%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1561%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1559%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1554%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1557%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1558%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1556%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1555%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1560%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1552%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1551%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1550%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1549%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1548%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1547%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1546%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1545%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1544%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1553%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1540%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1542%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1538%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1541%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1539%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1536%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1537%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1543%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1534%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1535%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1522%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1532%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1531%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1530%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1529%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1528%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1526%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1527%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1525%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1524%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1533%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1523%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1521%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1519%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1518%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1517%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1520%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1515%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1514%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1512%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1511%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1510%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1509%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1508%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1516%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1513%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1505%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1502%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1500%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1503%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1501%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1506%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1499%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1498%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1497%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1507%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1504%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1496%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1493%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1492%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1491%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1490%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1488%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1489%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1494%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1495%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1486%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1485%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1484%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1483%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1482%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1480%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1481%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1487%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1478%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1477%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1479%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1476%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1475%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1474%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1471%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1472%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1469%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1468%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1467%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1466%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1465%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1473%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1470%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1462%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1463%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1461%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1460%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1459%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1464%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1451%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1457%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1455%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1454%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1452%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1453%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1450%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1456%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1448%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1449%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1447%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1446%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1445%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1458%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1444%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1443%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1441%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1440%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1442%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1439%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1438%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1437%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1435%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1436%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1432%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1433%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1434%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1431%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1426%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1427%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1428%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1423%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1424%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1425%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1430%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1429%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1422%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1418%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1420%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1419%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1417%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1415%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1416%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1421%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1414%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1407%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1413%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1410%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1411%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1405%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1406%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1408%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1412%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1409%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1404%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1403%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1401%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1402%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1399%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1400%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1397%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1398%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1393%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1396%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1394%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1395%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1392%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1391%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1390%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1389%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1386%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1387%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1385%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1383%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1384%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1382%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1381%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1380%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1388%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1369%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1374%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1379%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1377%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1376%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1378%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1375%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1373%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1372%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1371%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1370%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1368%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1361%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1366%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1367%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1364%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1365%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1362%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1363%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1359%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1360%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1358%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1357%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1356%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1355%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1354%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1353%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1348%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1347%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1352%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1350%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1349%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1351%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1346%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1345%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1344%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1343%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1342%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1341%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1340%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1337%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1338%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1339%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1336%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1333%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1335%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1334%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1331%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1332%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1330%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1329%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1328%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1327%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1326%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1325%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1322%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1324%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1323%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1321%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1319%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1320%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1318%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1317%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1316%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1315%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1314%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1312%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1313%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1311%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1310%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1308%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1309%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1304%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1305%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1303%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1301%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1306%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1300%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1299%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1298%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1307%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1302%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1296%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1295%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1293%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1294%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1291%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1297%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1292%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1289%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1288%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1290%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1287%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1285%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1284%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1283%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1282%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1278%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1280%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1281%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1279%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1286%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1277%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1276%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1271%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1272%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1273%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1275%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1270%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1269%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1274%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1268%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1267%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1261%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1258%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1265%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1264%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1262%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1266%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1260%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1259%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1256%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1257%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1263%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1255%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1247%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1250%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1246%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1254%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1253%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1252%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1251%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1248%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1249%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1245%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1243%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1241%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1242%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1239%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1237%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1240%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1238%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1244%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1236%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1233%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1234%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1235%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1232%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1228%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1230%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1229%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1231%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1227%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1226%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1224%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1222%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1225%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1223%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1221%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1220%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1219%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1218%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1217%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1215%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1216%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1212%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1213%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1214%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1211%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1209%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1210%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1208%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1203%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1207%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1205%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1204%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1202%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1201%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1200%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1199%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1206%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1197%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1198%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1195%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1196%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1194%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1191%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1193%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1192%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1190%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1185%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1189%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1187%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1186%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1184%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1188%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1183%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1182%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1181%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1180%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1177%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1169%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1178%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1179%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1176%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1173%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1175%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1174%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1172%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1171%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1160%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1167%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1170%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1168%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1166%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1163%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1164%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1158%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1165%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1162%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1159%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1161%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1157%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1156%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1153%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1154%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1151%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1152%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1155%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1150%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1139%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1149%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1144%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1146%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1145%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1141%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1148%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1142%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1140%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1147%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1143%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1138%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1134%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1137%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1136%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1131%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1135%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1132%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1133%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1130%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1129%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1123%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1127%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1125%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1128%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1126%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1124%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1121%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1122%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1119%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1120%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1116%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1118%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1115%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1114%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1111%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1113%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1112%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1117%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1110%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1100%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1109%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1108%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1106%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1105%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1103%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1104%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1102%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1101%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1107%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1099%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1098%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1092%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1097%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1096%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1095%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1093%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1094%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1091%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1090%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1088%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1087%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1086%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1084%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1085%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1082%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1083%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1081%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1089%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1073%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1080%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1079%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1078%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1077%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1076%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1072%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1075%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1074%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1071%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1070%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1069%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1068%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1067%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1066%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1065%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1061%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1064%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1062%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1058%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1056%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1063%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1060%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1057%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1059%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1049%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1046%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1054%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1050%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1052%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1053%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1048%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1047%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1055%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1045%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1051%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1044%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1042%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1040%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1043%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1041%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FSolution%2FYBT%2FProblem%2FT1039%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[信息学奥赛一本通（C++版）第二部分 基础算法 第三章 递推算法]]></title>
     <url>%2FSolution%2FYBT%2F2.3%2F</url>
     <content type="text"><![CDATA[信息学奥赛一本通（C++版）第二部分 基础算法 第三章 递推算法 T1312 : 昆虫繁殖【题目描述】科学家在热带森林中发现了一种特殊的昆虫，这种昆虫的繁殖能力很强。每对成虫过$x$个月产$y$对卵，每对卵要过两个月长成成虫。假设每个成虫不死，第一个月只有一对成虫，且卵长成成虫后的第一个月不产卵(过$x$个月产卵)，问过$z$个月以后，共有成虫多少对？$0 \leq x \leq 20,1 \leq y \leq 20,x \leq z \leq 50$。 【输入】$x,y,z$的数值。 【输出】过$z$个月以后，共有成虫对数。 【输入样例】11 2 8 【输出样例】137 【答案&amp;代码】12345678910111213#include&lt;stdio.h&gt;long long adult[64],born[64];int main(void)&#123; int x,y,z; scanf("%d%d%d",&amp;x,&amp;y,&amp;z); for(int i=1;i&lt;=x;i++) adult[i]=1,born[i]=0; for(int i=x+1;i&lt;=z+1;i++) born[i]=y*adult[i-x], adult[i]=adult[i-1]+born[i-2]; printf("%lld",adult[z+1]); return 0;&#125; T1313 : 位数问题【题目描述】在所有的$N$位数中，有多少个数中有偶数个数字$3$？由于结果可能很大，你只需要输出这个答案对$12345$取余的值。 【输入】读入一个数$N$。 【输出】输出有多少个数中有偶数个数字$3$。 【输入样例】12 【输出样例】173 【答案&amp;代码】12345678910111213141516#include&lt;stdio.h&gt;int f[1001][2];int main(void)&#123; int n; f[1][0]=9,f[1][1]=1; scanf("%d",&amp;n); for(int i=2,x;i&lt;=n;i++)&#123; x=f[1][0]; if(i==n) x--; f[i][0]=(f[i-1][0]*x+f[i-1][1])%12345, f[i][1]=(f[i-1][1]*x+f[i-1][0])%12345; &#125; printf("%d",f[n][0]); return 0; &#125; T1314: 过河卒【题目描述】棋盘上$A$点有一个过河卒，需要走到目标$B$点。卒行走的规则：可以向下、或者向右。同时在棋盘上的某一点有一个对方的马（如$C$点），该马所在的点和所有跳跃一步可达的点称为对方马的控制点，如图中的$C$点和$P_{1},…,P_{8}$，卒不能通过对方马的控制点。棋盘用坐标表示，$A$点$(0,0)$、$B$点$(n,m)$（$n,m$为不超过$20$的整数），同样马的位置坐标是需要给出的，$C≠A$且$C≠B$。现在要求你计算出卒从$A$点能够到达$B$点的路径的条数。 【输入】给出$n,m$和$C$点的坐标。 【输出】从$A$点能够到达$B$点的路径的条数。 【输入样例】18 6 0 4 【输出样例】11617 【答案&amp;代码】12345678910111213141516171819202122232425262728293031#include&lt;stdio.h&gt;unsigned long long dp[21][21]=&#123;0&#125;;int main(void)&#123; int n,m; scanf("%d%d",&amp;n,&amp;m); int mx,my; scanf("%d%d",&amp;mx,&amp;my); dp[0][0]=1; for(int i=0;i&lt;=n;i++)&#123; for(int j=0;j&lt;=m;j++) if(i==mx&amp;&amp;j==my|| i==mx-1&amp;&amp;j==my-2|| i==mx-2&amp;&amp;j==my-1|| i==mx-2&amp;&amp;j==my+1|| i==mx+1&amp;&amp;j==my-2|| i==mx+2&amp;&amp;j==my-1|| i==mx+1&amp;&amp;j==my+2 ) dp[i][j]=0; else if(i==0&amp;&amp;j!=0) dp[i][j]=dp[i][j-1]; else if(j==0&amp;&amp;i!=0) dp[i][j]=dp[i-1][j]; else if(i==0&amp;&amp;j==0) dp[i][j]=1; else dp[i][j]=dp[i-1][j]+dp[i][j-1]; &#125; printf("%lld",dp[n][m]); return 0;&#125; T1188: 菲波那契数列(2)【题目描述】菲波那契数列是指这样的数列:数列的第一个和第二个数都为$1$，接下来每个数都等于前面$2$个数之和。 给出一个正整数$a$，要求菲波那契数列中第$a$个数对$1000$取模的结果是多少。 【输入】第$1$行是测试数据的组数$n$，后面跟着$n$行输入。每组测试数据占$1$行，包括一个正整数$a(1 \leq a \leq 1000000)$。 【输出】$n$行，每行输出对应一个输入。输出应是一个正整数，为菲波那契数列中第$a$个数对$1000$取模得到的结果。 【输入样例】12345452191 【输出样例】1234511811 【答案&amp;代码】1234567891011121314151617#include&lt;stdio.h&gt;int fun(int n)&#123; int F1=1,F2=1,Fn=1; for(int i=3;i&lt;=n;i++) Fn=F1+F2,F1=F2,F2=Fn,Fn%=1000,F1%=1000,F2%=1000; return Fn;&#125;int main(void)&#123; int n; scanf("%d",&amp;n); for(int i=0;i&lt;n;i++)&#123; int temp; scanf("%d",&amp;temp); printf("%d\n",fun(temp)%1000); &#125; return 0;&#125; T1189: Pell数列【题目描述】Pell数列$a_{1},a_{2},a_{3},…$的定义是这样的，$a_{1}=1,a_{2}=2,…,a_{n}=2a_{n-1}+a_{n-2}(n&gt;2)$。 给出一个正整数$k$，要求Pell数列的第$k$项模上$32767$是多少。 【输入】第$1$行是测试数据的组数$n$，后面跟着$n$行输入。每组测试数据占$1$行，包括一个正整数$k(1 \leq k&lt;1000000)$。 【输出】$n$行，每行输出对应一个输入。输出应是一个非负整数。 【输入样例】123218 【输出样例】121408 【答案&amp;代码】12345678910111213#include&lt;stdio.h&gt;unsigned int a[1000005]=&#123;0,1,2&#125;;int main(void)&#123; for(int i=3;i&lt;=1000000;i++) a[i]=(a[i-1]&lt;&lt;1)+a[i-2],a[i]%=32767; int n; scanf("%d",&amp;n); for(int i=0,temp;i&lt;n;i++)&#123; scanf("%d",&amp;temp); printf("%d\n",a[temp]); &#125; return 0;&#125; T1190: 上台阶【题目描述】楼梯有$n(71&gt;n&gt;0)$阶台阶,上楼时可以一步上$1$阶,也可以一步上$2$阶,也可以一步上$3$阶，编程计算共有多少种不同的走法。 【输入】输入的每一行包括一组测试数据，即为台阶数$n$。最后一行为$0$，表示测试结束。 【输出】每一行输出对应一行输入的结果，即为走法的数目。 【输入样例】1234512340 【输出样例】12341247 【答案&amp;代码】1234567891011#include&lt;stdio.h&gt;long long d[110];int main(void)&#123; d[1]=1,d[2]=2,d[3]=4; for(int i=4;i&lt;=100;i++) d[i]=d[i-1]+d[i-2]+d[i-3]; int n; while(scanf("%d",&amp;n)==1&amp;&amp;n) printf("%lld\n",d[n]); return 0;&#125; T1191: 流感传染【题目描述】有一批易感人群住在网格状的宿舍区内，宿舍区为$n*n$的矩阵，每个格点为一个房间，房间里可能住人，也可能空着。在第一天，有些房间里的人得了流感，以后每天，得流感的人会使其邻居传染上流感，（已经得病的不变），空房间不会传染。请输出第$m$天得流感的人数。 【输入】第一行一个数字$n$，$n$不超过$100$，表示有$n*n$的宿舍房间。 接下来的$n$行，每行$n$个字符，.表示第一天该房间住着健康的人，#表示该房间空着，@表示第一天该房间住着得流感的人。 接下来的一行是一个整数$m$，$m$不超过$100$。 【输出】输出第$m$天，得流感的人数。 【输入样例】12345675....#.#.@..#@..#.........4 【输出样例】116 【答案&amp;代码】123456789101112131415161718192021222324252627282930#include&lt;stdio.h&gt;char map[101][102],temp[101][102];#include&lt;string.h&gt;int main(void)&#123; int n,m; scanf("%d",&amp;n); for(int i=1;i&lt;=n;i++) scanf("%s",map[i]+1); scanf("%d",&amp;m); for(int l=1;l&lt;m;l++)&#123; memcpy(temp,map,sizeof(map)); for(int i=1;i&lt;=n;i++) for(int j=1;j&lt;=n;j++) if(temp[i][j]=='.'&amp;&amp; (temp[i-1][j]=='@' ||temp[i+1][j]=='@' ||temp[i][j-1]=='@' ||temp[i][j+1]=='@' ) ) map[i][j]='@'; &#125; int sum=0; for(int i=1;i&lt;=n;i++) for(int j=1;j&lt;=n;j++) if(map[i][j]=='@') sum+=1; printf("%d",sum); return 0;&#125; T1192: 放苹果【题目描述】把$M$个同样的苹果放在$N$个同样的盘子里，允许有的盘子空着不放，问共有多少种不同的分法？（用$K$表示）$5,1,1$和$1,5,1$是同一种分法。 【输入】第一行是测试数据的数目$t(0 \leq t \leq 20)$。以下每行均包含二个整数$M$和$N$，以空格分开。$1 \leq M,N \leq 10$。 【输出】对输入的每组数据$M$和$N$，用一行输出相应的$K$。 【输入样例】1217 3 【输出样例】18 【答案&amp;代码】12345678910111213141516171819#include&lt;stdio.h&gt;int f[101][101];int main(void)&#123; int n,m,t; for(int i=0;i&lt;=100;i++) for(int j=0;j&lt;=100;j++) if(i==0||j==1) f[i][j]=1; else if(j&gt;i) f[i][j]=f[i][i]; else f[i][j]=f[i][j-1]+f[i-j][j]; scanf("%d",&amp;t); for(int i=0;i&lt;t;i++) scanf("%d%d",&amp;m,&amp;n), printf("%d\n",f[m][n]); return 0;&#125; T1193: 吃糖果【题目描述】名名的妈妈从外地出差回来，带了一盒好吃又精美的巧克力给名名盒内共有$N$块巧克力，$(0&lt;N&lt;20)$。妈妈告诉名名每天可以吃一块或者两块巧克力。假设名名每天都吃巧克力，问名名共有多少种不同的吃完巧克力的方案。例如：如果$N=1$，则名名第$1$天就吃掉它，共有$1$种方案；如果$N=2$，则名名可以第$1$天吃$1$块，第$2$天吃$1$块，也可以第$1$天吃$2$块，共有$2$种方案；如果$N=3$，则名名第$1$天可以吃$1$块，剩$2$块，也可以第$1$天吃$2$块剩$1$块，所以名名共有$2+1=3$种方案；如果$N=4$，则名名可以第$1$天吃$1$块，剩$3$块，也可以第$1$天吃$2$块，剩$2$块，共有$3+2=5$种方案。现在给定$N$，请你写程序求出名名吃巧克力的方案数目。 【输入】输入只有$1$行，即整数$N$。 【输出】输出只有$1$行，即名名吃巧克力的方案数。 【输入样例】14 【输出样例】15 【答案&amp;代码】12345678910111213141516#include&lt;stdio.h&gt;int f[32]=&#123;0,1,2,3,5&#125;;int fun(int n)&#123; if(f[n]!=0) return f[n]; else if(n==0) return 0; else return f[n]=fun(n-1)+fun(n-2);&#125;int main(void)&#123; int n; scanf("%d",&amp;n); printf("%d",fun(n)); return 0;&#125; T1194: 移动路线【题目描述】$X$桌子上有一个$m$行$n$列的方格矩阵，将每个方格用坐标表示，行坐标从下到上依次递增，列坐标从左至右依次递增，左下角方格的坐标为$(1,1)$，则右上角方格的坐标为$(m,n)$。 小明是个调皮的孩子，一天他捉来一只蚂蚁，不小心把蚂蚁的右脚弄伤了，于是蚂蚁只能向上或向右移动。小明把这只蚂蚁放在左下角的方格中，蚂蚁从左下角的方格中移动到右上角的方格中，每步移动一个方格。蚂蚁始终在方格矩阵内移动，请计算出不同的移动路线的数目。 对于$1$行$1$列的方格矩阵，蚂蚁原地移动，移动路线数为$1$；对于$1$行$2$列（或$2$行$1$列）的方格矩阵，蚂蚁只需一次向右（或向上）移动，移动路线数也为$1…$对于一个$2$行$3$列的方格矩阵，如下图所示： $(2,1)$ $(2,2)$ $(2,3)$ $(1,1)$ $(1,2)$ $(1,3)$ 蚂蚁共有$3$种移动路线： 路线$1$：$(1,1) → (1,2) → (1,3) → (2,3)$ 路线$2$：$(1,1) → (1,2) → (2,2) → (2,3)$ 路线$3$：$(1,1) → (2,1) → (2,2) → (2,3)$ 【输入】输入只有一行，包括两个整数$m$和$n(0&lt;m+n \leq 20)$，代表方格矩阵的行数和列数，$m,n$之间用空格隔开。 【输出】输出只有一行，为不同的移动路线的数目。 【输入样例】12 3 【输出样例】13 【答案&amp;代码】12345678910111213#include&lt;stdio.h&gt;long long map[32][32];int main(void)&#123; for(int i=1;i&lt;=21;i++) map[i][1]=map[1][i]=1; for(int i=2;i&lt;=31;i++) for(int j=2;j&lt;=21;j++) map[i][j]=map[i-1][j]+map[i][j-1]; int m,n; scanf("%d%d",&amp;m,&amp;n); printf("%lld",map[m][n]); return 0;&#125; T1195: 移动路线【题目描述】一个给定的正整数序列，在每个数之前都插入+号或-号后计算它们的和。比如序列：$1,2,4$共有$8$种可能的序列： 123456789101112131415(+1) + (+2) + (+4) = 7(+1) + (+2) + (-4) = -1(+1) + (-2) + (+4) = 3(+1) + (-2) + (-4) = -5(-1) + (+2) + (+4) = 5(-1) + (+2) + (-4) = -3(-1) + (-2) + (+4) = 1(-1) + (-2) + (-4) = -7 所有结果中至少有一个可被整数$k$整除，我们则称此正整数序列可被$k$整除。例如上述序列可以被$3,5,7$整除，而不能被$2,4,6,8,…$整除。注意：$0,-3,-6,-9,…$都可以认为是$3$的倍数。 【输入】输入的第一行包含两个数：$N(2&lt;N&lt;10000)$和$k(2&lt;k&lt;100)$，其中$N$代表一共有$N$个数，$k$代表被除数。第二行给出序列中的$N$个整数，这些整数的取值范围都$0$到$10000$之间（可能重复）。 【输出】如果此正整数序列可被$k$整除，则输出YES，否则输出NO。（注意：都是大写字母） 【输入样例】123 21 2 4 【输出样例】1NO 【答案&amp;代码】123456789101112131415161718#include&lt;stdio.h&gt;bool f[10005][205];int a[10005];int main(void)&#123; int n,k; scanf("%d%d",&amp;n,&amp;k); for(int i=1;i&lt;=n;i++) scanf("%d",a+i); f[1][(a[1]%k+k)%k]=1; for(int i=2;i&lt;=n;i++) for(int j=0;j&lt;k;j++) f[i][j]=(f[i-1][((j-a[i])%k+k)%k]||f[i-1][(j+a[i])%k]); if(f[n][0]) printf("YES"); else printf("NO"); return 0;&#125; T1196: 踩方格【题目描述】有一个方格矩阵，矩阵边界在无穷远处。我们做如下假设： 每走一步时，只能从当前方格移动一格，走到某个相邻的方格上； 走过的格子立即塌陷无法再走第二次； 只能向北、东、西三个方向走； 请问：如果允许在方格矩阵上走$n$步，共有多少种不同的方案。$2$种走法只要有一步不一样，即被认为是不同的方案。 【输入】允许在方格上行走的步数$n(n \leq 20)$。 【输出】计算出的方案数量。 【输入样例】12 【输出样例】17 【答案&amp;代码】12345678910#include&lt;stdio.h&gt;int a[21]=&#123;0,3,7&#125;;int main(void)&#123; int n; scanf("%d",&amp;n); for(int i=3;i&lt;=n;i++) a[i]=2*a[i-1]+a[i-2]; printf("%d",a[n]); return 0;&#125; T1197: 山区建小学【题目描述】政府在某山区修建了一条道路，恰好穿越总共m个村庄的每个村庄一次，没有回路或交叉，任意两个村庄只能通过这条路来往。已知任意两个相邻的村庄之间的距离为$d_i$（为正整数），其中，$0&lt;i&lt;m$。为了提高山区的文化素质，政府又决定从$m$个村中选择$n$个村建小学（设$0&lt;n \leq m&lt;500$）。请根据给定的$m,n$以及所有相邻村庄的距离，选择在哪些村庄建小学，才使得所有村到最近小学的距离总和最小，计算最小值。 【输入】第$1$行为$m$和$n$，其间用空格间隔。 第$2$行为$m−1$个整数，依次表示从一端到另一端的相邻村庄的距离，整数之间以空格间隔。 例如: 1210 32 4 6 5 2 4 3 1 3 表示在$10$个村庄建$3$所学校。第$1$个村庄与第$2$个村庄距离为$2$，第$2$个村庄与第$3$个村庄距离为$4$，第$3$个村庄与第$4$个村庄距离为$6$，$…$，第$9$个村庄到第$10$个村庄的距离为3$。 【输出】各村庄到最近学校的距离之和的最小值。 【输入样例】1210 23 1 3 1 1 1 1 1 3 【输出样例】118 【答案&amp;代码】12345678910111213141516171819202122232425262728293031323334353637383940414243#include&lt;stdio.h&gt;int f[510][510],dis[510][510],d[510],s[510][510];int min(int a,int b)&#123; return a&lt;b?a:b;&#125;int abs(int n)&#123; return n&gt;0?n:(-n);&#125;int dist(int i,int j)&#123; int x=0; int mid=(i+j)/2; for(int k=i;k&lt;=j;k++) x+=dis[k][mid]; return x;&#125;int main(void)&#123; int m,n; scanf("%d%d",&amp;m,&amp;n); for(int i=2,temp;i&lt;=m;i++) scanf("%d",&amp;temp), d[i]=d[i-1]+temp; for(int i=1;i&lt;=m;i++) for(int j=1;j&lt;=m;j++) if(i==j) dis[i][j]=0; else dis[i][j]=dis[j][i]=abs(d[j]-d[i]); for(int i=1;i&lt;=m;i++) for(int j=1;j&lt;=m;j++) s[i][j]=dist(i,j); for(int i=1;i&lt;=m;i++) for(int j=1;j&lt;=m;j++) f[i][j]=0X3F3F3F3F; for(int i=1;i&lt;=m;i++) f[i][i]=0,f[i][1]=s[1][i]; for(int i=2;i&lt;=m;i++) for(int j=2;j&lt;=min(i,n);j++) for(int k=j-1;k&lt;=i-1;k++) if(i!=j) f[i][j]=min(f[i][j],f[k][j-1]+s[k+1][i]); printf("%d",f[m][n]); return 0;&#125;]]></content>
@@ -81,30 +3721,6 @@
     <title><![CDATA[信息学奥赛一本通（C++版）第一部分 C++语言 第三章 程序的控制结构]]></title>
     <url>%2FSolution%2FYBT%2F1.3%2F</url>
     <content type="text"><![CDATA[信息学奥赛一本通（C++版）第一部分 C++语言 第三章 程序的控制结构 第一节 if选择结构T1039 : 判断数正负【题目描述】给定一个整数$N$，判断其正负。如果$N&gt;0$，输出positive；如果$N=0$，输出zero；如果$N&lt;0$，输出negative。 【输入】一个整数$N(−10^{9}≤N≤10^{9})$。 【输出】如果$N&gt;0$，输出positive; 如果$N=0$，输出zero; 如果$N&lt;0$，输出negative。 【输入样例】11 【输出样例】1positive 【答案&amp;代码】12345678910111213#include&lt;stdio.h&gt;#include&lt;math.h&gt;int main(void)&#123; int n; scanf("%d",&amp;n); if(n&gt;0) printf("positive"); else if(n==0) printf("zero"); else printf("negative"); return 0;&#125; T1040 : 输出绝对值【题目描述】输入一个浮点数，输出这个浮点数的绝对值，保留到小数点后两位。 【输入】输入一个浮点数，其绝对值不超过$10000$。 【输出】输出这个浮点数的绝对值，保留到小数点后两位。 【输入样例】1-3.14 【输出样例】13.14 【答案&amp;代码】12345678910#include&lt;stdio.h&gt;int main(void)&#123; double n; scanf("%lf",&amp;n); if(n&gt;=0) printf("%.2f",n); else printf("%.2f",-1*n); return 0;&#125; T1041 : 奇偶数判断【题目描述】给定一个整数，判断该数是奇数还是偶数。如果$n$是奇数，输出odd；如果$n$是偶数，输出even。 【输入】输入仅一行，一个大于零的正整数$n$。 【输出】输出仅一行，如果$n$是奇数，输出odd；如果$n$是偶数，输出even。 【输入样例】15 【输出样例】1odd 【答案&amp;代码】12345678910#include&lt;stdio.h&gt;int main(void)&#123; int n; scanf("%d",&amp;n); if(n%2==0) printf("even"); else printf("odd"); return 0;&#125; T1042 : 奇偶ASCII值判断【题目描述】任意输入一个字符，判断其ASCII是否是奇数，若是，输出YES，否则，输出NO。例如，字符A的ASCII值是65，则输出YES，若输入字符B(ASCII值是66)，则输出NO。 【输入】输入一个字符。 【输出】如果其ASCII值为奇数，则输出YES，否则，输出NO。 【输入样例】1A 【输出样例】1YES 【答案&amp;代码】12345678910#include&lt;stdio.h&gt;int main(void)&#123; char ch; scanf("%c",&amp;ch); if(ch%2==0) printf("NO"); else printf("YES"); return 0;&#125; T1043 : 整数大小比较【题目描述】输入两个整数，比较它们的大小。若$x&gt;y$，输出&gt;；若$x=y$，输出=；若$x &lt; y$，输出&lt;。 【输入】一行，包含两个整数$x$和$y$，中间用单个空格隔开。$0≤x&lt;2^{32},−2^{31}≤y&lt;2^{31}$。 【输出】一个字符。若$x&gt;y$，输出&gt;；若$x=y$，输出=；若$x &lt; y$，输出&lt;。 【输入样例】11000 100 【输出样例】1&gt; 【答案&amp;代码】123456789101112#include&lt;stdio.h&gt;int main(void)&#123; int x,y; scanf("%d%d",&amp;x,&amp;y); if(x&gt;y) printf("&gt;"); else if(x==y) printf("="); else printf("&lt;"); return 0;&#125; T1044 : 判断是否为两位数【题目描述】判断一个正整数是否是两位数(即大于等于$10$且小于等于$99$)。若该正整数是两位数，输出$1$，否则输出$0$。 【输入】一个正整数，不超过$1000$。 【输出】一行。若该正整数是两位数，输出$1$，否则输出$0$。 【输入样例】154 【输出样例】11 【答案&amp;代码】123456789101112#include&lt;stdio.h&gt;int main(void)&#123; int x,y; scanf("%d%d",&amp;x,&amp;y); if(x&gt;y) printf("&gt;"); else if(x==y) printf("="); else printf("&lt;"); return 0;&#125; T1045 : 收集瓶盖赢大奖【题目描述】某饮料公司最近推出了一个“收集瓶盖赢大奖”的活动：如果你拥有$10$个印有“幸运”、或$20$个印有“鼓励”的瓶盖，就可以兑换一个神秘大奖。现分别给出你拥有的印有“幸运”和“鼓励”的瓶盖数，判断是否可以去兑换大奖。若可以兑换大奖，输出$1$，否则输出$0$。 【输入】一行，包含两个整数，分别是印有“幸运”和“鼓励”的瓶盖数，用一个空格隔开。 【输出】一行。若可以兑换大奖，输出$1$，否则输出$0$。 【输入样例】111 19 【输出样例】11 【答案&amp;代码】12345678910#include&lt;stdio.h&gt;int main(void)&#123; int xy,gl; scanf("%d%d",&amp;xy,&amp;gl); if(xy&gt;=10||gl&gt;=20) printf("1"); else printf("0"); return 0;&#125; T1046 : 判断一个数能否同时被3和5整除【题目描述】判断一个数$n$能否同时被$3$和$5$整除，如果能同时被$3$和$5$整除输出YES，否则输出NO。 【输入】输入一行，包含一个整数$n$。$(-1,000,000 &lt; n &lt; 1,000,000)$ 【输出】输出一行，如果能同时被$3$和$5$整除输出YES，否则输出NO。 【输入样例】115 【输出样例】1YES 【答案&amp;代码】12345678910#include&lt;stdio.h&gt;int main(void)&#123; int num; scanf("%d",&amp;num); if(num%3==0&amp;&amp;num%5==0) printf("YES"); else printf("NO"); return 0;&#125; T1047 : 判断能否被3，5，7整除【题目描述】给定一个整数，判断它能否被$3,5,7$整除，并输出以下信息： 能同时被$3,5,7$整除（直接输出$3 5 7$，每个数中间一个空格）； 只能被其中两个数整除（输出两个数，小的在前，大的在后。例如：$3 5$或者$3 7$或者$5 7$，中间用空格分隔）； 只能被其中一个数整除（输出这个除数）； 不能被任何数整除，输出小写字符n，不包括单引号。 【输入】输入一行，包括一个整数。 【输出】输出一行，按照描述要求给出整数被$3,5,7$整除的情况。 【输入样例】1105 【输出样例】13 5 7 【答案&amp;代码】123456789101112131415161718#include&lt;stdio.h&gt;int main(void)&#123; int num; scanf("%d",&amp;num); if(num%105==0) printf("3 5 7"); else if(num%3==0||num%5==0||num%7==0)&#123; if(num%3==0) printf("3 "); if(num%5==0) printf("5 "); if(num%7==0) printf("7 "); &#125; else printf("n"); return 0;&#125; T1048 : 有一门课不及格的学生【题目描述】给出一名学生的语文和数学成绩，判断他是否恰好有一门课不及格(成绩小于$60$分)。若该生恰好有一门课不及格，输出$1$；否则输出$0$。 【输入】一行，包含两个在$0$到$100$之间的整数，分别是该生的语文成绩和数学成绩。 【输出】若该生恰好有一门课不及格，输出$1$；否则输出$0$。 【输入样例】150 80 【输出样例】11 【答案&amp;代码】123456789101112#include&lt;stdio.h&gt;int main(void)&#123; int ch,ma; scanf("%d%d",&amp;ch,&amp;ma); if(ch&lt;60&amp;&amp;ma&gt;=60) printf("1"); else if(ch&gt;=60&amp;&amp;ma&lt;60) printf("1"); else printf("0"); return 0;&#125; 第二节 switch语句T1049 : 晶晶赴约会【题目描述】晶晶的朋友贝贝约晶晶下周一起去看展览，但晶晶每周的$1,3,5$有课必须上课，请帮晶晶判断她能否接受贝贝的邀请，如果能输出YES；如果不能则输出NO。注意YES和NO都是大写字母！ 【输入】输入有一行，贝贝邀请晶晶去看展览的日期，用数字$1$到$7$表示从星期一到星期日。 【输出】输出有一行，如果晶晶可以接受贝贝的邀请，输出YES，否则，输出NO。注意YES和NO都是大写字母！ 【输入样例】12 【输出样例】1YES 【答案&amp;代码】1234567891011121314#include&lt;stdio.h&gt;int main(void)&#123; int d; scanf("%d",&amp;d); switch(d)&#123; case 1: case 3: case 5: printf("NO");break; default: printf("YES");break; &#125; return 0;&#125; T1050 : 骑车与走路【题目描述】在清华校园里，没有自行车，上课办事会很不方便。但实际上。并非去办任何事情都是骑车快,因为骑车总要找车、开锁、停车、锁车等,这要耽误一些时间。假设找到自行车，开锁并车上自行车的时间为$27$秒；停车锁车的时间为$23$秒；步行每秒行走$1.2$米，骑车每秒行走$3.0$米。请判断走不同的距离去办事,是骑车快还是走路快。如果骑车快，输出一行Bike；如果走路快，输出一行Walk；如果一样快，输出一行All。 【输入】输入一行，包含一个整数，表示一次办事要行走的距离,单位为米。 【输出】输出一行,如果骑车快,输出一行Bike;如果走路快,输出一行Walk;如果一样快,输出一行All。 【输入样例】1120 【输出样例】1Bike 【答案&amp;代码】123456789101112#include&lt;stdio.h&gt;int main(void)&#123; int len; scanf("%d",&amp;len); if(50+(double)len/3.0&gt;(double)len/1.2) printf("Walk"); else if(50+(double)len/3.0==(double)len/1.2) printf("All"); else printf("Bike"); return 0;&#125; T1051 : 分段函数【题目描述】编写程序，计算下列分段函数$y=f(x)$的值。结果保留到小数点后三位。 123y=−x+2.5; (0 ≤x&lt; 5)y=2−1.5(x−3)(x−3) (5 ≤x&lt; 10)y=x2−1.5 (10 ≤x&lt; 20) 【输入】一个浮点数$N(0≤N&lt;20)$。 【输出】输出N对应的分段函数值：$f(N)$。结果保留到小数点后三位。 【输入样例】11.0 【输出样例】11.500 【答案&amp;代码】12345678910111213#include&lt;stdio.h&gt;int main(void)&#123; double x,y; scanf("%lf",&amp;x); if(0&lt;=x&amp;&amp;x&lt;5) y=-x+2.5; else if(5&lt;=x&amp;&amp;x&lt;10) y=2-1.5*(x-3)*(x-3); else if(10&lt;=x&amp;&amp;x&lt;20) y=x/2-1.5; printf("%.3f",y); return 0;&#125; T1052 : 计算邮资【题目描述】根据邮件的重量和用户是否选择加急计算邮费。计算规则：重量在$1000$克以内（包括$1000$克）,基本费$8$元。超过$1000$克的部分，每$500$克加收超重费$4$元，不足$500$克部分按$500$克计算；如果用户选择加急，多收$5$元。 【输入】输入一行，包含整数和一个字符，以一个空格分开，分别表示重量（单位为克）和是否加急。如果字符是y，说明选择加急；如果字符是n，说明不加急。 【输出】输出一行，包含一个整数，表示邮费。 【输入样例】11200 y 【输出样例】117 【答案&amp;代码】12345678910111213141516#include&lt;stdio.h&gt;#include&lt;math.h&gt;int main(void)&#123; int x; char ch; scanf("%d %c",&amp;x,&amp;ch); int sum; if(x&lt;=1000) sum=8; else sum=8+ceil((double)(x-1000)/500)*4; if(ch=='y') sum+=5; printf("%d",sum); return 0;&#125; T1053 : 最大数输出【题目描述】输入三个整数，数与数之间以一个空格分开。 输出一个整数，即最大的整数。 【输入】输入为一行，包含三个整数，数与数之间以一个空格分开。 【输出】输出一行，包含一个整数，即最大的整数。 【输入样例】110 20 56 【输出样例】156 【答案&amp;代码】12345678910#include&lt;stdio.h&gt;#include&lt;algorithm&gt;int main(void)&#123; int num[3]; for(int i=0;i&lt;3;i++) scanf("%d",num+i); std::sort(num,num+3); printf("%d",num[2]); return 0;&#125; T1054 : 三角形判断【题目描述】给定三个正整数，分别表示三条线段的长度，判断这三条线段能否构成一个三角形。如果能构成三角形，则输出yes，否则输出no。 【输入】输入共一行，包含三个正整数，分别表示三条线段的长度，数与数之间以一个空格分开。 【输出】如果能构成三角形，则输出yes，否则输出no。 【输入样例】13 4 5 【输出样例】1yes 【答案&amp;代码】12345678910111213#include&lt;stdio.h&gt;#include&lt;algorithm&gt;int main(void)&#123; int num[3]; for(int i=0;i&lt;3;i++) scanf("%d",num+i); std::sort(num,num+3); if(num[0]+num[1]&gt;num[2]) printf("yes"); else printf("no"); return 0;&#125; T1055 : 判断闰年【题目描述】判断某年是否是闰年。如果公元$a$年是闰年输出Y，否则输出N。 【输入】输入只有一行，包含一个整数$a(0 &lt; a &lt; 3000)$。 【输出】一行，如果公元$a$年是闰年输出Y，否则输出N。 【输入样例】12006 【输出样例】1N 【答案&amp;代码】123456789101112#include&lt;stdio.h&gt;int main(void)&#123; int y; scanf("%d",&amp;y); if(y%400==0) printf("Y"); else if(y%4==0&amp;&amp;y%100!=0) printf("Y"); else printf("N"); return 0;&#125; T1056 : 点和正方形的关系【题目描述】有一个正方形，四个角的坐标$(x,y)$分别是$(1,-1),(1,1),(-1,-1),(-1,1)$，$x$是横轴，$y$是纵轴。写一个程序，判断一个给定的点是否在这个正方形内(包括正方形边界)。如果点在正方形内，则输出yes，否则输出no。 【输入】输入一行，包括两个整数$x,y$，以一个空格分开，表示坐标$(x,y)$。 【输出】输出一行，如果点在正方形内，则输出yes，否则输出no。 【输入样例】11 1 【输出样例】1yes 【答案&amp;代码】12345678910#include&lt;stdio.h&gt;int main(void)&#123; int x,y; scanf("%d%d",&amp;x,&amp;y); if(-1&lt;=x&amp;&amp;x&lt;=1&amp;&amp;-1&lt;=y&amp;&amp;y&lt;=1) printf("yes"); else printf("no"); return 0;&#125; T1057 : 简单计算器【题目描述】一个最简单的计算器，支持$+,-,*,/$四种运算。仅需考虑输入输出为整数的情况，数据和运算结果不会超过int表示的范围。然而： 如果出现除数为$0$的情况，则输出：Divided by zero! 如果出现无效的操作符(即不为$+,-,*,/$之一），则输出：Invalid operator! 【输入】输入只有一行，共有三个参数，其中第$1,2$个参数为整数，第$3$个参数为操作符（$+,-,*,/$）。 【输出】输出只有一行，一个整数，为运算结果。然而： 如果出现除数为$0$的情况，则输出：Divided by zero! 如果出现无效的操作符(即不为$+,-,*,/$之一），则输出：Invalid operator! 【输入样例】11 2 + 【输出样例】13 【答案&amp;代码】123456789101112131415161718192021222324252627282930313233#include&lt;stdio.h&gt;int main(void)&#123; int a,b; char op; scanf("%d %d %c",&amp;a,&amp;b,&amp;op); int result; switch(op)&#123; case '+': result=a+b; printf("%d",result); break; case '-': result=a-b; printf("%d",result); break; case '*': result=a*b; printf("%d",result); break; case '/': if(b==0)&#123; printf("Divided by zero!"); break; &#125; result=a/b; printf("%d",result); break; default: printf("Invalid operator!"); break; &#125; return 0;&#125; T1058 : 求一元二次方程【题目描述】求一元二次方程$ax^{2}+bx+c=0$的根，其中$a$不等于$0$。结果要求精确到小数点后$5$位。 【输入】输入一行，包含三个浮点数$a,b,c$（它们之间以一个空格分开），分别表示方程$ax^{2}+bx+c=0$的系数。 【输出】输出一行，表示方程的解。 若两个实根相等，则输出形式为：“$x1=x2=…$”； 若两个实根不等，在满足根小者在前的原则，则输出形式为：“$x1=…;x2=…$”； 若无实根输出No answer!。 所有输出部分要求精确到小数点后$5$位，数字、符号之间没有空格。 【输入样例】1-15.97 19.69 12.02 【输出样例】1x1=-0.44781;x2=1.68075 【答案&amp;代码】1234567891011121314151617181920212223242526272829#include&lt;stdio.h&gt;#include&lt;math.h&gt;#define precision_1 1e-12#define precision_2 1e-6int main(void)&#123; double a,b,c,x1,x2,delta; scanf("%lf%lf%lf",&amp;a,&amp;b,&amp;c); delta=b*b-4*a*c; if(delta&lt;0&amp;&amp;fabs(delta)&gt;precision_1) printf("No answer!\n"); else if(fabs(delta)&lt;precision_1)&#123; x1=-b/(2*a); if(fabs(x1)&lt;precision_2) printf("x1=x2=%.5lf\n",0); else printf("x1=x2=%.5lf\n",x1); &#125; else&#123; x1=(-b+sqrt(delta))/(2*a); x2=(-b-sqrt(delta))/(2*a); if(fabs(x1)&lt;precision_2) x1=fabs(x1); if(fabs(x2)&lt;precision_2) x2=fabs(x2); if(x1&lt;x2) printf("x1=%.5lf;x2=%.5lf",x1,x2); else printf("x1=%.5lf;x2=%.5lf",x2,x1); &#125; return 0;&#125;]]></content>
-      <categories>
-        <category>Solution</category>
-      </categories>
-      <tags>
-        <tag>题解</tag>
-        <tag>信息学奥赛一本通</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[信息学奥赛一本通（C++版）第一部分 C++语言 第二章 顺序结构程序设计]]></title>
-    <url>%2FSolution%2FYBT%2F1.2%2F</url>
-    <content type="text"><![CDATA[信息学奥赛一本通（C++版）第一部分 C++语言 第二章 顺序结构程序设计 第一节 运算符和表达式T1006 : A+B问题【题目描述】大部分的在线题库，都会将$A+B$问题作为第一题，以帮助新手熟悉平台的使用方法。 $A+B$问题的题目描述如下：给定两个整数$A$和$B$，输出$A+B$的值。保证$A,B$及结果均在整型范围内。现在请你解决这一问题。 【输入】一行，包含两个整数$A,B$，中间用单个空格隔开。$A$和$B$均在整型范围内。 【输出】一个整数，即$A+B$的值。保证结果在整型范围内。 【输入样例】11 2 【输出样例】13 【答案&amp;代码】123456789#include&lt;cstdio&gt;int a,b;int main(void)&#123; scanf("%d%d",&amp;a,&amp;b); printf("%d\n",a+b); return 0;&#125; T1007 : 计算(a+b)×c的值【题目描述】给定$3$个整数$a,b,c$，计算表达式$(a+b)×c$的值。 【输入】输入仅一行，包括三个整数$a,b,c$, 数与数之间以一个空格分开。$(-10^{4} &lt; a,b,c &lt; 10^{4})$ 【输出】输出一行，即表达式的值。 【输入样例】12 3 5 【输出样例】125 【答案&amp;代码】123456789#include&lt;cstdio&gt;int a,b,c;int main(void)&#123; scanf("%d%d%d",&amp;a,&amp;b,&amp;c); printf("%d\n",(a+b)*c); return 0;&#125; T1008 : 计算(a+b)/c的值【题目描述】给定$3$个整数$a,b,c$，计算表达式$(a+b)÷c$的值。 【输入】输入仅一行，包括三个整数$a,b,c$, 数与数之间以一个空格分开。$(-10^{4} &lt; a,b,c &lt; 10^{4} , c \neq 0)$ 【输出】输出一行，即表达式的值。 【输入样例】11 1 3 【输出样例】10 【答案&amp;代码】123456789#include&lt;cstdio&gt;int a,b,c;int main(void)&#123; scanf("%d%d%d",&amp;a,&amp;b,&amp;c); printf("%d\n",(a+b)/c); return 0;&#125; T1009 : 带余除法【题目描述】给定被除数和除数，求整数商及余数。此题中请使用默认的整除和取余运算，无需对结果进行任何特殊处理。 【输入】一行，包含两个整数，依次为被除数和除数（除数非零），中间用一个空格隔开。 【输出】一行，包含两个整数，依次为整数商和余数，中间用一个空格隔开。 【输入样例】110 3 【输出样例】13 1 【答案&amp;代码】1234567#include&lt;cstdio&gt;int main(void)&#123; int a,b; scanf("%d%d",&amp;a,&amp;b); printf("%d %d",a/b,a%b); return 0;&#125; T1010 : 计算分数的浮点数值【题目描述】两个整数$a$和$b$分别作为分子和分母，既分数$\frac{a}{b}$，求它的浮点数值(双精度浮点数，保留小数点后$9$位)。 【输入】输入仅一行，包括两个整数$a$和$b$。 【输出】输出也仅一行，分数$\frac{a}{b}$的浮点数值（双精度浮点数，保留小数点后$9$位）。 【输入样例】15 7 【输出样例】10.714285714 【答案&amp;代码】1234567#include&lt;stdio.h&gt;int main(void)&#123; double a,b; scanf("%lf%lf",&amp;a,&amp;b); printf("%.9f",a/b); return 0;&#125; 第二节 常量和变量T1011 : 甲流疫情死亡率【题目描述】甲流并不可怕，在中国，它的死亡率并不是很高。请根据截止$2009$年$12$月$22$日各省报告的甲流确诊数和死亡数，计算甲流在各省的死亡率。 【输入】输入仅一行，有两个整数，第一个为确诊数，第二个为死亡数。 【输出】输出仅一行，甲流死亡率，以百分数形式输出，精确到小数点后$3$位。 【输入样例】110433 60 【输出样例】10.575% 【答案&amp;代码】1234567#include&lt;stdio.h&gt;int main(void)&#123; double a,b; scanf("%lf%lf",&amp;a,&amp;b); printf("%.3f%%",b/a*100); return 0;&#125; T1012 : 计算多项式的值【题目描述】对于多项式$f(x)=ax^{3}+bx^{2}+cx+d$和给定的$a,b,c,d,x$，计算$f(x)$的值，保留到小数点后$7$位。 【输入】输入仅一行，包含$5$个实数，分别是$x$，及参数$a,b,c,d$的值，每个数都是绝对值不超过$100$的双精度浮点数。数与数之间以一个空格分开。 【输出】输出一个实数，即$f(x)$的值，保留到小数点后$7$位。 【输入样例】12.31 1.2 2 2 3 【输出样例】133.0838692 【答案&amp;代码】123456789#include&lt;stdio.h&gt;#include&lt;math.h&gt;int main(void)&#123; double a,b,c,d,x; scanf("%lf%lf%lf%lf%lf",&amp;x,&amp;a,&amp;b,&amp;c,&amp;d); double ans=a*pow(x,3)+b*x*x+c*x+d; printf("%.7f",ans); return 0;&#125; T1013 : 温度表达转化【题目描述】利用公式$C=5×(F−32)÷9$（其中$C$表示摄氏温度，$F$表示华氏温度）进行计算转化,输入华氏温度$F$，输出摄氏温度$C$，要求精确到小数点后$5$位。 【输入】输入一行，包含一个实数$F$，表示华氏温度。$(F≥−459.67)$ 【输出】输出一行，包含一个实数，表示对应的摄氏温度，要求精确到小数点后$5$位。 【输入样例】141 【输出样例】15.00000 【答案&amp;代码】123456789#include&lt;stdio.h&gt;#include&lt;math.h&gt;int main(void)&#123; double F; scanf("%lf",&amp;F); double C=5*(F-32)/9; printf("%.5f",C); return 0;&#125; T1014 : 与圆相关的计算【题目描述】给出圆的半径，求圆的直径、周长和面积。输入圆的半径实数$r$，输出圆的直径、周长、面积，每个数保留小数点后$4$位。圆周率取值为$3.14159$。 【输入】输入包含一个实数$r(0 &lt; r \leq 10^{4})$，表示圆的半径。 【输出】输出一行，包含三个数，分别表示圆的直径、周长、面积，数与数之间以一个空格分开，每个数保留小数点后$4$位。 【输入样例】13.0 【输出样例】16.0000 18.8495 28.2743 【答案&amp;代码】12345678#include&lt;stdio.h&gt;#define PI 3.14159int main(void)&#123; double r; scanf("%lf",&amp;r); printf("%.4f %.4f %.4f",2*r,2*r*PI,r*r*PI); return 0;&#125; T1015 : 计算并联电阻的阻值【题目描述】对于阻值为$R_{1}$和$R_{2}$的电阻，其并联电阻阻值公式计算如下：$R=\frac{1}{\frac{1}{R_{1}}+\frac{1}{R_{2}}}$。输入两个电阻阻抗大小，浮点型。输出并联之后的阻抗大小，结果保留小数点后$2$位。 【输入】两个电阻阻抗大小，浮点型，以一个空格分开。 【输出】并联之后的阻抗大小，结果保留小数点后$2$位。 【输入样例】11 2 【输出样例】10.67 【答案&amp;代码】1234567#include&lt;stdio.h&gt;int main(void)&#123; double r1,r2; scanf("%lf%lf",&amp;r1,&amp;r2); printf("%.2f",1/(1/r1+1/r2)); return 0;&#125; 第三节 标准数据类型T1016 : 整型数据类型存储空间大小【题目描述】分别定义int，short类型的变量各一个，并依次输出它们的存储空间大小(单位：字节)。 【输入】(无） 【输出】一行，两个整数，分别是两个变量的存储空间大小，用一个空格隔开。 【答案&amp;代码】12345#include&lt;stdio.h&gt;int main(void)&#123; printf("%d %d",sizeof(int),sizeof(short)); return 0;&#125; T1017 : 浮点型数据类型存储空间大小【题目描述】分别定义float，double类型的变量各一个，并依次输出它们的存储空间大小(单位：字节)。 【输入】(无） 【输出】一行，两个整数，分别是两个变量的存储空间大小，用一个空格隔开。 【答案&amp;代码】12345#include&lt;stdio.h&gt;int main(void)&#123; printf("%d %d",sizeof(float),sizeof(double)); return 0;&#125; T1018 : 其他数据类型存储空间大小【题目描述】分别定义bool，char类型的变量各一个，并依次输出它们的存储空间大小(单位：字节)。 【输入】(无） 【输出】一行，两个整数，分别是两个变量的存储空间大小，用一个空格隔开。 【答案&amp;代码】12345#include&lt;stdio.h&gt;int main(void)&#123; printf("%d %d",sizeof(bool),sizeof(char)); return 0;&#125; T1019 : 其他数据类型存储空间大小【题目描述】输入一个单精度浮点数，将其向零舍入到整数。说明：向零舍入的含义是，正数向下舍入，负数向上舍入。提示：可以使用强制类型转换来实现。 【输入】一个单精度浮点数。 【输出】一个整数，即向零舍入到整数的结果。 【输入样例】12.3 【输出样例】12 【答案&amp;代码】1234567#include&lt;stdio.h&gt;int main(void)&#123; double num; scanf("%lf",&amp;num); printf("%d",(int)num); return 0;&#125; T1020 : 打印ASCII码【题目描述】输入一个除空格以外的可见字符（保证在函数scanf中可使用格式说明符%c读入），输出其ASCII码。 【输入】一个除空格以外的可见字符。 【输出】一个十进制整数，即该字符的ASCII码。 【输入样例】1A 【输出样例】165 【答案&amp;代码】1234567#include&lt;stdio.h&gt;int main(void)&#123; char ch; scanf("%c",&amp;ch); printf("%d",ch); return 0;&#125; T1021 : 打印字符【题目描述】输入一个整数，即字符的ASCII码，保证存在对应的可见字符。输出相对应的字符。 【输入】一个整数，即字符的ASCII码，保证存在对应的可见字符。 【输出】一行，包含相应的字符。 【输入样例】165 【输出样例】1A 【答案&amp;代码】1234567#include&lt;stdio.h&gt;int main(void)&#123; int ch; scanf("%d",&amp;ch); printf("%c",ch); return 0;&#125; T1022 : 整型与布尔型的转换【题目描述】将一个整型变量的值赋给一个布尔型变量，再将这个布尔型变量的值赋给一个整型变量，得到的值是多少？ 【输入】一个整型范围内的整数，即初始时整型变量的值。 【输出】一个整数，经过上述过程后得到的结果。 【输入样例】13 【输出样例】11 【答案&amp;代码】123456789#include&lt;stdio.h&gt;int main(void)&#123; int n; scanf("%d",&amp;n); bool temp=n; n=temp; printf("%d",n); return 0;&#125; T1023 : Hello,World!的大小【题目描述】我们曾经输出过的&quot;Hello, World!&quot;吗？它虽然不是本章所涉及的基本数据类型的数据，但我们同样可以用sizeof函数获得它所占用的空间大小。 【输入】（无） 【输出】一个整数，即&quot;Hello, World!&quot;的大小。 【答案&amp;代码】12345#include&lt;stdio.h&gt;int main(void)&#123; printf("%d",sizeof("Hello, World!")); return 0;&#125; 第四节 数据输入输出T1024 : 保留3位小数的浮点数【题目描述】读入一个单精度浮点数，保留$3$位小数输出这个浮点数。 【输入】只有一行，一个单精度浮点数。 【输出】也只有一行，读入的单精度浮点数。 【输入样例】112.34521 【输出样例】112.345 【答案&amp;代码】1234567#include&lt;stdio.h&gt;int main(void)&#123; double num; scanf("%lf",&amp;num); printf("%.3f",num); return 0;&#125; T1025 : 保留12位小数的浮点数【题目描述】读入一个双精度浮点数，保留$12$位小数，输出这个浮点数。 【输入】只有一行，一个双精度浮点数。 【输出】也只有一行，保留$12$位小数的浮点数。 【输入样例】13.1415926535798932 【输出样例】13.141592653580 【答案&amp;代码】1234567#include&lt;stdio.h&gt;int main(void)&#123; double num; scanf("%lf",&amp;num); printf("%.12lf",num); return 0;&#125; T1026 : 空格分隔输出【题目描述】读入一个字符，一个整数，一个单精度浮点数，一个双精度浮点数，然后按顺序输出它们，并且要求在他们之间用一个空格分隔。输出浮点数时保留$6$位小数。 【输入】第一行是一个字符； 第二行是一个整数； 第三行是一个单精度浮点数； 第四行是一个双精度浮点数。 【输出】输出字符、整数、单精度浮点数和双精度浮点数，之间用空格分隔。 【输入样例】1234a122.33.2 【输出样例】1a 12 2.300000 3.200000 【答案&amp;代码】123456789#include&lt;stdio.h&gt;int main(void)&#123; char ch; int n; double a,b; scanf("%c%d%lf%lf",&amp;ch,&amp;n,&amp;a,&amp;b); printf("%c %d %.6f %.6f",ch,n,a,b); return 0;&#125; T1027 : 输出浮点数【题目描述】读入一个双精度浮点数，分别按输出格式%f，%f保留$5$位小数，%e和%g的形式输出这个整数，每次在单独一行上输出。 【输入】一个双精度浮点数。 【输出】第一行是按%f输出的双精度浮点数； 第二行是按%f保留$5$位小数输出的双精度浮点数； 第三行是按%e输出的双精度浮点数； 第四行是按%g输出的双精度浮点数。 【输入样例】112.3456789 【输出样例】123412.34567912.345681.234568e+00112.3457 【答案&amp;代码】1234567#include&lt;stdio.h&gt;int main(void)&#123; double n; scanf("%lf",&amp;n); printf("%.6f\n%.5f\n%e\n%g",n,n,n,n); return 0;&#125; T1028 : 字符菱形【题目描述】给定一个字符，用它构造一个对角线长$5$个字符，倾斜放置的菱形。 【输入】输入只有一行， 包含一个字符。 【输出】该字符构成的菱形。 【输入样例】1* 【输出样例】12345 * ******** *** * 【答案&amp;代码】1234567#include&lt;stdio.h&gt;int main(void)&#123; char ch; scanf("%c",&amp;ch); printf(" %c \n %c%c%c \n%c%c%c%c%c\n %c%c%c \n %c ",ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch,ch); return 0;&#125; 第五节 顺序结构实例T1029 : 计算浮点数相除的余【题目描述】计算两个双精度浮点数$a$和$b$的相除的余数，$a$和$b$都是双精度浮点数。这里余数$r$的定义是：$a=k×b+r$，其中$k$是整数，$0≤r&lt;b$。 【输入】输入仅一行，包括两个双精度浮点数$a$和$b$。 【输出】输出也仅一行，$a÷b$的余数。 【输入样例】173.263 0.9973 【输出样例】10.4601 【答案&amp;代码】123456789#include&lt;stdio.h&gt;int main(void)&#123; double a,b; scanf("%lf%lf",&amp;a,&amp;b); int k=(int)(a/b); double r=a-k*b; printf("%g",r); return 0;&#125; T1030 : 计算球的体积【题目描述】对于半径为$r$的球，其体积的计算公式为$V=\frac{4}{3}πr^{3}$，这里取$π=3.14$。现给定$r$，即球半径，类型为$double$，求球的体积$V$，保留到小数点后$2$位。 【输入】输入为一个不超过$100$的非负实数，即球半径，类型为$double$。 【输出】输出一个实数，即球的体积，保留到小数点后$2$位。 【输入样例】14 【输出样例】1267.95 【答案&amp;代码】12345678910#include&lt;stdio.h&gt;#include&lt;math.h&gt;#define PI 3.14int main(void)&#123; double r; scanf("%lf",&amp;r); double V=pow(r,3)*PI*4/3; printf("%.2f",V); return 0;&#125; T1031 : 反向输出一个三位数【题目描述】将一个三位数反向输出，例如输入$358$，反向输出$853$。 【输入】一个三位数$n$。 【输出】反向输出$n$。 【输入样例】1100 【输出样例】1001 【答案&amp;代码】123456789#include&lt;stdio.h&gt;int main(void)&#123; int num; scanf("%d",&amp;num); printf("%d",num%10); printf("%d",(num/10)%10); printf("%d",num/100); return 0;&#125; T1032 : 大象喝水查【题目描述】一只大象口渴了，要喝$20$升水才能解渴，但现在只有一个深$h$厘米，底面半径为$r$厘米的小圆桶($h$和$r$都是整数)。问大象至少要喝多少桶水才会解渴。 【输入】输入有一行：包行两个整数，以一个空格分开，分别表示小圆桶的深$h$和底面半径$r$，单位都是厘米。 【输出】输出一行，包含一个整数，表示大象至少要喝水的桶数。 【输入样例】123 11 【输出样例】13 【答案&amp;代码】123456789#include&lt;stdio.h&gt;#include&lt;math.h&gt;int main(void)&#123; double h,r; scanf("%lf%lf",&amp;h,&amp;r); double V=r*r*M_PI*h; printf("%d",(int)ceil(20000/V)); return 0;&#125; T1033 : 计算线段长度【题目描述】已知线段的两个端点的坐标$A(X_{a},Y_{b}),B(X_{b},Y_{b})$，求线段$AB$的长度，保留到小数点后$3$位。 【输入】第一行是两个实数$X_{a},Y_{b}$，即$A$的坐标。 第二行是两个实数$X_{b},Y_{b}$，即$B$的坐标。 输入中所有实数的绝对值均不超过$10000$。 【输出】一个实数，即线段$AB$的长度，保留到小数点后$3$位。 【输入样例】121 12 2 【输出样例】11.414 【答案&amp;代码】123456789#include&lt;stdio.h&gt;#include&lt;math.h&gt;int main(void)&#123; double Xa,Ya; double Xb,Yb; scanf("%lf%lf%lf%lf",&amp;Xa,&amp;Ya,&amp;Xb,&amp;Yb); printf("%.3f",sqrt((Xb-Xa)*(Xb-Xa)+(Yb-Ya)*(Yb-Ya))); return 0;&#125; T1034 : 计算三角形面积【题目描述】平面上有一个三角形，它的三个顶点坐标分别为$(x_{1}, y_{1}), (x_{2}, y_{2}), (x_{3}, y_{3})$，那么请问这个三角形的面积是多少，精确到小数点后两位。 【输入】输入仅一行，包括$6$个单精度浮点数，分别对应$x_{1}, y_{1}, x_{2}, y_{2}, x_{3}, y_{3}$。 【输出】输出也是一行，输出三角形的面积，精确到小数点后两位。 【输入样例】10 0 4 0 0 3 【输出样例】16.00 【答案&amp;代码】123456789101112131415161718#include&lt;stdio.h&gt;#include&lt;math.h&gt;double len(double Xa,double Ya,double Xb,double Yb)&#123; return sqrt((Xb-Xa)*(Xb-Xa)+(Yb-Ya)*(Yb-Ya));&#125;int main(void)&#123; double X1,Y1; double X2,Y2; double X3,Y3; scanf("%lf%lf%lf%lf%lf%lf",&amp;X1,&amp;Y1,&amp;X2,&amp;Y2,&amp;X3,&amp;Y3); double len1=len(X1,Y1,X2,Y2); double len2=len(X2,Y2,X3,Y3); double len3=len(X1,Y1,X3,Y3); double q=(len1+len2+len3)/2; double S=sqrt(q*(q-len1)*(q-len2)*(q-len3)); printf("%.2f",S); return 0;&#125; T1035 : 等差数列末项计算【题目描述】给出一个等差数列的前两项$a_{1},a_{2}$，求第$n$项是多少。 【输入】一行，包含三个整数$a_{1},a_{2},n$。$−100 \leq a_{1},a_{2} \leq 100,0 &lt; n \leq 1000$。 【输出】一个整数，即第$n$项的值。 【输入样例】11 4 100 【输出样例】1298 【答案&amp;代码】12345678#include&lt;stdio.h&gt;int main(void)&#123; int a1,a2,n; scanf("%d%d%d",&amp;a1,&amp;a2,&amp;n); int gc=a2-a1; printf("%d",gc*(n-1)+a1); return 0;&#125; T1036 : A×B问题【题目描述】输入两个正整数$A$和$B$，求$A×B$的值。注意乘积的范围和数据类型的选择。 【输入】一行，包含两个正整数$A$和$B$，中间用单个空格隔开。$1 \leq A,B \leq 50000$。 【输出】一个整数，即$A×B$的值。 【输入样例】13 4 【输出样例】112 【答案&amp;代码】1234567#include&lt;stdio.h&gt;int main(void)&#123; unsigned long long a,b; scanf("%llu%llu",&amp;a,&amp;b); printf("%llu",a*b); return 0;&#125; T1037 : 计算2的幂【题目描述】给定非负整数$n$，求$2^{n}$的值，即$2$的$n$次方。 【输入】一个整数$n$。$0≤n&lt;31$。 【输出】一个整数，即$2$的$n$次方。 【输入样例】13 【输出样例】18 【答案&amp;代码】12345678#include&lt;stdio.h&gt;#include&lt;math.h&gt;int main(void)&#123; int n; scanf("%d",&amp;n); printf("%d",1&lt;&lt;n); return 0;&#125; T1038 : 苹果和虫子【题目描述】你买了一箱$n$个苹果，很不幸的是买完时箱子里混进了一条虫子。虫子每$x$小时能吃掉一个苹果，假设虫子在吃完一个苹果之前不会吃另一个，那么经过$y$小时你还有多少个完整的苹果？ 【输入】输入仅一行，包括$n,x,y$（均为整数）。 【输出】输出也仅一行，剩下的苹果个数。 【输入样例】110 4 9 【输出样例】17 【答案&amp;代码】1234567891011#include&lt;stdio.h&gt;#include&lt;math.h&gt;int main(void)&#123; int x,y,n; scanf("%d%d%d",&amp;n,&amp;x,&amp;y); int temp=(int)ceil((double)y/x); if(temp&gt;n) temp=n; printf("%d",n-temp); return 0;&#125;]]></content>
-      <categories>
-        <category>Solution</category>
-      </categories>
-      <tags>
-        <tag>题解</tag>
-        <tag>信息学奥赛一本通</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[信息学奥赛一本通（C++版）第一部分 C++语言 第一章 C++语言入门]]></title>
-    <url>%2FSolution%2FYBT%2F1.1%2F</url>
-    <content type="text"><![CDATA[信息学奥赛一本通（C++版）第一部分 C++语言 第一章 C++语言入门 T1000 : 入门测试题目 时间限制: 1000 ms 内存限制: 32768 KB 【题目描述】&emsp;&emsp;求两个整数的和。 【输入】&emsp;&emsp;一行，两个用空格隔开的整数。 【输出】&emsp;&emsp;两个整数的和。 【输入样例】11 2 【输出样例】13 【答案&amp;代码】1234567#include&lt;stdio.h&gt;/*标准输入输出头文件*/int main(void)&#123; int a,b;/*定义a,b两个变量*/ scanf("%d%d",&amp;a,&amp;b);/*输入两个整数，即a,b的值*/ printf("%d",a+b);/*输出a+b的值*/ return 0;/*退出主函数*/&#125; T1001 : Hello,World! 时间限制: 1000 ms 内存限制: 65536 KB 【题目描述】&emsp;&emsp;编写一个能够输出Hello,World!的程序，这个程序常常作为一个初学者接触一门新的编程语言所写的第一个程序，也经常用来测试开发、编译环境是否能够正常工作。 &emsp;&emsp;提示：Hello,World!中间没空格。 【输入】&emsp;&emsp;无 【输出】&emsp;&emsp;Hello,World! 【输入样例】1（无） 【输出样例】1Hello,World! 【答案&amp;代码】12345#include&lt;stdio.h&gt;/*标准输入输出头文件*/int main(void)&#123; printf("Hello,World!");/*输出字符串"Hello,World!"*/ return 0;/*退出主函数*/&#125; T1002: 输出第二个整数 时间限制: 1000 ms 内存限制: 65536 KB 【题目描述】&emsp;&emsp;输入三个整数，整数之间由一个空格分隔，整数是$32$位有符号整数。把第二个输入的整数输出。 【输入】&emsp;&emsp;只有一行，共三个整数，整数之间由一个空格分隔。整数是$32$位有符号整数。 【输出】&emsp;&emsp;只有一行，一个整数，即输入的第二个整数。 【输入样例】1123 456 789 【输出样例】1456 【答案&amp;代码】1234567#include&lt;stdio.h&gt;/*标准输入输出头文件*/int main(void)&#123; int n;/*定义变量n*/ scanf("%*d%d%*d",&amp;n);/*读入三个整数，其中对第一、三个整数不进行操作，将第二个整数的值赋给n*/ printf("%d",n);/*输出n的值*/ return 0;/*退出主函数*/&#125; T1003: 对齐输出 时间限制: 1000 ms 内存限制: 65536 KB 【题目描述】&emsp;&emsp;读入三个整数，按每个整数占$8$个字符的宽度，右对齐输出它们，按照格式要求依次输出三个整数，之间以一个空格分开。 【输入】&emsp;&emsp;只有一行，包含三个整数，整数之间以一个空格分开。 【输出】&emsp;&emsp;只有一行，按照格式要求依次输出三个整数，之间以一个空格分开。 【输入样例】1123456789 0 -1 【输出样例】1123456789 0 -1 【答案&amp;代码】1234567#include&lt;stdio.h&gt;/*标准输入输出头文件*/int main(void)&#123; int a,b,c;/*定义三个变量a,b,c*/ scanf("%d%d%d",&amp;a,&amp;b,&amp;c);/*输入a,b,c的值*/ printf("%8d %8d %8d",a,b,c);/*%8d，每个整数占8个字符的宽度，输出a,b,c的值*/ return 0;/*退出主函数*/&#125; T1004: 字符三角形 时间限制: 1000 ms 内存限制: 65536 KB 【题目描述】&emsp;&emsp;给定一个字符，用它构造一个底边长$5$个字符，高$3$个字符的等腰字符三角形。 【输入】&emsp;&emsp;输入只有一行，包含一个字符。 【输出】&emsp;&emsp;该字符构成的等腰三角形，底边长$5$个字符，高$3$个字符。 【输入样例】1* 【输出样例】123 * ******** 【答案&amp;代码】123456789#include&lt;stdio.h&gt;/*标准输入输出头文件*/int main(void)&#123; char ch;/*定义字符变量ch*/ scanf("%c",&amp;ch);/*输入字符ch*/ printf(" %c \n",ch); printf(" %c%c%c \n",ch,ch,ch); printf("%c%c%c%c%c",ch,ch,ch,ch,ch);/*输出三角形*/ return 0;/*退出主函数*/&#125; T1005: 地球人口承载力估计 时间限制: 1000 ms 内存限制: 65536 KB 【题目描述】&emsp;&emsp;假设地球上的新生资源按恒定速度增长。照此测算，地球上现有资源加上新生资源可供$x$亿人生活$a$年，或供$y$亿人生活$b$年。 &emsp;&emsp;为了能够实现可持续发展，避免资源枯竭，地球最多能够养活多少亿人？ 【输入】&emsp;&emsp;一行，包括四个正整数$x,a,y,b$，两个整数之间用单个空格隔开。$x &gt; y , a &lt; b , ax &lt; by$，各整数均不大于$10000$。 【输出】&emsp;&emsp;一个实数$z$，表示地球最多养活$z$亿人，舍入到小数点后两位。 【输入样例】1110 90 90 210 【输出样例】175.00 【答案&amp;代码】12345678#include&lt;stdio.h&gt;/*标准输入输出头文件*/int main(void)&#123; double a,x,b,y;/*定义题中变量*/ scanf("%lf%lf%lf%lf",&amp;x,&amp;a,&amp;y,&amp;b);/*输入x,a,y,b的值*/ double z=(b*y-a*x)/(b-a);/*经过数学分析可得z=(by-ax)/(b-a)*/ printf("%.2f",z);/*输出z的值*/ return 0;/*退出主函数*/&#125;]]></content>
       <categories>
         <category>Solution</category>
       </categories>
@@ -401,8 +4017,8 @@
         <tag>并查集</tag>
         <tag>题解</tag>
         <tag>洛谷</tag>
-        <tag>图论</tag>
         <tag>NOIp提高组</tag>
+        <tag>图论</tag>
       </tags>
   </entry>
   <entry>
@@ -416,8 +4032,8 @@
         <tag>并查集</tag>
         <tag>题解</tag>
         <tag>洛谷</tag>
-        <tag>图论</tag>
         <tag>NOIp提高组</tag>
+        <tag>图论</tag>
         <tag>Kruskal</tag>
         <tag>LCA</tag>
       </tags>
