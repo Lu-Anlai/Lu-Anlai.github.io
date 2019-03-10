@@ -96,3 +96,8 @@ symbols_count_time:
   time: true 
   total_symbols: true 
   total_time: true
+
+# hexo-sage-posts 
+sage_posts:
+  filter: hidden
+
