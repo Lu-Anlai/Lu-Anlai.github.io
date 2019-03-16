@@ -98,18 +98,18 @@
 
 
 
-  <meta name="description" content="学生，江西赣州人">
-<meta name="keywords" content="���,��Ϣѧ����һ��ͨ">
+  <meta name="description" content="T1046 : 判断一个数能否同时被3和5整除 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$">
+<meta name="keywords" content="题解,信息学奥赛一本通">
 <meta property="og:type" content="article">
-<meta property="og:title" content="T1046">
+<meta property="og:title" content="T1046 判断一个数能否同时被3和5整除">
 <meta property="og:url" content="https://www.lu-anlai.top/Solution/YBT/Problem/T1046/index.html">
 <meta property="og:site_name" content="Lu-Anlai&#39;s Blog">
-<meta property="og:description" content="学生，江西赣州人">
+<meta property="og:description" content="T1046 : 判断一个数能否同时被3和5整除 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-10T09:06:54.081Z">
+<meta property="og:updated_time" content="2019-03-16T09:38:04.836Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="T1046">
-<meta name="twitter:description" content="学生，江西赣州人">
+<meta name="twitter:title" content="T1046 判断一个数能否同时被3和5整除">
+<meta name="twitter:description" content="T1046 : 判断一个数能否同时被3和5整除 时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$">
 
 
 
@@ -126,7 +126,7 @@
   };
 </script>
 
-  <title>T1046 | Lu-Anlai's Blog</title>
+  <title>T1046 判断一个数能否同时被3和5整除 | Lu-Anlai's Blog</title>
   
 
 
@@ -460,7 +460,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">T1046
+          <h1 class="post-title" itemprop="name headline">T1046 判断一个数能否同时被3和5整除
 
               
             
@@ -486,12 +486,24 @@
                 
               
 
-              <time title="创建时间：2019-03-10 15:58:57 / 修改时间：17:06:54" itemprop="dateCreated datePublished" datetime="2019-03-10T15:58:57+08:00">2019-03-10</time>
+              <time title="创建时间：2019-03-10 15:58:57" itemprop="dateCreated datePublished" datetime="2019-03-10T15:58:57+08:00">2019-03-10</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-16 17:38:04" itemprop="dateModified" datetime="2019-03-16T17:38:04+08:00">2019-03-16</time>
               
             
           </span>
@@ -544,7 +556,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">0</span>
+                <span title="本文字数">448</span>
               
 
               
@@ -578,7 +590,17 @@
       
 
       
-        
+        <h3 id="T1046-判断一个数能否同时被3和5整除"><a href="#T1046-判断一个数能否同时被3和5整除" class="headerlink" title="T1046 : 判断一个数能否同时被3和5整除"></a>T1046 : 判断一个数能否同时被3和5整除</h3><blockquote>
+<p>时间限制: $1000 \text{ms}$ 内存限制: $65536 \text{KB}$</p>
+</blockquote>
+<a id="more"></a>
+<h4 id="【题目描述】"><a href="#【题目描述】" class="headerlink" title="【题目描述】"></a>【题目描述】</h4><p>判断一个数$n$能否同时被$3$和$5$整除，如果能同时被$3$和$5$整除输出<code>YES</code>，否则输出<code>NO</code>。</p>
+<h4 id="【输入】"><a href="#【输入】" class="headerlink" title="【输入】"></a>【输入】</h4><p>输入一行，包含一个整数$n$。$(-1,000,000 &lt; n &lt; 1,000,000)$</p>
+<h4 id="【输出】"><a href="#【输出】" class="headerlink" title="【输出】"></a>【输出】</h4><p>输出一行，如果能同时被$3$和$5$整除输出<code>YES</code>，否则输出<code>NO</code>。</p>
+<h4 id="【输入样例】"><a href="#【输入样例】" class="headerlink" title="【输入样例】"></a>【输入样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">15</span><br></pre></td></tr></table></figure>
+<h4 id="【输出样例】"><a href="#【输出样例】" class="headerlink" title="【输出样例】"></a>【输出样例】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">YES</span><br></pre></td></tr></table></figure>
+<h4 id="【答案-amp-代码】"><a href="#【答案-amp-代码】" class="headerlink" title="【答案&amp;代码】"></a>【答案&amp;代码】</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> num;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;num);</span><br><span class="line">    <span class="keyword">if</span>(num%<span class="number">3</span>==<span class="number">0</span>&amp;&amp;num%<span class="number">5</span>==<span class="number">0</span>)</span><br><span class="line">        <span class="built_in">puts</span>(<span class="string">"YES"</span>);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">puts</span>(<span class="string">"NO"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -601,9 +623,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/���/" rel="tag"># ���</a>
+            <a href="/tags/题解/" rel="tag"># 题解</a>
           
-            <a href="/tags/��Ϣѧ����һ��ͨ/" rel="tag"># ��Ϣѧ����һ��ͨ</a>
+            <a href="/tags/信息学奥赛一本通/" rel="tag"># 信息学奥赛一本通</a>
           
         </div>
       
@@ -616,8 +638,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Solution/YBT/Problem/T1045/" rel="next" title="T1045">
-                <i class="fa fa-chevron-left"></i> T1045
+              <a href="/Solution/YBT/Problem/T1045/" rel="next" title="T1045 收集瓶盖赢大奖">
+                <i class="fa fa-chevron-left"></i> T1045 收集瓶盖赢大奖
               </a>
             
           </div>
@@ -626,8 +648,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Solution/YBT/Problem/T1047/" rel="prev" title="T1047">
-                T1047 <i class="fa fa-chevron-right"></i>
+              <a href="/Solution/YBT/Problem/T1047/" rel="prev" title="T1047 判断能否被3，5，7整除">
+                T1047 判断能否被3，5，7整除 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -673,8 +695,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -879,6 +910,23 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#T1046-判断一个数能否同时被3和5整除"><span class="nav-number">1.</span> <span class="nav-text">T1046 : 判断一个数能否同时被3和5整除</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#【题目描述】"><span class="nav-number">1.1.</span> <span class="nav-text">【题目描述】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入】"><span class="nav-number">1.2.</span> <span class="nav-text">【输入】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出】"><span class="nav-number">1.3.</span> <span class="nav-text">【输出】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输入样例】"><span class="nav-number">1.4.</span> <span class="nav-text">【输入样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【输出样例】"><span class="nav-number">1.5.</span> <span class="nav-text">【输出样例】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【答案-amp-代码】"><span class="nav-number">1.6.</span> <span class="nav-text">【答案&amp;代码】</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
         <div class="back-to-top">
@@ -913,7 +961,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">218k</span>
+    <span title="站点总字数">217k</span>
   
 
   
@@ -924,7 +972,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:19</span>
+    <span title="站点阅读时长">3:17</span>
   
 </div>
 
