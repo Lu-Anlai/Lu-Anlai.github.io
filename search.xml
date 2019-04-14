@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[欢迎]]></title>
     <url>%2Fstart%2F</url>
-    <content type="text"><![CDATA[欢迎来到$\text{Lu-Anlai’s Blog}$本博客由 Hexo 强力驱动 v3.8.0 | 主题 – NexT.Gemini v7.0.0 公式渲染引擎是$\text{MathJax}$。 博客主要内容是题解（水题题解），之前在洛谷博客和$\text{CSDN}$博客发布的文章不久就会转移到这个博客上来（咕咕咕）。 更新日志 2019-03-05 优化博客结构 2019-03-09 修补了一些$\text{BUG}$]]></content>
+    <content type="text"><![CDATA[欢迎来到$\text{Lu-Anlai’s Blog}$本博客由 Hexo 强力驱动 v3.8.0 | 主题 – NexT.Gemini v7.0.0 公式渲染引擎是$\text{MathJax}$。 博客主要内容是题解（水题题解），之前在洛谷博客和$\text{CSDN}$博客发布的文章不久就会转移到这个博客上来（咕咕咕）。 更新日志 2019-03-05 优化博客结构 2019-03-09 修补了一些$\text{BUG}$ $\text{To Do List}$ 题解 P4296 P4588 P2023 P3803 CF784C P1919 CF678A P5148 P3906 P4562 P4613]]></content>
   </entry>
   <entry>
     <title><![CDATA[【题解】【洛谷 P3879】 [TJOI2010]阅读理解]]></title>
@@ -14,8 +14,8 @@
       </categories>
       <tags>
         <tag>题解</tag>
-        <tag>洛谷</tag>
         <tag>字符串</tag>
+        <tag>洛谷</tag>
         <tag>STL</tag>
       </tags>
   </entry>
@@ -297,8 +297,8 @@
       <tags>
         <tag>题解</tag>
         <tag>洛谷</tag>
-        <tag>JSOI2008</tag>
         <tag>线段树</tag>
+        <tag>JSOI2008</tag>
       </tags>
   </entry>
   <entry>
